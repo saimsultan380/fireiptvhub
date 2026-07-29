@@ -250,9 +250,10 @@ h1,
 .site-atmosphere__glow--primary {
   width: min(920px, 140vw);
   height: min(720px, 95vh);
-  top: 6%;
+  /* Mobile: sit lower behind the homepage hero mockup (below the title) */
+  top: 26%;
   left: 50%;
-  transform: translateX(-42%);
+  transform: translateX(-50%);
   background: radial-gradient(
     ellipse at center,
     rgba(247, 24, 17, 0.28) 0%,
