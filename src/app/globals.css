@@ -3,6 +3,9 @@
 
 @theme {
   --font-sans: Geist, "Geist Fallback", system-ui, -apple-system, sans-serif;
+  --color-secondary: #f71811;
+  --color-secondary-foreground: #ffffff;
+  --color-brand-logo: #f71811;
 }
 
 @layer base {
@@ -13,6 +16,8 @@
     --brand-red-from: #e01e26;
     --brand-red-via: #ee2830;
     --brand-red-to: #b5121a;
+    /* Logo sample: bright red-orange (not flat #FF0000 / dull #E01E26) */
+    --brand-logo: #f71811;
     --brand-navy: #12141f;
     --brand-gray: #4a4a4a;
 
@@ -21,6 +26,9 @@
 
     --primary: #e01e26;
     --primary-foreground: #ffffff;
+
+    --secondary: #f71811;
+    --secondary-foreground: #ffffff;
 
     --border: #e5e7eb;
     --ring: #e01e26;
@@ -205,39 +213,43 @@ h1,
   animation-delay: var(--hero-enter-delay, 0ms);
 }
 
-/* Red Highlighted Text Utility */
+/* Section title accent — solid logo secondary (no gradient) */
 .text-brand-gradient {
-  background: linear-gradient(to right, #E01E26 0%, #FF5A5F 50%, #8E0A0F 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+  color: var(--secondary);
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  -webkit-text-fill-color: unset;
   display: inline;
   font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+}
+
+.text-secondary {
+  color: var(--secondary);
 }
 
 /* Typography Tokens */
 .text-h1-b1g {
   font-family: 'Poppins', system-ui, -apple-system, sans-serif;
-  font-size: 28px;
-  line-height: 1.18;
+  font-size: 22px;
+  line-height: 1.2;
   font-weight: 700;
   letter-spacing: -0.025em;
   color: #12141f;
 }
 @media (min-width: 640px) {
   .text-h1-b1g {
-    font-size: 34px;
+    font-size: 28px;
   }
 }
 @media (min-width: 1024px) {
   .text-h1-b1g {
-    font-size: 42px;
+    font-size: 34px;
   }
 }
 @media (min-width: 1280px) {
   .text-h1-b1g {
-    font-size: 46px;
+    font-size: 38px;
   }
 }
 
@@ -322,5 +334,12 @@ h1,
 
   span:not(h1 *):not(h2 *):not(h3 *):not(h4 *):not(h5 *):not(h6 *):not(.text-h1-b1g *):not(.text-h2 *):not(.font-heading):not(.text-brand-gradient) {
     font-size: 14px !important;
+  }
+
+  /* Hero title body copy — slightly smaller on mobile (contact page excluded) */
+  [data-hero] .hero-desc,
+  [data-hero] .hero-desc p {
+    font-size: 12px !important;
+    line-height: 1.55 !important;
   }
 }

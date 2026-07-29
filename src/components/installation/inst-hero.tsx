@@ -36,7 +36,7 @@ export function InstHero() {
 
               {/* Body Copy */}
               <FadeIn delay={0.22} duration={0.45} yOffset={14}>
-                <div className="mt-4 sm:mt-6 space-y-3 sm:space-y-4 text-xs sm:text-sm lg:text-base text-black leading-relaxed">
+                <div className="hero-desc mt-4 sm:mt-6 space-y-3 sm:space-y-4 text-xs sm:text-sm lg:text-base text-black leading-relaxed">
                   <p>
                     Just unboxed a new Fire TV Stick and not sure where to start? You’re in exactly the right place. This Fire TV Stick installation guide takes you from the sealed box to your first live stream in around fifteen minutes — written in plain English, with no jargon and no steps skipped.
                   </p>
@@ -93,7 +93,7 @@ export function InstHero() {
             </div>
 
             <FadeIn delay={0.22} duration={0.45} yOffset={14} className="w-full">
-              <div className="mt-4 space-y-3 text-xs sm:text-sm text-black leading-relaxed">
+              <div className="hero-desc mt-4 space-y-3 text-xs sm:text-sm text-black leading-relaxed">
                 <p>
                   Just unboxed a new Fire TV Stick and not sure where to start? You’re in exactly the right place. This Fire TV Stick installation guide takes you from the sealed box to your first live stream in around fifteen minutes — written in plain English, with no jargon and no steps skipped.
                 </p>

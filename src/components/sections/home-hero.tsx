@@ -32,7 +32,7 @@ export function HomeHeroSection() {
             </div>
 
             <FadeIn delay={0.22} duration={0.45} yOffset={14} className="w-full mt-4">
-              <div className="space-y-4 text-xs sm:text-sm lg:text-base text-black leading-relaxed">
+              <div className="hero-desc space-y-4 text-xs sm:text-sm lg:text-base text-black leading-relaxed">
                 <p>
                   What if one subscription covered every match, every movie night, and every channel your family actually watches? That’s exactly what Fire IPTV Hub UK delivers. Our Firestick IPTV subscription brings 20,000+ live channels, a huge on-demand library, and complete sports coverage to every Fire TV device — with activation that takes minutes, not days.
                 </p>
@@ -85,7 +85,7 @@ export function HomeHeroSection() {
             </div>
 
             <FadeIn delay={0.22} duration={0.45} yOffset={14} className="w-full mt-3">
-              <div className="space-y-3 text-xs text-black leading-relaxed">
+              <div className="hero-desc space-y-3 text-xs text-black leading-relaxed">
                 <p>
                   What if one subscription covered every match, every movie night, and every channel your family actually watches? That’s exactly what Fire IPTV Hub UK delivers. Our Firestick IPTV subscription brings 20,000+ live channels, a huge on-demand library, and complete sports coverage to every Fire TV device — with activation that takes minutes, not days.
                 </p>

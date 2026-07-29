@@ -29,7 +29,7 @@ export function FireHeroSection() {
             </div>
 
             <FadeIn delay={0.22} duration={0.45} yOffset={14} className="w-full mt-4">
-              <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm lg:text-base text-black leading-relaxed">
+              <div className="hero-desc space-y-3 sm:space-y-4 text-xs sm:text-sm lg:text-base text-black leading-relaxed">
                 <p>
                   Your entertainment shouldn’t be locked into someone else’s schedule — or someone else’s contract. At Fire IPTV Hub UK, every Firestick IPTV subscription UK plan puts you in charge: stream for a single month, half a year, or a full twelve months, and switch or stop whenever it suits you.
                 </p>
@@ -90,7 +90,7 @@ export function FireHeroSection() {
             </div>
 
             <FadeIn delay={0.22} duration={0.45} yOffset={14} className="w-full mt-3">
-              <div className="space-y-3 text-xs text-black leading-relaxed">
+              <div className="hero-desc space-y-3 text-xs text-black leading-relaxed">
                 <p>
                   Your entertainment shouldn’t be locked into someone else’s schedule — or someone else’s contract. At Fire IPTV Hub UK, every Firestick IPTV subscription UK plan puts you in charge: stream for a single month, half a year, or a full twelve months, and switch or stop whenever it suits you.
                 </p>

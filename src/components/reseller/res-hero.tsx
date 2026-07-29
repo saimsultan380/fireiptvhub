@@ -31,7 +31,7 @@ export function ResHero() {
               </div>
 
               <FadeIn delay={0.22} duration={0.45} yOffset={14}>
-                <div className="mt-4 sm:mt-6 space-y-3 sm:space-y-4 text-xs sm:text-sm lg:text-base text-black leading-relaxed">
+                <div className="hero-desc mt-4 sm:mt-6 space-y-3 sm:space-y-4 text-xs sm:text-sm lg:text-base text-black leading-relaxed">
                   <p>
                     Want to earn money by selling Firestick IPTV subscriptions UK? With Firestick IPTV reseller panels in the UK, you can easily start your own IPTV business today. Our reseller platform gives you everything you need — a powerful IPTV panel, instant activation credits, and full control to create and manage customer accounts.
                   </p>
@@ -80,7 +80,7 @@ export function ResHero() {
             </div>
 
             <FadeIn delay={0.22} duration={0.45} yOffset={14} className="w-full">
-              <div className="mt-4 space-y-3 text-xs sm:text-sm text-black leading-relaxed">
+              <div className="hero-desc mt-4 space-y-3 text-xs sm:text-sm text-black leading-relaxed">
                 <p>
                   Want to earn money by selling Firestick IPTV subscriptions UK? With Firestick IPTV reseller panels in the UK, you can easily start your own IPTV business today. Our reseller platform gives you everything you need — a powerful IPTV panel, instant activation credits, and full control to create and manage customer accounts.
                 </p>
