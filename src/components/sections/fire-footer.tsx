@@ -18,7 +18,7 @@ const quickLinks = [
 
 export function FireFooter() {
   return (
-    <footer className="w-full bg-white border-t border-slate-200 py-12 sm:py-16">
+    <footer className="w-full section-glass border-t border-white/50 py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
         {/* Top: Brand & Links */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-slate-100">

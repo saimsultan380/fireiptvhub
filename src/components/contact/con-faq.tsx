@@ -93,7 +93,7 @@ export function ConFAQ() {
   return (
     <section
       id="faq"
-      className="w-full py-12 sm:py-20 bg-white border-t border-slate-200"
+      className="w-full py-12 sm:py-20 section-glass border-t border-white/50"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
         

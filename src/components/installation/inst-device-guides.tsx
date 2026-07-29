@@ -267,7 +267,7 @@ export function InstDeviceGuides() {
   return (
     <section
       id="device-guides"
-      className="w-full py-12 sm:py-20 bg-slate-50/50 border-t border-slate-200"
+      className="w-full py-12 sm:py-20 section-glass border-t border-white/50"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
         
@@ -361,12 +361,12 @@ export function InstDeviceGuides() {
               {/* Devices Mockup Image (matches provided screenshot 2) */}
               <div className="relative w-full max-w-md mx-auto my-8 select-none flex items-center justify-center">
                 <Image
-                  src="/hero-image.PNG"
+                  src="/hero-mockup.png"
                   alt="Firestick IPTV supported devices"
                   width={500}
                   height={300}
                   priority
-                  className="w-full h-auto object-contain"
+                  className="w-full h-auto object-contain bg-transparent"
                 />
               </div>
 

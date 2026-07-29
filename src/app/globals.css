@@ -36,6 +36,7 @@
 
   html {
     scroll-behavior: smooth;
+    background-color: #ffffff;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -45,7 +46,7 @@
   }
 
   body {
-    background-color: var(--background);
+    background-color: transparent;
     color: var(--foreground);
     font-family: Geist, 'Geist Fallback', system-ui, -apple-system, sans-serif;
     font-size: 13px;
@@ -226,6 +227,114 @@ h1,
 
 .text-secondary {
   color: var(--secondary);
+}
+
+/* ─── Fixed red atmosphere (behind glass sections) ───────────────────────── */
+.site-atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.site-atmosphere__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(48px);
+  will-change: transform;
+}
+
+/* Primary halo — hero image area (upper / center-right), like the mockup glow */
+.site-atmosphere__glow--primary {
+  width: min(920px, 140vw);
+  height: min(720px, 95vh);
+  top: 6%;
+  left: 50%;
+  transform: translateX(-42%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(247, 24, 17, 0.28) 0%,
+    rgba(247, 24, 17, 0.16) 28%,
+    rgba(255, 80, 60, 0.08) 48%,
+    transparent 70%
+  );
+}
+
+/* Secondary ambient wash — keeps red present mid-page while scrolling */
+.site-atmosphere__glow--secondary {
+  width: min(780px, 120vw);
+  height: min(620px, 80vh);
+  top: 48%;
+  left: 18%;
+  transform: translate(-20%, -20%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(247, 24, 17, 0.14) 0%,
+    rgba(247, 24, 17, 0.06) 40%,
+    transparent 68%
+  );
+  filter: blur(56px);
+}
+
+/* Soft lower wash */
+.site-atmosphere__glow--soft {
+  width: min(700px, 110vw);
+  height: min(560px, 70vh);
+  bottom: -8%;
+  right: -5%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(247, 24, 17, 0.1) 0%,
+    rgba(247, 24, 17, 0.04) 42%,
+    transparent 70%
+  );
+  filter: blur(64px);
+}
+
+@media (min-width: 1024px) {
+  .site-atmosphere__glow--primary {
+    left: 62%;
+    transform: translateX(-35%);
+    top: 8%;
+  }
+}
+
+/* Content sits above the fixed atmosphere */
+.site-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Frosted glass section layers — red glow shows through behind */
+.section-glass {
+  background: rgba(255, 255, 255, 0.58);
+  -webkit-backdrop-filter: blur(18px) saturate(1.15);
+  backdrop-filter: blur(18px) saturate(1.15);
+  border-color: rgba(226, 232, 240, 0.55);
+}
+
+/* Hero / top band — lighter frost so the red halo reads clearly behind the mockup */
+.section-glass-hero {
+  background: rgba(255, 255, 255, 0.22);
+  -webkit-backdrop-filter: blur(12px) saturate(1.1);
+  backdrop-filter: blur(12px) saturate(1.1);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .section-glass {
+    background: rgba(255, 255, 255, 0.92);
+  }
+  .section-glass-hero {
+    background: rgba(255, 255, 255, 0.85);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-atmosphere__glow {
+    filter: blur(36px);
+  }
 }
 
 /* Typography Tokens */

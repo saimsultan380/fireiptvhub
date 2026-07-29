@@ -10,7 +10,7 @@ import { MaskReveal } from "@/components/animation/mask-reveal";
 
 export function SubHero() {
   return (
-    <div className="relative bg-white text-[#12141F] flex flex-col pb-8 sm:pb-12" data-hero>
+    <div className="relative section-glass-hero text-[#12141F] flex flex-col pb-8 sm:pb-12" data-hero>
       {/* Hero Section Main Container */}
       <main className="flex-1 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-14">
         

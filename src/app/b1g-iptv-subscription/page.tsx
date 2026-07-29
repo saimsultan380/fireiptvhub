@@ -21,7 +21,7 @@ export const metadata = buildPageMetadata({
 
 export default function SubscriptionPlansPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-transparent">
       <FireHeader />
       <BreadcrumbJsonLd items={[...page.breadcrumbs]} />
 

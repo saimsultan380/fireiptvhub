@@ -6,7 +6,7 @@ import { B1GLogo } from "@/components/brand/b1g-logo";
 
 export function B1GFooter() {
   return (
-    <footer className="w-full bg-white border-t border-slate-200 py-12 sm:py-16">
+    <footer className="w-full section-glass border-t border-white/50 py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
         
         {/* Top half: Logo & Links */}

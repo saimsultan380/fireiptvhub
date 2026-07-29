@@ -17,7 +17,7 @@ export function ResCreditsWork() {
   return (
     <section
       id="credits-work"
-      className="w-full py-12 sm:py-20 bg-white border-t border-slate-200"
+      className="w-full py-12 sm:py-20 section-glass border-t border-white/50"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
         <FadeIn className="w-full rounded-[12px] border border-slate-200 bg-white p-6 sm:p-8 flex flex-col justify-between">

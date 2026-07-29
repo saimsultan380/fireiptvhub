@@ -37,7 +37,7 @@ export function ResFeatures() {
   return (
     <section
       id="panel-features"
-      className="w-full py-12 sm:py-20 bg-white border-t border-slate-200"
+      className="w-full py-12 sm:py-20 section-glass border-t border-white/50"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start w-full">

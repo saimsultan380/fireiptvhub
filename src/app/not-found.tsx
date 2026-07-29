@@ -30,7 +30,7 @@ const helpfulLinks = [
 
 export default function NotFound() {
   return (
-    <main className="min-h-screen bg-white flex flex-col">
+    <main className="min-h-screen bg-transparent flex flex-col">
       <B1GHeader />
 
       <section className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 sm:py-24">

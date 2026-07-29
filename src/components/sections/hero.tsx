@@ -8,7 +8,7 @@ import { ArrowRight, CheckCircle2, Play, Shield, Zap, Layers } from "lucide-reac
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-28 lg:pt-24 lg:pb-32 bg-white">
+    <section className="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-28 lg:pt-24 lg:pb-32 section-glass-hero">
       {/* Background Subtle Gradient Glow */}
       <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl">
         <div

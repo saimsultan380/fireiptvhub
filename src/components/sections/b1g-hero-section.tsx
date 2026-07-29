@@ -7,7 +7,7 @@ import { B1GTrustRow } from "./b1g-trust-row";
 
 export function B1GHeroSection() {
   return (
-    <div className="relative bg-white text-[#12141F] flex flex-col pb-8 sm:pb-12" data-hero>
+    <div className="relative section-glass-hero text-[#12141F] flex flex-col pb-8 sm:pb-12" data-hero>
       <div className="flex-1 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-14">
         {/* DESKTOP */}
         <div className="hidden lg:grid lg:grid-cols-12 lg:gap-12 lg:items-center">

@@ -18,7 +18,7 @@ export const metadata = buildPageMetadata({
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-transparent">
       <B1GHeader />
       <BreadcrumbJsonLd items={[...page.breadcrumbs]} />
 

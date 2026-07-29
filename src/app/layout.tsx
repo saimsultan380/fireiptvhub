@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
+import { SiteAtmosphere } from "@/components/layout/site-atmosphere";
+import { CtaClickSound } from "@/components/layout/cta-click-sound";
 import { JsonLd } from "@/components/seo/json-ld";
 import {
   SITE_DESCRIPTION,
@@ -118,10 +120,14 @@ export default function RootLayout({
       className="h-full antialiased light"
       style={{ colorScheme: "light" }}
     >
-      <body className="min-h-full flex flex-col bg-white text-[#12141F] selection:bg-[#E01E26] selection:text-white font-sans">
-        <JsonLd data={[organizationJsonLd, websiteJsonLd]} />
-        <ScrollReveal />
-        {children}
+      <body className="min-h-full flex flex-col bg-transparent text-[#12141F] selection:bg-[#E01E26] selection:text-white font-sans">
+        <SiteAtmosphere />
+        <div className="site-content min-h-full flex flex-col flex-1">
+          <JsonLd data={[organizationJsonLd, websiteJsonLd]} />
+          <ScrollReveal />
+          <CtaClickSound />
+          {children}
+        </div>
       </body>
     </html>
   );

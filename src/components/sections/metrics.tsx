@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export function Metrics() {
   return (
-    <section id="metrics" className="py-20 md:py-28 bg-white">
+    <section id="metrics" className="py-20 md:py-28 section-glass">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Heading & Intro */}

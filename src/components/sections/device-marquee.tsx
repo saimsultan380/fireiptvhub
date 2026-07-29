@@ -32,7 +32,7 @@ export function DeviceMarquee() {
   const marqueeItems = [...devices, ...devices, ...devices];
 
   return (
-    <div className="w-full py-6 sm:py-10 bg-white border-t border-b border-slate-100 overflow-hidden select-none">
+    <div className="w-full py-6 sm:py-10 section-glass border-t border-b border-white/50 overflow-hidden select-none">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-5 text-center">
         <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E01E26]">
           Supported Across All Platforms &amp; Devices

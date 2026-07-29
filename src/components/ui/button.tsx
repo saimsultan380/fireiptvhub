@@ -4,6 +4,7 @@ import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
+import { playCtaClickSound } from "@/lib/cta-click-sound";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center text-sm font-semibold tracking-tight transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 select-none whitespace-nowrap shrink-0",
@@ -40,11 +41,25 @@ export interface ButtonProps
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, enableShine = true, children, ...props }, ref) => {
+  (
+    {
+      className,
+      variant,
+      size,
+      enableShine = true,
+      children,
+      onClick,
+      onPointerDown,
+      ...props
+    },
+    ref
+  ) => {
     const shouldReduceMotion = useReducedMotion();
 
     const isPrimary = variant === "primary" || !variant;
+    const isOutline = variant === "outline";
     const showShine = isPrimary && enableShine;
+    const isCta = isPrimary || isOutline;
 
     const easeCurve = [0.21, 0.47, 0.32, 0.98] as const;
 
@@ -57,11 +72,17 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           duration: 0.2,
           ease: easeCurve,
         }}
+        data-cta={isCta ? "true" : undefined}
         className={cn(
           buttonVariants({ variant, size }),
           showShine && !shouldReduceMotion ? "shine-effect" : "",
           className
         )}
+        onPointerDown={(event) => {
+          if (isCta && event.button === 0) playCtaClickSound();
+          onPointerDown?.(event);
+        }}
+        onClick={onClick}
         {...(props as React.ComponentPropsWithoutRef<typeof motion.button>)}
       >
         {children}
