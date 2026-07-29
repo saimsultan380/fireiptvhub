@@ -88,7 +88,7 @@ const troubleshootList: TroubleshootingItem[] = [
   {
     title: "Third-Party Player Requests Payment",
     checks: [
-      "Alternative application activation charges are separate from B1G IPTV",
+      "Alternative application activation charges are separate from Firestick IPTV",
     ],
   },
 ];
@@ -183,7 +183,7 @@ export function InstTroubleshooting() {
         {/* Update & Reinstall Double Column */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch w-full">
           
-          {/* Updating B1G Player */}
+          {/* Updating Your IPTV App */}
           <FadeIn className="rounded-[12px] border border-slate-200 bg-white p-6 flex flex-col justify-between h-full">
             <div>
               <div className="flex items-center gap-2.5 mb-5">
@@ -191,7 +191,7 @@ export function InstTroubleshooting() {
                   <RefreshCw className="h-4 w-4 stroke-[2]" />
                 </div>
                 <h3 className="text-base sm:text-lg font-bold text-[#12141F] leading-none">
-                  Updating B1G Player
+                  Updating Your IPTV App
                 </h3>
               </div>
 

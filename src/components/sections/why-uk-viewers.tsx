@@ -73,14 +73,14 @@ export function WhyUKViewers() {
         <FadeIn className="w-full max-w-4xl mb-10">
           <h2 className="text-h2 font-bold tracking-tight text-[#12141F]">
             Why UK Viewers Choose{" "}
-            <span className="text-brand-gradient font-bold">B1G IPTV</span>
+            <span className="text-brand-gradient font-bold">Firestick IPTV</span>
           </h2>
           <div className="mt-4 space-y-3 text-sm sm:text-base text-[#4A4A4A] leading-relaxed">
             <p>
               People comparing IPTV services usually want more than a large content figure. They also need clear account access, straightforward installation, popular-device support and help when a setup problem occurs.
             </p>
             <p>
-              B1G IPTV is designed for viewers throughout England, Scotland, Wales and Northern Ireland.
+              Firestick IPTV is designed for viewers throughout England, Scotland, Wales and Northern Ireland.
             </p>
           </div>
         </FadeIn>
@@ -200,7 +200,7 @@ export function WhyUKViewers() {
                 </h3>
               </div>
               <p className="text-xs sm:text-sm text-[#4A4A4A] leading-relaxed flex-1">
-                Every active B1G IPTV subscription includes access to the B1G Player app for supported Android and Fire TV devices. The app provides a clean, dedicated interface that keeps your account information and available content in one place — no switching between external players.
+                Every active Firestick IPTV subscription includes access to compatible IPTV apps for supported Android and Fire TV devices. The app provides a clean, dedicated interface that keeps your account information and available content in one place — no switching between external players.
               </p>
             </div>
 
@@ -233,7 +233,7 @@ export function WhyUKViewers() {
                   size="sm"
                   className="w-full rounded-[10px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white text-xs font-semibold py-2.5"
                 >
-                  <span>Contact B1G Player Support</span>
+                  <span>Contact Fire IPTV Hub Support</span>
                   <ArrowRight className="ml-2 h-3.5 w-3.5 stroke-[2.5]" />
                 </Button>
               </Link>

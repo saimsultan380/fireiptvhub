@@ -12,7 +12,7 @@ const tipsList = [
   "Close unused background applications.",
   "Restart the player if it becomes unresponsive.",
   "Restart the router if the network becomes unstable.",
-  "Keep B1G Player updated.",
+  "Keep your IPTV app updated.",
   "Select a stream quality suitable for the connection.",
 ];
 

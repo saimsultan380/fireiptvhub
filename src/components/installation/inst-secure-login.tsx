@@ -66,7 +66,7 @@ export function InstSecureLogin() {
               </div>
 
               <p className="text-xs sm:text-sm text-slate-500 font-semibold mb-5 leading-relaxed">
-                Every active B1G IPTV subscription includes private account information.
+                Every active Firestick IPTV subscription includes private account information.
               </p>
 
               {/* Login parameters grid */}
@@ -107,7 +107,7 @@ export function InstSecureLogin() {
                 Profile Name
               </span>
               <p className="text-xs text-slate-500 font-semibold leading-relaxed">
-                Choose a clear name such as: <strong className="text-slate-800">B1G IPTV</strong>, <strong className="text-slate-800">Main TV</strong>, <strong className="text-slate-800">Living Room</strong>, or <strong className="text-slate-800">Firestick</strong>. The profile name does not affect the login.
+                Choose a clear name such as: <strong className="text-slate-800">Firestick IPTV</strong>, <strong className="text-slate-800">Main TV</strong>, <strong className="text-slate-800">Living Room</strong>, or <strong className="text-slate-800">Firestick</strong>. The profile name does not affect the login.
               </p>
             </div>
           </FadeIn>

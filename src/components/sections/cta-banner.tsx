@@ -19,12 +19,12 @@ export function B1GCTABanner() {
           
           {/* Header Title */}
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#12141F] max-w-2xl font-heading mb-4">
-            Start Your <span className="text-brand-gradient font-bold">B1G Player Experience</span>
+            Start Your <span className="text-brand-gradient font-bold">Firestick IPTV Experience</span>
           </h2>
 
           {/* Subtitle Description */}
           <p className="text-xs sm:text-sm lg:text-base text-slate-500 font-semibold leading-relaxed max-w-3xl mb-8">
-            Choose a B1G IPTV subscription, install the official app and access available live television, sports, movies and television series through one organised platform.
+            Choose a Firestick IPTV subscription, install a compatible app and access available live television, sports, movies and television series through one organised platform.
           </p>
 
           {/* Action CTAs */}
@@ -38,7 +38,7 @@ export function B1GCTABanner() {
                 className="w-full sm:w-auto rounded-[12px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white px-8 py-3.5 text-xs sm:text-sm font-semibold shine-effect"
               >
                 <Calendar className="mr-2 h-4 w-4 stroke-[2.5]" />
-                <span>View B1G IPTV Plans</span>
+                <span>View Subscription Plans</span>
               </Button>
             </Link>
 
@@ -50,7 +50,7 @@ export function B1GCTABanner() {
                 className="w-full sm:w-auto rounded-[12px] border-2 border-[#E01E26] bg-white text-[#12141F] px-8 py-3.5 text-xs sm:text-sm font-semibold hover:bg-red-50"
               >
                 <Tv className="mr-2 h-4 w-4 text-[#E01E26] stroke-[2.5]" />
-                <span>Install B1G Player</span>
+                <span>Install IPTV App</span>
               </Button>
             </Link>
 

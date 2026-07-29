@@ -18,7 +18,7 @@ export function B1GLogo({ className, size = "md" }: B1GLogoProps) {
     <div className={cn("relative flex items-center select-none", heightMap[size], className)}>
       <Image
         src="/logo.PNG"
-        alt="B1G Player Logo"
+        alt="Fire IPTV Hub Logo"
         width={160}
         height={60}
         priority

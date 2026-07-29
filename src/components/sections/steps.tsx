@@ -26,7 +26,7 @@ const stepsList: StepItem[] = [
   {
     number: "03",
     title: "Install the Player",
-    description: "Use B1G Player on Android or Firestick, or choose a compatible alternative application for another device.",
+    description: "Use a compatible IPTV app on Android or Firestick, or choose a compatible alternative application for another device.",
   },
   {
     number: "04",
@@ -99,7 +99,7 @@ export function StartWatchingSteps() {
                 size="lg"
                 className="w-full md:w-auto rounded-[12px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white px-5 sm:px-6 py-3.5 text-xs sm:text-sm font-semibold"
               >
-                <span>Start Your B1G IPTV Subscription</span>
+                <span>Start Your Firestick IPTV Subscription</span>
                 <ArrowRight className="ml-2 h-4 w-4 stroke-[2.5]" />
               </Button>
             </Link>

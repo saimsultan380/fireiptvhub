@@ -1,0 +1,169 @@
+"use client";
+
+import React, { useRef, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+
+const navLinks = [
+  { name: "Home", href: "/" },
+  { name: "Installation Guide", href: "/b1g-player-installation-guide/" },
+  { name: "Subscription Plans", href: "/b1g-iptv-subscription/" },
+  { name: "Reseller Panel", href: "/b1g-player-reseller/" },
+  { name: "Contact Us", href: "/contact/" },
+];
+
+/** Shared frosted-glass surface — desktop header + mobile navbar use the exact same look */
+const glassSurface =
+  "border border-white/40 bg-white/70 shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-xl supports-[backdrop-filter]:bg-white/55";
+
+export function FireHeader() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen((wasOpen) => {
+      const willOpen = !wasOpen;
+
+      // Pin sticky header to the top of the viewport when opening
+      if (willOpen && headerRef.current) {
+        const offset = headerRef.current.getBoundingClientRect().top - 12;
+        if (Math.abs(offset) > 1) {
+          window.scrollBy({ top: offset, behavior: "instant" });
+        }
+      }
+
+      return willOpen;
+    });
+  };
+
+  return (
+    <header
+      ref={headerRef}
+      className="sticky top-3 sm:top-4 z-50 w-full px-3 sm:px-6 lg:px-8 max-w-[1280px] mx-auto"
+    >
+      {/* DESKTOP HEADER CONTAINER */}
+      <div
+        className={`hidden lg:flex h-[84px] w-full items-center justify-between rounded-[12px] px-8 overflow-hidden ${glassSurface}`}
+      >
+        {/* LEFT: Logo */}
+        <Link href="/" className="flex items-center shrink-0 group">
+          <div className="relative w-[140px] h-[72px] flex items-center justify-center transition-transform duration-300 group-hover:scale-[1.02]">
+            <Image
+              src="/logo.PNG"
+              alt="Fire IPTV Hub Logo"
+              width={140}
+              height={72}
+              priority
+              className="w-full h-full object-contain object-left"
+            />
+          </div>
+        </Link>
+
+        {/* CENTER: Horizontal Nav */}
+        <nav className="flex items-center gap-8 text-[15px] font-semibold text-slate-700">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="transition-colors duration-200 hover:text-[#E01E26] whitespace-nowrap"
+            >
+              {link.name}
+            </Link>
+          ))}
+        </nav>
+
+        {/* RIGHT: Primary CTA */}
+        <div className="flex items-center shrink-0">
+          <Link href="/b1g-iptv-subscription/">
+            <Button
+              variant="primary"
+              className="h-[44px] px-6 rounded-[12px] text-sm font-semibold bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white whitespace-nowrap"
+            >
+              Get Started
+            </Button>
+          </Link>
+        </div>
+      </div>
+
+      {/* MOBILE HEADER */}
+      <div className="relative lg:hidden w-full h-[64px]">
+        <div
+          className={`absolute top-0 left-0 right-0 z-50 flex flex-col w-full rounded-[12px] overflow-hidden ${glassSurface}`}
+        >
+          {/* Collapsed Top Bar */}
+          <div className="flex h-[64px] items-center justify-between px-5 shrink-0">
+            <Link href="/" className="flex items-center group">
+              <div className="relative w-[110px] h-[52px] flex items-center justify-center transition-transform duration-300 group-active:scale-[1.02]">
+                <Image
+                  src="/logo.PNG"
+                  alt="Fire IPTV Hub Logo"
+                  width={110}
+                  height={52}
+                  priority
+                  className="w-full h-full object-contain object-left"
+                />
+              </div>
+            </Link>
+
+            <button
+              type="button"
+              onClick={toggleMobileMenu}
+              className="p-2 text-slate-800 focus:outline-none"
+              aria-label="Toggle Navigation Menu"
+              aria-expanded={mobileMenuOpen}
+            >
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6 text-[#E01E26]" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
+
+          {/* Overlay panel */}
+          <AnimatePresence initial={false}>
+            {mobileMenuOpen && (
+              <motion.div
+                key="mobile-menu-overlay"
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.25, ease: [0.21, 0.47, 0.32, 0.98] }}
+                className="overflow-hidden border-t border-white/40 bg-transparent"
+              >
+                <div className="p-5 flex flex-col gap-5">
+                  <nav className="flex flex-col gap-3.5">
+                    {navLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        href={link.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="text-base font-semibold text-slate-800 py-3 border-b border-white/40"
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                  </nav>
+
+                  <div className="pt-2">
+                    <Link href="/b1g-iptv-subscription/" onClick={() => setMobileMenuOpen(false)}>
+                      <Button
+                        variant="primary"
+                        className="w-full h-[48px] rounded-[12px] text-base font-semibold bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white"
+                      >
+                        Get Started
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </div>
+    </header>
+  );
+}

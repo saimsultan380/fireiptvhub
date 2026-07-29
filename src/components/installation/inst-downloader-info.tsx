@@ -29,7 +29,7 @@ export function InstDownloaderInfo() {
         {/* Section Heading */}
         <FadeIn className="w-full max-w-4xl mb-10 mx-auto text-center">
           <h2 className="text-h2 font-bold tracking-tight text-[#12141F]">
-            Official B1G Player <span className="text-brand-gradient font-bold">Download Information</span>
+            Official <span className="text-brand-gradient font-bold">Download Information</span>
           </h2>
         </FadeIn>
 
@@ -104,7 +104,7 @@ export function InstDownloaderInfo() {
               <div className="flex items-start gap-2.5">
                 <AlertCircle className="h-4 w-4 text-[#E01E26] shrink-0 mt-0.5" />
                 <p className="text-xs text-[#E01E26] font-semibold leading-relaxed">
-                  Use only the official code and address shown on the B1G Player website or supplied by the support team.
+                  Use only the official code and address shown on the Fire IPTV Hub website or supplied by the support team.
                 </p>
               </div>
               <p className="text-xs text-slate-500 font-semibold leading-relaxed pl-6.5">

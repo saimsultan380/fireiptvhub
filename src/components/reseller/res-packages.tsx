@@ -1,66 +1,333 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { FadeIn } from "@/components/animation/fade-in";
-import { Button } from "@/components/ui/button";
-import { Layers, Check } from "lucide-react";
 
-interface ResellerPackage {
+interface ResellerPanel {
   id: string;
   name: string;
-  price: string;
-  credits: string;
-  description: string;
-  ctaText: string;
-  isRecommended?: boolean;
-  features: string[];
+  apps?: string[];
+  image: string;
+  codes: string[];
+  credits: string[];
+  minimum: string;
 }
 
-const packagesList: ResellerPackage[] = [
+const panelsList: ResellerPanel[] = [
   {
-    id: "starter",
-    name: "Starter Package",
-    price: "£60",
-    credits: "30 Credits",
-    description: "Suitable for new resellers testing local demand and client setup parameters.",
-    ctaText: "Choose Starter Package",
-    features: [
-      "Panel access",
-      "Customer-account creation",
-      "B1G Player setup information",
-      "Reseller guidance",
+    id: "8k-premium",
+    name: "8K PREMIUM",
+    apps: ["8K PREMIUM", "8K PLAYER VIP", "STRONG 8K PLAYER"],
+    image: "/8k.jpg",
+    codes: ["439873", "851720", "1240465", "1050263", "5811661"],
+    credits: [
+      "1 Credit = 1 Month",
+      "3 Credit = 3 Months",
+      "6 Credit = 6 Months",
+      "12 Credit = 12 Months",
     ],
+    minimum: "Minimum 120 Credit",
   },
   {
-    id: "professional",
-    name: "Professional Package",
-    price: "£150",
-    credits: "100 Credits",
-    description: "Suitable for growing resellers with regular customer activations.",
-    ctaText: "Choose Professional Package",
-    isRecommended: true,
-    features: [
-      "Higher credit balance",
-      "Account and renewal management",
-      "Trial creation where available",
-      "Standard reseller support",
-      "Additional-credit purchasing",
+    id: "b1g-iptv",
+    name: "B1G IPTV",
+    apps: ["B1G IPTV", "B1G Player"],
+    image: "/b1g.jpg",
+    codes: ["4464458", "5060514"],
+    credits: [
+      "1 Credit = 1 Month",
+      "3 Credit = 3 Months",
+      "6 Credit = 6 Months",
+      "12 Credit = 12 Months",
     ],
+    minimum: "Minimum 100 Credit",
   },
   {
-    id: "business",
-    name: "Business Package",
-    price: "Custom",
-    credits: "Custom Balance",
-    description: "Suitable for established resellers or agencies handling higher account volumes.",
-    ctaText: "Discuss Business Package",
-    features: [
-      "Custom credit balance",
-      "Higher activation capacity",
-      "Priority reseller assistance where available",
-      "Account-management tools",
-      "Additional-credit purchasing",
+    id: "infinity-tv",
+    name: "INFINITY TV UK",
+    image: "/infinity.jpg",
+    codes: ["6551793", "464482", "1364392"],
+    credits: [
+      "1 Credit = 1 Month",
+      "3 Credit = 3 Months",
+      "6 Credit = 6 Months",
+      "12 Credit = 12 Months",
     ],
+    minimum: "Minimum 100 Credit",
+  },
+  {
+    id: "lion-ott",
+    name: "LION OTT",
+    image: "/lion.jpg",
+    codes: ["150797"],
+    credits: [
+      "0.1 Credit = 1 Month",
+      "0.3 Credit = 3 Months",
+      "0.6 Credit = 6 Months",
+      "1 Credit = 12 Months",
+    ],
+    minimum: "Minimum 10 Yearly Credit",
+  },
+  {
+    id: "ultra-8k",
+    name: "ULTRA 8K OTT",
+    image: "/ultra-8k.png",
+    codes: ["7114846", "4719136"],
+    credits: [
+      "1 Credit = 1 Month",
+      "3 Credit = 3 Months",
+      "6 Credit = 6 Months",
+      "12 Credit = 12 Months",
+    ],
+    minimum: "Minimum 120 Credit",
+  },
+  {
+    id: "t-rex",
+    name: "T-REX OFFICIAL",
+    image: "/iptv-trex.jpg",
+    codes: ["2599771", "9216452", "2892546", "496164"],
+    credits: [
+      "1 Credit = 1 Month",
+      "3 Credit = 3 Months",
+      "6 Credit = 6 Months",
+      "12 Credit = 12 Months",
+    ],
+    minimum: "Minimum 120 Credit",
+  },
+  {
+    id: "gtv-sky-glass",
+    name: "GTV SKY GLASS",
+    image: "/skyglass.jpg",
+    codes: ["721889", "407342", "231740"],
+    credits: [
+      "1 Credit = 1 Month",
+      "3 Credit = 3 Months",
+      "6 Credit = 6 Months",
+      "12 Credit = 12 Months",
+    ],
+    minimum: "Minimum 120 Credit",
+  },
+  {
+    id: "crystal",
+    name: "CRYSTAL",
+    image: "/crystal.jpg",
+    codes: ["601344"],
+    credits: [
+      "0.1 Credit = 1 Month",
+      "0.3 Credit = 3 Months",
+      "0.6 Credit = 6 Months",
+      "1 Credit = 12 Months",
+    ],
+    minimum: "Minimum 10 Yearly Credit",
+  },
+  {
+    id: "max-ott",
+    name: "MAX OTT",
+    image: "/max-ott.jpg",
+    codes: ["583349"],
+    credits: [
+      "3 Credit = 1 Month",
+      "6 Credit = 3 Months",
+      "9 Credit = 6 Months",
+      "12 Credit = 12 Months",
+    ],
+    minimum: "Minimum 120 Yearly Credit",
+  },
+  {
+    id: "golden-ott",
+    name: "GOLDEN OTT",
+    image: "/golden-ott.jpg",
+    codes: ["8381615", "2257663", "9105073"],
+    credits: [
+      "0.1 Credit = 1 Month",
+      "0.3 Credit = 3 Months",
+      "0.6 Credit = 6 Months",
+      "1 Credit = 12 Months",
+    ],
+    minimum: "Minimum 10 Yearly Credit",
+  },
+  {
+    id: "extra-ott",
+    name: "EXTRA OTT",
+    image: "/extra-ott.jpg",
+    codes: ["WILL BE UPDATED SOON"],
+    credits: [
+      "0.1 Credit = 1 Month",
+      "0.3 Credit = 3 Months",
+      "0.6 Credit = 6 Months",
+      "1 Credit = 12 Months",
+    ],
+    minimum: "Minimum 10 Yearly Credit",
+  },
+  {
+    id: "mega-ott",
+    name: "MEGA OTT",
+    image: "/mega-ott.jpg",
+    codes: ["6712600"],
+    credits: [
+      "0.1 Credit = 1 Month",
+      "0.3 Credit = 3 Months",
+      "0.6 Credit = 6 Months",
+      "1 Credit = 12 Months",
+    ],
+    minimum: "Minimum 10 Yearly Credit",
+  },
+  {
+    id: "starshare",
+    name: "STARSHARE",
+    image: "/starshare.jpg",
+    codes: ["4732470", "9575361"],
+    credits: [
+      "1 Credit = 1 Month",
+      "3 Credit = 3 Months",
+      "5 Credit = 6 Months",
+      "10 Credit = 12 Months",
+    ],
+    minimum: "Minimum 10 Yearly Credit",
+  },
+  {
+    id: "5g-live",
+    name: "5G LIVE IPTV",
+    image: "/5g-live.jpg",
+    codes: ["481538"],
+    credits: [
+      "1 Credit = 1 Month",
+      "3 Credit = 3 Months",
+      "6 Credit = 6 Months",
+      "12 Credit = 12 Months",
+    ],
+    minimum: "Minimum 120 Credit",
+  },
+  {
+    id: "opplex",
+    name: "OPPLEX",
+    image: "/opplex-tv.jpg",
+    codes: ["9083676"],
+    credits: [
+      "1 Credit = 1 Month",
+      "3 Credit = 3 Months",
+      "5 Credit = 6 Months",
+      "10 Credit = 12 Months",
+    ],
+    minimum: "Minimum 10 Yearly Credit",
+  },
+  {
+    id: "dream-4k",
+    name: "DREAM 4K",
+    image: "/dream-4k.jpg",
+    codes: ["2548862"],
+    credits: [
+      "1 Credit = 1 Month",
+      "3 Credit = 3 Months",
+      "6 Credit = 6 Months",
+      "12 Credit = 12 Months",
+    ],
+    minimum: "Minimum 120 Credit",
+  },
+  {
+    id: "geo-iptv",
+    name: "GEO IPTV",
+    image: "/geo-iptv.jpg",
+    codes: ["WILL BE UPDATED SOON"],
+    credits: [
+      "1 Credit = 1 Month",
+      "3 Credit = 3 Months",
+      "5 Credit = 6 Months",
+      "10 Credit = 12 Months",
+    ],
+    minimum: "Minimum 10 Yearly Credit",
+  },
+  {
+    id: "nexon-ott",
+    name: "NEXON OTT",
+    image: "/nexon.png",
+    codes: ["978885", "798870"],
+    credits: [
+      "1 Credit = 1 Month",
+      "3 Credit = 3 Months",
+      "6 Credit = 6 Months",
+      "12 Credit = 12 Months",
+    ],
+    minimum: "Minimum 120 Credit",
+  },
+  {
+    id: "dino-4k",
+    name: "DINO 4K",
+    image: "/dyno.jpg",
+    codes: ["8374888"],
+    credits: [
+      "1 Credit = 1 Month",
+      "3 Credit = 3 Months",
+      "6 Credit = 6 Months",
+      "12 Credit = 12 Months",
+    ],
+    minimum: "Minimum 120 Credit",
+  },
+  {
+    id: "magnum-ott",
+    name: "MAGNUM OTT",
+    image: "/magnum-ott.jpg",
+    codes: ["8381615"],
+    credits: [
+      "0.1 Credit = 1 Month",
+      "0.3 Credit = 3 Months",
+      "0.6 Credit = 6 Months",
+      "1 Credit = 12 Months",
+    ],
+    minimum: "Minimum 10 Yearly Credit",
+  },
+  {
+    id: "platinum-ott",
+    name: "Platinum OTT",
+    image: "/platimun-ott.jpg",
+    codes: ["7952708"],
+    credits: [
+      "0.1 Credit = 1 Month",
+      "0.3 Credit = 3 Months",
+      "0.6 Credit = 6 Months",
+      "1 Credit = 12 Months",
+    ],
+    minimum: "Minimum 10 Yearly Credit",
+  },
+  {
+    id: "4k-ott-pro-max",
+    name: "4K OTT | PRO MAX",
+    image: "/4k-ott.jpg",
+    codes: ["936335"],
+    credits: [
+      "1 Credit = 1 Month",
+      "3 Credit = 3 Months",
+      "6 Credit = 6 Months",
+      "12 Credit = 12 Months",
+    ],
+    minimum: "Minimum 120 Credit",
+  },
+  {
+    id: "storm-ott",
+    name: "STORM OTT",
+    image: "/strom-iptv.webp",
+    codes: ["5903011", "5152383"],
+    credits: [
+      "1 Credit = 1 Month",
+      "3 Credit = 3 Months",
+      "5 Credit = 6 Months",
+      "10 Credit = 12 Months",
+    ],
+    minimum: "Minimum 120 Credit",
+  },
+  {
+    id: "zum-tv",
+    name: "ZUM TV",
+    image: "/zum-tv.jpg",
+    codes: ["7997525", "5481690", "6293347"],
+    credits: [
+      "1 Credit = 1 Month",
+      "3 Credit = 3 Months",
+      "5 Credit = 6 Months",
+      "10 Credit = 12 Months",
+    ],
+    minimum: "Minimum 120 Credit",
   },
 ];
 
@@ -71,100 +338,93 @@ export function ResPackages() {
       className="w-full py-12 sm:py-20 bg-slate-50/50 border-t border-slate-200"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
-        
-        {/* Section Heading */}
-        <FadeIn className="w-full max-w-4xl mb-12">
+        <FadeIn className="w-full max-w-4xl mb-4">
           <h2 className="text-h2 font-bold tracking-tight text-[#12141F] font-heading">
-            Reseller <span className="text-brand-gradient font-bold">Packages</span>
+            IPTV PANELS &{" "}
+            <span className="text-brand-gradient font-bold">APPLICATIONS</span>
           </h2>
         </FadeIn>
 
-        {/* Packages Grid */}
+        <FadeIn className="w-full mb-8">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <span className="text-[11px] font-bold text-[#E01E26] uppercase tracking-wider">
+              DOWNLOADER CODES:
+            </span>
+            <span className="text-xs sm:text-sm font-semibold text-slate-500">
+              IPTV RESEELER PANEL CREDIT PLANS
+            </span>
+          </div>
+        </FadeIn>
+
         <FadeIn className="w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch w-full">
-            {packagesList.map((pkg) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 items-stretch w-full">
+            {panelsList.map((panel) => (
               <div
-                key={pkg.id}
-                className={`relative flex flex-col justify-between rounded-[12px] border bg-white p-6 sm:p-8 transition-all duration-200 ${
-                  pkg.isRecommended
-                    ? "border-[#E01E26] ring-1 ring-[#E01E26]"
-                    : "border-slate-200"
-                }`}
+                key={panel.id}
+                className="rounded-[12px] border border-slate-200 bg-white p-4 flex flex-col h-full transition-colors hover:border-slate-300"
               >
-                {/* Popular Badge */}
-                {pkg.isRecommended && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gradient-to-r from-[#E01E26] to-[#EE2830] text-[10px] font-bold text-white uppercase tracking-wider">
-                    Most Popular
-                  </span>
-                )}
-
-                <div>
-                  {/* Header Title */}
-                  <div className="flex items-center gap-2 mb-2">
-                    <Layers
-                      className={`h-4 w-4 shrink-0 ${
-                        pkg.isRecommended ? "text-[#E01E26]" : "text-slate-400"
-                      }`}
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-lg border border-slate-100 bg-slate-50">
+                    <Image
+                      src={panel.image}
+                      alt={panel.name}
+                      fill
+                      sizes="44px"
+                      className="object-contain p-1"
                     />
-                    <h3 className="text-xs sm:text-sm font-bold text-[#12141F] tracking-wide uppercase">
-                      {pkg.name}
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="text-xs sm:text-sm font-bold text-[#12141F] leading-snug font-heading truncate">
+                      {panel.name}
                     </h3>
+                    {panel.apps && panel.apps.length > 1 && (
+                      <p className="text-[10px] text-slate-400 font-semibold leading-tight mt-0.5 truncate">
+                        {panel.apps.join(" · ")}
+                      </p>
+                    )}
                   </div>
-
-                  {/* Pricing and Credits Info */}
-                  <div className="mb-4">
-                    <span className="text-3xl font-extrabold text-[#12141F] tracking-tight font-heading block">
-                      {pkg.price}
-                    </span>
-                    <span className="text-xs sm:text-sm font-bold text-[#E01E26] bg-red-50/50 px-2.5 py-0.5 rounded-md border border-red-100 inline-block mt-1">
-                      {pkg.credits}
-                    </span>
-                  </div>
-
-                  {/* Description */}
-                  <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed mb-6">
-                    {pkg.description}
-                  </p>
-
-                  {/* Features List */}
-                  <ul className="space-y-3 mb-8 border-t border-slate-100 pt-5">
-                    {pkg.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2.5">
-                        <span
-                          className={`flex h-4 w-4 shrink-0 items-center justify-center rounded-full ${
-                            pkg.isRecommended
-                              ? "bg-red-50 text-[#E01E26]"
-                              : "bg-slate-50 text-slate-400"
-                          }`}
-                        >
-                          <Check className="h-2.5 w-2.5 stroke-[3]" />
-                        </span>
-                        <span className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
 
-                {/* CTA Button */}
-                <Button
-                  variant={pkg.isRecommended ? "primary" : "outline"}
-                  size="lg"
-                  className={`w-full rounded-[12px] py-3.5 text-xs sm:text-sm font-semibold transition-colors duration-200 ${
-                    pkg.isRecommended
-                      ? "bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white hover:opacity-95 shadow-none"
-                      : "border-2 border-[#E01E26] bg-white text-[#12141F] hover:bg-red-50"
-                  }`}
-                >
-                  {pkg.ctaText}
-                </Button>
+                <div className="mb-3">
+                  <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1.5">
+                    Downloader Codes
+                  </span>
+                  <div className="flex flex-wrap gap-1">
+                    {panel.codes.map((code) => (
+                      <span
+                        key={code}
+                        className={`inline-block px-1.5 py-0.5 rounded-md text-[10px] sm:text-xs font-bold leading-none ${
+                          code === "WILL BE UPDATED SOON"
+                            ? "bg-amber-50 text-amber-700 border border-amber-100"
+                            : "bg-red-50 text-[#E01E26] border border-red-100"
+                        }`}
+                      >
+                        {code}
+                      </span>
+                    ))}
+                  </div>
+                </div>
 
+                <ul className="space-y-1 mb-3 flex-1">
+                  {panel.credits.map((line) => (
+                    <li
+                      key={line}
+                      className="text-[11px] sm:text-xs font-semibold text-slate-600 leading-snug"
+                    >
+                      {line}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="border-t border-slate-100 pt-2 mt-auto">
+                  <span className="text-[11px] sm:text-xs font-bold text-[#12141F]">
+                    {panel.minimum}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
         </FadeIn>
-
       </div>
     </section>
   );

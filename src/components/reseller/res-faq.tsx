@@ -11,44 +11,29 @@ interface FAQItem {
 
 const faqList: FAQItem[] = [
   {
-    question: "What is the B1G Player reseller panel?",
-    answer: "It is a dashboard used by approved resellers to create and manage customer accounts with credits.",
+    question: "What is an IPTV reseller panel and how does it work?",
+    answer:
+      "An IPTV reseller panel is a dashboard that lets you create and manage IPTV accounts for customers. You buy credits, convert them into subscriptions, and sell them at your own price.",
   },
   {
-    question: "Does every customer receive B1G Player?",
-    answer: "Customers using supported Android or Fire TV devices can use the official app.",
+    question: "How much can I earn as an IPTV reseller?",
+    answer:
+      "Our IPTV reseller program offers high profit margins. You decide your own retail price (e.g. sell £9.99 plans at £14.99 and keep profit).",
   },
   {
-    question: "Can I set my own prices?",
-    answer: "Yes, subject to the reseller terms.",
+    question: "Do I need technical knowledge to run an IPTV reseller business?",
+    answer:
+      "No technical setup required – we manage servers, you manage customers. All you need is an internet connection.",
   },
   {
-    question: "How do credits work?",
-    answer: "Credits are deducted when an eligible account is created or renewed.",
+    question: "What is the best IPTV reseller panel for Firestick and Smart TVs?",
+    answer:
+      "With Firestick IPTV reseller panels in the UK, you get a powerful IPTV panel, instant activation credits, and full control to create and manage customer accounts — plus reliable 4K streaming and 24/7 support.",
   },
   {
-    question: "Can I start with 30 credits?",
-    answer: "A 30-credit starter option may be available for £60.",
-  },
-  {
-    question: "Can I purchase more credits?",
-    answer: "Yes, according to the current reseller package rules.",
-  },
-  {
-    question: "Do I provide customer support?",
-    answer: "Yes. Resellers should provide first-line assistance.",
-  },
-  {
-    question: "Can I create trials?",
-    answer: "Trial creation depends on the panel and package rules.",
-  },
-  {
-    question: "Can I sell outside the UK?",
-    answer: "Ask the reseller team about supported markets.",
-  },
-  {
-    question: "How do I apply?",
-    answer: "Submit a reseller enquiry through the Contact page.",
+    question: "Can I offer free trials to my customers as a reseller?",
+    answer:
+      "Yes. Our reseller panels give you control over account creation (trial, monthly, yearly plans).",
   },
 ];
 
@@ -90,10 +75,9 @@ export function ResFAQ() {
           </span>
         </button>
 
-        {/* Expandable answer */}
         <div
           className={`transition-all duration-300 ease-in-out overflow-hidden ${
-            isOpen ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"
+            isOpen ? "max-h-[280px] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <div className="px-5 pb-5 pt-0 border-t border-slate-100/50 mt-1">
@@ -112,39 +96,33 @@ export function ResFAQ() {
       className="w-full py-12 sm:py-20 bg-white border-t border-slate-200"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
-        
-        {/* Heading */}
         <FadeIn className="w-full max-w-4xl mb-12">
           <div className="flex items-center gap-2.5 mb-3">
             <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-red-50 text-[#E01E26] shrink-0">
               <HelpCircle className="h-4 w-4 stroke-[2]" />
             </div>
             <h3 className="text-sm font-bold uppercase tracking-wider text-[#E01E26]">
-              Reseller Help
+              FAQ
             </h3>
           </div>
           <h2 className="text-h2 font-bold tracking-tight text-[#12141F]">
-            Reseller <span className="text-brand-gradient font-bold">FAQs</span>
+            Frequently Asked Questions{" "}
+            <span className="text-brand-gradient font-bold">(FAQs)</span>
           </h2>
         </FadeIn>
 
-        {/* 2-Column Accordions */}
         <FadeIn className="w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start w-full">
-            
-            {/* Left Col */}
             <div className="flex flex-col gap-4 w-full">
               {leftColFaqs.map((faq, idx) => renderFaqItem(faq, idx))}
             </div>
-
-            {/* Right Col */}
             <div className="flex flex-col gap-4 w-full">
-              {rightColFaqs.map((faq, idx) => renderFaqItem(faq, idx + midIndex))}
+              {rightColFaqs.map((faq, idx) =>
+                renderFaqItem(faq, idx + midIndex)
+              )}
             </div>
-
           </div>
         </FadeIn>
-
       </div>
     </section>
   );

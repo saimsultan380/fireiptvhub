@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 
 /** Canonical production origin — always non-www, no trailing slash on origin. */
-export const SITE_ORIGIN = "https://b1gplayer.uk";
+export const SITE_ORIGIN = "https://fireiptvhub.com";
 
-export const SITE_NAME = "B1G Player";
+export const SITE_NAME = "Fire IPTV Hub";
 
 export const SITE_TITLE =
-  "B1G Player – Official IPTV App & B1G IPTV Subscription";
+  "#1 Firestick IPTV UK – Premium IPTV Subscription for Fire TV Stick in 2026";
 
 export const SITE_DESCRIPTION =
-  "B1G Player is the official app for B1G IPTV subscriptions. Access live TV, sports, movies and series on supported Firestick and Android devices.";
+  "What if one subscription covered every match, every movie night, and every channel your family actually watches? Fire IPTV Hub UK delivers 20,000+ live channels, a huge on-demand library, and complete sports coverage to every Fire TV device.";
 
 /** Canonical route paths (always trailing slash except homepage `/`). */
 export const ROUTES = {
@@ -122,7 +122,7 @@ export function buildPageMetadata({
           url: "/og-image.png",
           width: 1200,
           height: 630,
-          alt: `${SITE_NAME} – Official IPTV App`,
+          alt: `${SITE_NAME} – Firestick IPTV UK`,
         },
       ],
     },
@@ -151,9 +151,9 @@ export const SITE_PAGES = [
   },
   {
     path: ROUTES.subscription,
-    title: "B1G Player Subscription UK – B1G IPTV Plans & Trial",
+    title: "Firestick IPTV Subscription Plans UK 2026 – Flexible, Affordable & Built for Every Viewer",
     description:
-      "Compare B1G Player plans with a B1G IPTV subscription. Choose 1, 3, 6 or 12 months, get instant activation and receive setup support in the UK.",
+      "Your entertainment shouldn’t be locked into someone else’s schedule — or someone else’s contract. At Fire IPTV Hub UK, every Firestick IPTV subscription UK plan puts you in charge.",
     changeFrequency: "weekly" as const,
     priority: 0.9,
     breadcrumbs: [
@@ -163,9 +163,10 @@ export const SITE_PAGES = [
   },
   {
     path: ROUTES.installation,
-    title: "B1G Player Installation Guide – Firestick & Android",
+    title: "Fire TV Stick Installation Guide – Easy Setup for All Firestick Models (2026)",
     description:
-      "Install B1G Player on Firestick, Android TV, phones and tablets using Downloader code 4172090, then sign in with your B1G IPTV subscription details.",
+      "Just unboxed a new Fire TV Stick and not sure where to start? This Fire TV Stick installation guide takes you from the sealed box to your first live stream in around fifteen minutes.",
+
     changeFrequency: "monthly" as const,
     priority: 0.8,
     breadcrumbs: [
@@ -175,9 +176,9 @@ export const SITE_PAGES = [
   },
   {
     path: ROUTES.reseller,
-    title: "B1G Player Reseller UK – Panel, Credits & IPTV Plans",
+    title: "Start Your IPTV Business Today with the Best IPTV Reseller Panels in UK 2026",
     description:
-      "Join the B1G Player reseller programme in the UK. Manage B1G IPTV subscriptions, customer accounts and credits through one organised reseller panel.",
+      "Want to earn money by selling Firestick IPTV subscriptions UK? With Firestick IPTV reseller panels in the UK, start your own IPTV business with instant activation credits and full account control.",
     changeFrequency: "monthly" as const,
     priority: 0.8,
     breadcrumbs: [
@@ -187,9 +188,9 @@ export const SITE_PAGES = [
   },
   {
     path: ROUTES.contact,
-    title: "Contact B1G Player – Free Trial, Setup & Subscription Help",
+    title: "Contact Firestick IPTV Support – 24/7 Help",
     description:
-      "Contact B1G Player for a free trial, B1G IPTV subscription advice, Firestick and Android setup help, renewals and reseller enquiries in the UK.",
+      "Have questions about your Firestick IPTV subscription, installation, or reseller panel? Our support team is here to help you 24/7.",
     changeFrequency: "monthly" as const,
     priority: 0.7,
     breadcrumbs: [

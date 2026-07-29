@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Page Not Found | B1G Player",
+    absolute: "Page Not Found | Fire IPTV Hub",
   },
   description:
-    "The page you requested could not be found. Return to B1G Player home or browse subscription plans, installation guides and support.",
+    "The page you requested could not be found. Return to Fire IPTV Hub home or browse subscription plans, installation guides and support.",
   robots: {
     index: false,
     follow: false,

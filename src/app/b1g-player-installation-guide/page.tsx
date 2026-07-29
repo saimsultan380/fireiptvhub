@@ -2,18 +2,17 @@ import React from "react";
 import { B1GHeader } from "@/components/sections/b1g-header";
 import { InstHero } from "@/components/installation/inst-hero";
 import { InstBeforeBegin } from "@/components/installation/inst-before-begin";
-import { InstDownloaderInfo } from "@/components/installation/inst-downloader-info";
-import { InstDeviceGuides } from "@/components/installation/inst-device-guides";
-import { InstSecureLogin } from "@/components/installation/inst-secure-login";
-import { InstUsageGuide } from "@/components/installation/inst-usage-guide";
-import { InstTroubleshooting } from "@/components/installation/inst-troubleshooting";
-import { InstFAQ } from "@/components/installation/inst-faq";
+import { InstSetupSteps } from "@/components/installation/inst-setup-steps";
+import { InstQuickFixes } from "@/components/installation/inst-quick-fixes";
 import { InstCTA } from "@/components/installation/inst-cta";
+import { InstFAQ } from "@/components/installation/inst-faq";
 import { B1GFooter } from "@/components/sections/footer";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import { buildPageMetadata, SITE_PAGES } from "@/lib/seo";
 
-const page = SITE_PAGES.find((p) => p.path === "/b1g-player-installation-guide/")!;
+const page = SITE_PAGES.find(
+  (p) => p.path === "/b1g-player-installation-guide/"
+)!;
 
 export const metadata = buildPageMetadata({
   title: page.title,
@@ -29,11 +28,8 @@ export default function InstallationGuidePage() {
 
       <InstHero />
       <InstBeforeBegin />
-      <InstDownloaderInfo />
-      <InstDeviceGuides />
-      <InstSecureLogin />
-      <InstUsageGuide />
-      <InstTroubleshooting />
+      <InstSetupSteps />
+      <InstQuickFixes />
       <InstFAQ />
       <InstCTA />
       <B1GFooter />

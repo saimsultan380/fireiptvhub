@@ -15,7 +15,7 @@ const loginDetailsList = [
   "Private username",
   "Private password",
   "Server URL",
-  "B1G Player app access",
+  "IPTV app access",
   "Setup instructions",
   "Customer-support information",
 ];
@@ -55,7 +55,7 @@ export function WhatIsIncluded() {
         <FadeIn className="w-full max-w-4xl mb-10">
           <h2 className="text-h2 font-bold tracking-tight text-[#12141F]">
             What Is Included with a{" "}
-            <span className="text-brand-gradient font-bold">B1G IPTV Subscription?</span>
+            <span className="text-brand-gradient font-bold">Firestick IPTV Subscription?</span>
           </h2>
           <p className="mt-4 text-sm sm:text-base text-[#4A4A4A] leading-relaxed">
             Every subscription includes access to the features and available entertainment listed for the selected package.

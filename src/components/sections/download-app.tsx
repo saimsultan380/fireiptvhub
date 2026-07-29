@@ -50,7 +50,7 @@ export function DownloadApp() {
         <FadeIn className="w-full max-w-4xl mb-10">
           <h2 className="text-h2 font-bold tracking-tight text-[#12141F]">
             Download the Official{" "}
-            <span className="text-brand-gradient font-bold">B1G Player App</span>
+            <span className="text-brand-gradient font-bold">IPTV App</span>
           </h2>
           <p className="mt-4 text-sm sm:text-base text-[#4A4A4A] leading-relaxed">
             The current app can be installed on compatible Android and Fire TV devices using the official Downloader route.

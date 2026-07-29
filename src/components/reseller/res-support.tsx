@@ -22,7 +22,7 @@ const bestPractices = [
   },
   {
     title: "Explain Device Compatibility",
-    desc: "Make it clear which devices use B1G Player and which require another compatible player application.",
+    desc: "Make it clear which devices use which IPTV app and which require another compatible player application.",
   },
   {
     title: "Provide First-Line Support",
@@ -100,7 +100,7 @@ export function ResSupport() {
                   variant="primary"
                   className="w-full sm:w-auto rounded-[12px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white px-5 py-3 text-xs sm:text-sm font-semibold"
                 >
-                  <span>Share B1G Player Installation Guide</span>
+                  <span>Share Installation Guide</span>
                   <ArrowRight className="ml-2 h-4 w-4 stroke-[2.5]" />
                 </Button>
               </Link>

@@ -59,11 +59,44 @@
   }
 }
 
-/* ─── Global Scroll Reveal ───────────────────────────────────────────────────
-   Add data-reveal to any element. ScrollReveal provider toggles .revealed.
-   Optional data-delay="40|80|120|160|200" for fast stagger.
-   Heroes / titles use data-no-reveal / [data-hero] — never hidden.
-────────────────────────────────────────────────────────────────────────────── */
+/* Interactive controls must never be left invisible by scroll-reveal */
+button[data-reveal],
+a[data-reveal],
+[role="tab"][data-reveal],
+[aria-pressed][data-reveal],
+[data-tabs][data-reveal],
+[data-toggle][data-reveal],
+[data-tabs] [data-reveal],
+[data-toggle] [data-reveal] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* ─── Infinite Device Marquee Keyframes ──────────────────────────────────────── */
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-33.333%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 22s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
+
+/* ─── Global Scroll Reveal ─────────────────────────────────────────────────── */
 [data-reveal] {
   opacity: 0;
   transform: translate3d(0, 10px, 0);
@@ -98,14 +131,14 @@
 /* Title containers stay visible — child word spans still animate via CSS */
 h1,
 .text-h1-b1g,
-[data-no-reveal] {
+[data-no-reveal],
+[data-no-reveal] [data-reveal] {
   opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
 }
 
-/* ─── Skew mask title reveal (CSS-only, transform-only = smooth 60fps) ──────
-   Opacity is intentionally omitted — overflow clip does the reveal, and
-   opacity + background-clip:text (brand gradient) causes paint lag.
-────────────────────────────────────────────────────────────────────────────── */
+/* ─── Skew mask title reveal ───────────────────────────────────────────────── */
 @keyframes mask-skew-reveal {
   from {
     transform: translate3d(0, 110%, 0) skewY(6deg);
@@ -116,7 +149,6 @@ h1,
 }
 
 .mask-reveal__word {
-  /* Must stay inline-block — .text-brand-gradient sets display:inline which breaks transforms */
   display: inline-block !important;
   transform: translate3d(0, 110%, 0) skewY(6deg);
   backface-visibility: hidden;
@@ -149,7 +181,7 @@ h1,
   }
 }
 
-/* ─── Hero mount fade/slide (description + image on load) ─────────────────── */
+/* ─── Hero mount fade/slide ────────────────────────────────────────────────── */
 @keyframes hero-enter-up {
   from {
     opacity: 0;
@@ -173,7 +205,7 @@ h1,
   animation-delay: var(--hero-enter-delay, 0ms);
 }
 
-/* Red Highlighted Text Utility for H1, H2, and Section Titles */
+/* Red Highlighted Text Utility */
 .text-brand-gradient {
   background: linear-gradient(to right, #E01E26 0%, #FF5A5F 50%, #8E0A0F 100%);
   -webkit-background-clip: text;
@@ -184,7 +216,7 @@ h1,
   font-family: 'Poppins', system-ui, -apple-system, sans-serif;
 }
 
-/* Typography Tokens (Max Font Weight 700) */
+/* Typography Tokens */
 .text-h1-b1g {
   font-family: 'Poppins', system-ui, -apple-system, sans-serif;
   font-size: 28px;

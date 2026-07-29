@@ -2,10 +2,7 @@ import React from "react";
 import { B1GHeader } from "@/components/sections/b1g-header";
 import { ConHero } from "@/components/contact/con-hero";
 import { ConHelpOptions } from "@/components/contact/con-help-options";
-import { ConForm } from "@/components/contact/con-form";
 import { ConWhatToInclude } from "@/components/contact/con-what-to-include";
-import { ConReseller } from "@/components/contact/con-reseller";
-import { ConFAQ } from "@/components/contact/con-faq";
 import { ConCTA } from "@/components/contact/con-cta";
 import { B1GFooter } from "@/components/sections/footer";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
@@ -27,10 +24,7 @@ export default function ContactPage() {
 
       <ConHero />
       <ConHelpOptions />
-      <ConForm />
       <ConWhatToInclude />
-      <ConReseller />
-      <ConFAQ />
       <ConCTA />
       <B1GFooter />
     </main>

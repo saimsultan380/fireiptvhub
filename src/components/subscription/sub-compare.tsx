@@ -74,9 +74,7 @@ export function SubCompare() {
                     <th className="px-6 py-4.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#12141F]">
                       Access Period
                     </th>
-                    <th className="px-6 py-4.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#12141F]">
-                      B1G Player
-                    </th>
+                    <th className="px-6 py-4.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#12141F]">IPTV App</th>
                     <th className="px-6 py-4.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#12141F]">
                       Support
                     </th>

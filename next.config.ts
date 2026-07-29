@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const CANONICAL_ORIGIN = "https://b1gplayer.uk";
+const CANONICAL_ORIGIN = "https://fireiptvhub.com";
 
 const nextConfig: NextConfig = {
   // Enforce trailing slashes site-wide (routes, Link, and metadata canonicals)
@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
       // WWW → non-WWW (permanent). Covers all routes including dynamic paths.
       {
         source: "/:path*",
-        has: [{ type: "host", value: "www.b1gplayer.uk" }],
+        has: [{ type: "host", value: "www.fireiptvhub.com" }],
         destination: `${CANONICAL_ORIGIN}/:path*`,
         permanent: true,
       },

@@ -13,7 +13,7 @@ export function B1GTrustRow() {
             <ShieldCheck className="h-4 w-4 sm:h-5 sm:w-5 stroke-[2.5]" />
           </div>
           <span className="text-xs sm:text-xs lg:text-sm font-semibold text-slate-800 tracking-tight leading-tight">
-            Official B1G Player App
+            Official Firestick IPTV App
           </span>
         </div>
 

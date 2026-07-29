@@ -11,7 +11,7 @@ export function B1GHeroMockup() {
         <div className="relative w-full flex items-center justify-center">
           <Image
             src="/hero-image.PNG"
-            alt="B1G Player App Interface Preview"
+            alt="Firestick IPTV streaming preview"
             width={1000}
             height={600}
             priority

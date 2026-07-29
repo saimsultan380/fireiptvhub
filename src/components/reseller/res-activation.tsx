@@ -101,7 +101,7 @@ export function ResActivation() {
                 variant="primary"
                 className="w-full sm:w-auto rounded-[12px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white px-5 py-3 text-xs sm:text-sm font-semibold"
               >
-                <span>Review B1G IPTV customer subscription plans</span>
+                <span>Review Firestick IPTV customer subscription plans</span>
                 <ArrowRight className="ml-2 h-4 w-4 stroke-[2.5]" />
               </Button>
             </Link>

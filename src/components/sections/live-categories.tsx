@@ -80,7 +80,7 @@ export function LiveCategories() {
             <span className="text-brand-gradient font-bold">Movies and Series</span>
           </h2>
           <p className="mt-4 text-sm sm:text-base text-[#4A4A4A] leading-relaxed">
-            B1G IPTV brings several entertainment categories together through the official app or another supported application.
+            Firestick IPTV brings several entertainment categories together through the official app or another supported application.
           </p>
         </FadeIn>
 

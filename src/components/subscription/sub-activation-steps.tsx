@@ -28,7 +28,7 @@ const stepsList: StepItem[] = [
   {
     number: "04",
     title: "Install the App",
-    description: "Use B1G Player on Android or Firestick, or install a compatible alternative player.",
+    description: "Use a compatible IPTV app on Android or Firestick, or install a compatible alternative player.",
   },
   {
     number: "05",

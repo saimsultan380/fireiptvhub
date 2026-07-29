@@ -11,15 +11,15 @@ interface FAQItem {
 
 const faqList: FAQItem[] = [
   {
-    question: "What is B1G Player?",
-    answer: "B1G Player is the official IPTV application used with an active B1G IPTV subscription on compatible Android and Fire TV devices.",
+    question: "What is Firestick IPTV?",
+    answer: "Firestick IPTV is a streaming service that lets you watch live TV, sports, movies and VOD on Fire TV Stick and compatible devices.",
   },
   {
     question: "Does the app come with the subscription?",
     answer: "Yes. Access to the official player is included with each active subscription.",
   },
   {
-    question: "What does a B1G IPTV subscription include?",
+    question: "What does a Firestick IPTV subscription include?",
     answer: "It may include more than 35,000 live channels, 50,000+ movies, 10,000+ television series, sports, EPG, Catch-Up and customer support.",
   },
   {
@@ -47,7 +47,7 @@ const faqList: FAQItem[] = [
     answer: "Visit the Installation Guide or contact the support team.",
   },
   {
-    question: "Can businesses resell B1G IPTV?",
+    question: "Can businesses resell Firestick IPTV?",
     answer: "Yes. Eligible businesses can apply through the reseller page.",
   },
 ];

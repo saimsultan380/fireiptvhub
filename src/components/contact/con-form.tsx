@@ -9,7 +9,7 @@ const enquiryTypes = [
   "Free Trial",
   "Subscription Question",
   "New Activation",
-  "B1G Player Installation",
+  "IPTV Installation",
   "Login Support",
   "Renewal or Upgrade",
   "Reseller Enquiry",
@@ -102,7 +102,7 @@ export function ConForm() {
                 Enquiry Sent Successfully!
               </h3>
               <p className="text-xs sm:text-sm text-slate-500 font-semibold max-w-md leading-relaxed mb-6">
-                Thank you for contacting B1G Player. Our UK support team will respond to your enquiry shortly.
+                Thank you for contacting Fire IPTV Hub. Our UK support team will respond to your enquiry shortly.
               </p>
               <Button
                 variant="outline"

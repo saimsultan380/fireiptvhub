@@ -1,28 +1,17 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { FadeIn } from "@/components/animation/fade-in";
-import { Settings, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Headphones } from "lucide-react";
 
-const panelCapabilities = [
-  "Create customer accounts",
-  "Choose subscription durations",
-  "Allocate connections",
-  "View active accounts",
-  "Track expiry dates",
-  "Renew eligible accounts",
-  "Manage your credit balance",
-  "Create trial accounts where available",
-  "Provide B1G Player installation details",
-];
-
-const resellerDuties = [
-  "Finding customers",
-  "Setting retail prices",
-  "Processing customer payments",
-  "Providing first-line support",
-  "Managing renewals",
-  "Following applicable laws and advertising rules",
+const panelGivesYou = [
+  "Control over account creation (trial, monthly, yearly plans)",
+  "Add or remove clients in seconds",
+  "Full stats & control (user activity, expiry dates, device connections)",
+  "Safe and stable IPTV service with 20,000+ channels and 70,000+ movies",
+  "Live sports: EPL IPTV, EFL IPTV, Sky Sports, DAZN, BeIN Sports, BBC, ITV",
 ];
 
 const Tick = () => (
@@ -44,76 +33,56 @@ export function ResIntro() {
       className="w-full py-12 sm:py-20 bg-white border-t border-slate-200"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
-        
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start w-full">
-          
-          {/* Left Column: Panel Capabilities */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             <FadeIn>
               <h2 className="text-h2 font-bold tracking-tight text-[#12141F] mb-4 font-heading">
-                What Is the B1G Player <span className="text-brand-gradient font-bold">Reseller Programme?</span>
+                What is Firestick IPTV{" "}
+                <span className="text-brand-gradient font-bold">Reseller Panel?</span>
               </h2>
+              <p className="text-sm sm:text-base text-slate-500 font-semibold leading-relaxed mb-4">
+                An IPTV reseller panel is a special dashboard that allows you to create, sell, and manage IPTV subscriptions for your own customers. Instead of building servers or buying expensive systems, you simply purchase reseller credits and use them to generate accounts.
+              </p>
               <p className="text-sm sm:text-base text-slate-500 font-semibold leading-relaxed mb-6">
-                The reseller programme allows approved individuals and businesses to create and manage customer subscriptions through a credit-based panel. Instead of sending every activation request to the main support team, resellers can perform eligible account actions directly.
+                With Fire IPTV Hub UK, our reseller panels give you:
               </p>
 
-              <div className="border-t border-slate-100 pt-5 w-full">
-                <h4 className="text-xs sm:text-sm font-bold text-[#12141F] mb-4">
-                  Depending on the panel configuration, you may be able to:
-                </h4>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
-                  {panelCapabilities.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5">
-                      <Tick />
-                      <span className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
-                        {item}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <ul className="grid grid-cols-1 gap-3 w-full mb-6">
+                {panelGivesYou.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2.5">
+                    <Tick />
+                    <span className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
 
-              <p className="text-xs sm:text-sm text-slate-500 font-semibold mt-6 leading-relaxed">
-                The panel gives you the tools required to organize account administration.
-              </p>
+              <Link href="/contact/">
+                <Button
+                  variant="primary"
+                  className="w-full sm:w-auto rounded-[12px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white px-5 py-3 text-xs sm:text-sm font-semibold"
+                >
+                  <Headphones className="mr-2 h-4 w-4 stroke-[2.5]" />
+                  <span>Contact Us Our Support Team</span>
+                </Button>
+              </Link>
             </FadeIn>
           </div>
 
-          {/* Right Column: Duties Card */}
           <div className="lg:col-span-5 w-full">
             <FadeIn delay={0.1}>
-              <div className="w-full rounded-[12px] border border-slate-200 bg-white p-6 flex flex-col justify-between h-full">
-                <div>
-                  <div className="flex items-center gap-2.5 mb-5">
-                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-red-50 text-[#E01E26] shrink-0">
-                      <Users className="h-4 w-4 stroke-[2]" />
-                    </div>
-                    <h3 className="text-base sm:text-lg font-bold text-[#12141F] leading-none">
-                      Reseller Duties
-                    </h3>
-                  </div>
-
-                  <p className="text-xs sm:text-sm text-slate-500 font-semibold mb-4 leading-relaxed">
-                    You remain responsible for:
-                  </p>
-
-                  <ul className="space-y-3.5">
-                    {resellerDuties.map((duty, idx) => (
-                      <li key={idx} className="flex items-start gap-2.5">
-                        <Tick />
-                        <span className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
-                          {duty}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div className="w-full rounded-[12px] border border-slate-200 bg-slate-50/50 p-6 flex flex-col justify-center min-h-[220px]">
+                <p className="text-[11px] font-bold text-[#E01E26] uppercase tracking-wider mb-2">
+                  Firestick iptv reseller panel UK 2026
+                </p>
+                <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed">
+                  Firestick IPTV Reseller UK dashboard with IPTV reseller panel UK interface showing client growth, subscriptions, profits, scalable business tools, and reseller features for 2026.
+                </p>
               </div>
             </FadeIn>
           </div>
-
         </div>
-
       </div>
     </section>
   );

@@ -19,7 +19,7 @@ const faqList: FAQItem[] = [
     answer: "Yes. Explain your preferred duration, device and viewing requirements.",
   },
   {
-    question: "Can you install B1G Player for me?",
+    question: "Can you Install IPTV App for me?",
     answer: "Support can provide installation instructions and troubleshooting guidance.",
   },
   {

@@ -60,7 +60,7 @@ export function SubFeatures() {
             What Your <span className="text-brand-gradient font-bold">Subscription Includes</span>
           </h2>
           <p className="mt-4 text-sm sm:text-base text-[#4A4A4A] leading-relaxed">
-            A B1G IPTV subscription gives you secure access to the currently available entertainment categories.
+            A Firestick IPTV subscription gives you secure access to the currently available entertainment categories.
           </p>
         </FadeIn>
 

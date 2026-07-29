@@ -3,12 +3,9 @@ import { B1GHeader } from "@/components/sections/b1g-header";
 import { ResHero } from "@/components/reseller/res-hero";
 import { ResIntro } from "@/components/reseller/res-intro";
 import { ResBenefits } from "@/components/reseller/res-benefits";
-import { ResFeatures } from "@/components/reseller/res-features";
 import { ResCreditsWork } from "@/components/reseller/res-credits-work";
 import { ResPackages } from "@/components/reseller/res-packages";
-import { ResActivation } from "@/components/reseller/res-activation";
-import { ResSupport } from "@/components/reseller/res-support";
-import { ResResponsibilities } from "@/components/reseller/res-responsibilities";
+import { ResFeatures } from "@/components/reseller/res-features";
 import { ResFAQ } from "@/components/reseller/res-faq";
 import { ResCTA } from "@/components/reseller/res-cta";
 import { B1GFooter } from "@/components/sections/footer";
@@ -32,12 +29,9 @@ export default function ResellerPanelPage() {
       <ResHero />
       <ResIntro />
       <ResBenefits />
-      <ResFeatures />
       <ResCreditsWork />
       <ResPackages />
-      <ResActivation />
-      <ResSupport />
-      <ResResponsibilities />
+      <ResFeatures />
       <ResFAQ />
       <ResCTA />
       <B1GFooter />

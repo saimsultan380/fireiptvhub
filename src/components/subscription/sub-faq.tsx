@@ -11,7 +11,7 @@ interface FAQItem {
 
 const faqList: FAQItem[] = [
   {
-    question: "Does every plan include B1G Player?",
+    question: "Does every plan include IPTV apps?",
     answer: "Yes. Official app access is included with each active subscription.",
   },
   {
@@ -20,7 +20,7 @@ const faqList: FAQItem[] = [
   },
   {
     question: "Can I watch on Firestick?",
-    answer: "Yes. Install B1G Player using the official Downloader code.",
+    answer: "Yes. Install IPTV App using the official Downloader code.",
   },
   {
     question: "Can I use Samsung or LG?",

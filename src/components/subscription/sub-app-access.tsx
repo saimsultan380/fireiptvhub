@@ -71,7 +71,7 @@ export function SubAppAccess() {
         {/* 2-Column Responsive Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch w-full">
           
-          {/* LEFT COLUMN: B1G Player App Included */}
+          {/* LEFT COLUMN: IPTV App Access Included */}
           <FadeIn className="rounded-[12px] border border-slate-200 bg-white p-6 flex flex-col justify-between h-full">
             <div>
               <div className="flex items-center gap-2.5 mb-5">
@@ -79,7 +79,7 @@ export function SubAppAccess() {
                   <ShieldCheck className="h-4 w-4 stroke-[2]" />
                 </div>
                 <h3 className="text-base sm:text-lg font-bold text-[#12141F] leading-none">
-                  B1G Player App Included
+                  IPTV App Access Included
                 </h3>
               </div>
 
@@ -135,7 +135,7 @@ export function SubAppAccess() {
                   variant="primary"
                   className="w-full sm:w-auto rounded-[12px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white px-5 py-3 text-xs sm:text-sm font-semibold"
                 >
-                  <span>Read the B1G Player Installation Guide</span>
+                  <span>Read the Installation Guide</span>
                   <ArrowRight className="ml-2 h-4 w-4 stroke-[2.5]" />
                 </Button>
               </Link>

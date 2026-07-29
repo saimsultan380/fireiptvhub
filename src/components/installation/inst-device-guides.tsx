@@ -34,7 +34,7 @@ const deviceGuidesList: DeviceGuide[] = [
     id: "firestick",
     name: "Amazon Firestick & Fire TV",
     icon: Cast,
-    title: "How to Install B1G Player on Firestick",
+    title: "How to Install IPTV App on Firestick",
     subtitle: "Amazon Firestick remains one of the most popular devices for IPTV media player installation.",
     showDownloaderCode: true,
     steps: [
@@ -48,7 +48,7 @@ const deviceGuidesList: DeviceGuide[] = [
       },
       {
         title: "Enter the Code",
-        description: "Open Downloader and enter the official Downloader Code: 4172090. Select Go. Confirm that the page displays the official B1G Player app before downloading.",
+        description: "Open Downloader and enter the official Downloader Code: 4172090. Select Go. Confirm that the page displays the Official Firestick IPTV App before downloading.",
       },
       {
         title: "Install the App",
@@ -56,7 +56,7 @@ const deviceGuidesList: DeviceGuide[] = [
       },
       {
         title: "Add App to Home Screen",
-        description: "Open your applications. Highlight B1G Player. Press the menu button. Select Move to Front.",
+        description: "Open your applications. Highlight the IPTV app. Press the menu button. Select Move to Front.",
       },
       {
         title: "Sign In",
@@ -68,7 +68,7 @@ const deviceGuidesList: DeviceGuide[] = [
     id: "android-tv",
     name: "Android TV & Android Boxes",
     icon: Tv,
-    title: "How to Install B1G Player on Android TV & Boxes",
+    title: "How to Install IPTV App on Android TV & Boxes",
     subtitle: "Use Downloader or a compatible installation method.",
     showDownloaderCode: true,
     steps: [
@@ -81,7 +81,7 @@ const deviceGuidesList: DeviceGuide[] = [
         description: "Enter: 4172090.",
       },
       {
-        title: "Install B1G Player",
+        title: "Install IPTV App",
         description: "Download the application file, allow install permissions when prompted, and complete the installation.",
       },
       {
@@ -98,11 +98,11 @@ const deviceGuidesList: DeviceGuide[] = [
     name: "Android Smartphones & Tablets",
     icon: Smartphone,
     title: "Android Phone and Tablet Setup",
-    subtitle: "Quickly set up B1G Player on your mobile Android devices.",
+    subtitle: "Quickly set up IPTV on your mobile Android devices.",
     steps: [
       {
         title: "Download the APK",
-        description: "Open the official download link (http://aftv.news/4172090) through your mobile browser. Download the B1G Player APK.",
+        description: "Open the official download link (http://aftv.news/4172090) through your mobile browser. Download the IPTV app APK.",
       },
       {
         title: "Allow Permissions & Install",
@@ -110,7 +110,7 @@ const deviceGuidesList: DeviceGuide[] = [
       },
       {
         title: "Sign In & Load",
-        description: "Open B1G Player. Enter your B1G IPTV login information (username, password, server URL). Wait for the categories to load.",
+        description: "Open the IPTV app. Enter your Firestick IPTV login information (username, password, server URL). Wait for the categories to load.",
       },
     ],
     notes: [
@@ -122,7 +122,7 @@ const deviceGuidesList: DeviceGuide[] = [
     name: "Samsung Smart TVs",
     icon: Tv,
     title: "Samsung Smart TV Setup",
-    subtitle: "Samsung televisions do not normally run the Android version of B1G Player. Install a compatible alternative player.",
+    subtitle: "Samsung televisions do not normally run the Android IPTV app. Install a compatible alternative player.",
     steps: [
       {
         title: "Select an IPTV App",
@@ -138,7 +138,7 @@ const deviceGuidesList: DeviceGuide[] = [
       },
     ],
     notes: [
-      "Some third-party applications require a separate activation payment. These charges are set by the application developer and are not included with your B1G IPTV subscription.",
+      "Some third-party applications require a separate activation payment. These charges are set by the application developer and are not included with your Firestick IPTV subscription.",
     ],
   },
   {
@@ -183,7 +183,7 @@ const deviceGuidesList: DeviceGuide[] = [
       },
     ],
     notes: [
-      "The official Android B1G Player APK cannot be installed on Apple TV.",
+      "The Android IPTV APK cannot be installed on Apple TV.",
     ],
   },
   {
@@ -199,7 +199,7 @@ const deviceGuidesList: DeviceGuide[] = [
       },
       {
         title: "Configure Credentials",
-        description: "Open the app. Enter the B1G IPTV subscription details (username, password, server URL) supplied after activation.",
+        description: "Open the app. Enter the Firestick IPTV subscription details (username, password, server URL) supplied after activation.",
       },
     ],
     notes: [
@@ -281,10 +281,10 @@ export function InstDeviceGuides() {
                 Installation Guide
               </span>
               <h2 className="text-xl sm:text-2xl font-bold text-[#12141F] mb-1 font-heading">
-                Supported Devices for B1G Player
+                Supported Devices for Firestick IPTV
               </h2>
               <p className="text-xs text-slate-500 font-semibold mb-6">
-                B1G Player supports a wide range of devices.
+                Firestick IPTV supports a wide range of devices.
               </p>
 
               {/* Device Tabs Menu */}
@@ -362,7 +362,7 @@ export function InstDeviceGuides() {
               <div className="relative w-full max-w-md mx-auto my-8 select-none flex items-center justify-center">
                 <Image
                   src="/hero-image.PNG"
-                  alt="B1G Player Supported Devices mockup"
+                  alt="Firestick IPTV supported devices"
                   width={500}
                   height={300}
                   priority

@@ -1,17 +1,13 @@
 import React from "react";
-import { B1GHeader } from "@/components/sections/b1g-header";
-import { SubHero } from "@/components/subscription/sub-hero";
-import { SubConsiderations } from "@/components/subscription/sub-considerations";
-import { SubPricing } from "@/components/subscription/sub-pricing";
-import { SubCompare } from "@/components/subscription/sub-compare";
-import { SubFeatures } from "@/components/subscription/sub-features";
-import { SubAppAccess } from "@/components/subscription/sub-app-access";
-import { SubActivationSteps } from "@/components/subscription/sub-activation-steps";
-import { SubTrial } from "@/components/subscription/sub-trial";
-import { SubRenew } from "@/components/subscription/sub-renew";
-import { SubFAQ } from "@/components/subscription/sub-faq";
-import { SubCTA } from "@/components/subscription/sub-cta";
-import { B1GFooter } from "@/components/sections/footer";
+import { FireHeader } from "@/components/sections/fire-header";
+import { FireHeroSection } from "@/components/sections/fire-hero-section";
+import { WhyChooseSection } from "@/components/sections/fire-why-choose";
+import { FirePricing } from "@/components/sections/fire-pricing";
+import { FireFeatures } from "@/components/sections/fire-features";
+import { FirePlanGuide } from "@/components/sections/fire-plan-guide";
+import { FireInstantActivation } from "@/components/sections/fire-instant-activation";
+import { FireFAQ } from "@/components/sections/fire-faq";
+import { FireFooter } from "@/components/sections/fire-footer";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import { buildPageMetadata, SITE_PAGES } from "@/lib/seo";
 
@@ -26,21 +22,17 @@ export const metadata = buildPageMetadata({
 export default function SubscriptionPlansPage() {
   return (
     <main className="min-h-screen bg-white">
-      <B1GHeader />
+      <FireHeader />
       <BreadcrumbJsonLd items={[...page.breadcrumbs]} />
 
-      <SubHero />
-      <SubConsiderations />
-      <SubPricing />
-      <SubCompare />
-      <SubFeatures />
-      <SubAppAccess />
-      <SubActivationSteps />
-      <SubTrial />
-      <SubRenew />
-      <SubFAQ />
-      <SubCTA />
-      <B1GFooter />
+      <FireHeroSection />
+      <WhyChooseSection />
+      <FirePricing />
+      <FireFeatures />
+      <FirePlanGuide />
+      <FireInstantActivation />
+      <FireFAQ />
+      <FireFooter />
     </main>
   );
 }

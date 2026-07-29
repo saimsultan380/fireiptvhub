@@ -62,7 +62,7 @@ export function InstUsageGuide() {
             </h3>
           </div>
           <h2 className="text-h2 font-bold tracking-tight text-[#12141F]">
-            Using the <span className="text-brand-gradient font-bold">B1G Player App</span>
+            Using the <span className="text-brand-gradient font-bold">IPTV App</span>
           </h2>
           <p className="mt-4 text-sm sm:text-base text-[#4A4A4A] leading-relaxed">
             Once setup has completed, the home screen displays available content categories and navigation panels.

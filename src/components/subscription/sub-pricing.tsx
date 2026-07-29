@@ -24,7 +24,7 @@ const getFeaturesForMonths = (monthsText: string) => [
   "Electronic Programme Guide",
   "Catch-Up where available",
   "HD, Full HD and 4K streams where supported",
-  "Official B1G Player App",
+  "Official Firestick IPTV App",
   "Private username, password and server URL",
   "Instant activation",
   "UK customer assistance",
@@ -77,7 +77,7 @@ export function SubPricing() {
         {/* Section Title */}
         <FadeIn className="w-full max-w-4xl mb-12">
           <h2 className="text-h2 font-bold tracking-tight text-[#12141F]">
-            Official B1G IPTV{" "}
+            Official Firestick IPTV{" "}
             <span className="text-brand-gradient font-bold">Subscription Plans</span>
           </h2>
         </FadeIn>

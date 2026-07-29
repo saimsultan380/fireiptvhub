@@ -19,12 +19,12 @@ export function SubCTA() {
           
           {/* Header Title */}
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#12141F] max-w-2xl font-heading mb-4">
-            Choose Your <span className="text-brand-gradient font-bold">B1G IPTV Subscription</span>
+            Choose Your <span className="text-brand-gradient font-bold">Firestick IPTV Subscription</span>
           </h2>
 
           {/* Subtitle Description */}
           <p className="text-xs sm:text-sm lg:text-base text-slate-500 font-semibold leading-relaxed max-w-3xl mb-8">
-            Compare the available durations, choose your plan and receive access to B1G Player after activation.
+            Compare the available durations, choose your plan and receive access after activation.
           </p>
 
           {/* Action CTAs */}
@@ -38,7 +38,7 @@ export function SubCTA() {
                 className="w-full sm:w-auto rounded-[12px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white px-8 py-3.5 text-xs sm:text-sm font-semibold shine-effect"
               >
                 <CreditCard className="mr-2 h-4 w-4 stroke-[2.5]" />
-                <span>Buy B1G IPTV Subscription</span>
+                <span>Buy Firestick IPTV Subscription</span>
               </Button>
             </Link>
 

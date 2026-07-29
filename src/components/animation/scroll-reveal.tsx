@@ -25,6 +25,13 @@ export function ScrollReveal() {
       // Never animate hero titles
       if (el.matches("h1, .text-h1-b1g")) return true;
       if (el.closest("h1, .text-h1-b1g")) return true;
+      // Interactive controls — React className updates wipe `.revealed` and leave opacity:0
+      if (el.matches("button, a, input, select, textarea, label, [role='tab'], [role='switch'], [aria-pressed]")) {
+        return true;
+      }
+      if (el.closest("button, a, [role='tablist'], [data-tabs], [data-toggle]")) {
+        return true;
+      }
       return false;
     };
 
@@ -80,6 +87,17 @@ export function ScrollReveal() {
     const autoMark = () => {
       const root = document.body;
 
+      // Repair interactive controls stuck invisible after React className overwrote `.revealed`
+      root
+        .querySelectorAll<HTMLElement>(
+          "button[data-reveal], a[data-reveal], [role='tab'][data-reveal], [aria-pressed][data-reveal], [data-tabs][data-reveal], [data-toggle][data-reveal], [data-tabs] [data-reveal], [data-toggle] [data-reveal]"
+        )
+        .forEach((el) => {
+          el.classList.add("revealed");
+          el.removeAttribute("data-reveal");
+          el.removeAttribute("data-delay");
+        });
+
       root
         .querySelectorAll<HTMLElement>("section div, footer div")
         .forEach((el) => {
@@ -112,11 +130,8 @@ export function ScrollReveal() {
           mark(el, (i % 6) * 40, { allowNested: true });
         });
 
-      root
-        .querySelectorAll<HTMLElement>("section button, footer button")
-        .forEach((el, i) => {
-          mark(el, (i % 4) * 40, { allowNested: true });
-        });
+      // Never mark buttons: React overwrites className on re-render and strips
+      // the observer's `.revealed` class, leaving [data-reveal]{opacity:0} forever.
 
       // Section images only — never hero images
       root.querySelectorAll<HTMLElement>("section img").forEach((el) => {

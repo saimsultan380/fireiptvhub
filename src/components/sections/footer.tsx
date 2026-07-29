@@ -16,7 +16,7 @@ export function B1GFooter() {
           <div className="md:col-span-6 flex flex-col items-start gap-4">
             <B1GLogo size="md" />
             <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed max-w-sm">
-              B1G Player is the official IPTV media application, providing a high-quality streaming interface for compatible Android and Fire TV platforms.
+              Fire IPTV Hub UK provides premium Firestick IPTV subscriptions with 20,000+ live TV channels, 70,000+ movies and TV shows, and 24/7 customer support.
             </p>
           </div>
 
@@ -77,7 +77,7 @@ export function B1GFooter() {
               </li>
               <li>
                 <Link
-                  href="/b1g-iptv-subscription/#free-trial"
+                  href="/contact/"
                   className="text-xs sm:text-sm text-slate-500 hover:text-[#E01E26] font-semibold transition-colors"
                 >
                   Request a Free Trial
@@ -100,10 +100,10 @@ export function B1GFooter() {
         <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="space-y-2">
             <p className="text-xs text-slate-400 font-semibold">
-              © {new Date().getFullYear()} B1G Player. All rights reserved.
+              Copyright © {new Date().getFullYear()} Fire IPTV Player, All rights reserved.
             </p>
             <p className="text-[11px] text-slate-400 leading-relaxed max-w-4xl">
-              <strong>Disclaimer:</strong> B1G Player is an IPTV media player application. It does not own, host, distribute, or stream any digital audio/video media content. Users must supply their own playlist URL, login credentials, or active subscription supplied by their service provider to stream content.
+              <strong>Disclaimer:</strong> Fire IPTV Hub is an IPTV subscription service. Users must use compatible player apps and login credentials supplied after activation to stream content.
             </p>
           </div>
         </div>

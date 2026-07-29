@@ -46,11 +46,11 @@ export function WhatIsB1GPlayer() {
         {/* Section Heading & Intro Paragraphs */}
         <FadeIn className="w-full max-w-4xl mb-10">
           <h2 className="text-h2 font-bold tracking-tight text-[#12141F]">
-            What Is <span className="text-brand-gradient font-bold">B1G Player?</span>
+            What Is <span className="text-brand-gradient font-bold">Firestick IPTV?</span>
           </h2>
           <div className="mt-4 space-y-3 text-sm sm:text-base text-[#4A4A4A] leading-relaxed">
             <p>
-              B1G Player is the official IPTV application developed for customers with an active B1G IPTV subscription.
+              Firestick IPTV is a premium streaming subscription for customers who want live TV, sports, movies and on-demand entertainment.
             </p>
             <p>
               It provides a straightforward way to sign in using the private username, password and server URL supplied after activation. Once the account has loaded, the application organises available live television, sports, movies, television series and programme-guide information into clear sections.
@@ -131,7 +131,7 @@ export function WhatIsB1GPlayer() {
         <FadeIn className="w-full">
           <div className="w-full rounded-[12px] border border-slate-200 bg-white p-5 sm:p-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <p className="text-xs sm:text-sm text-[#4A4A4A] leading-relaxed max-w-2xl">
-              The player works together with the subscription. It provides the interface, while the active B1G IPTV account supplies the available channels and on-demand categories.
+              The player works together with the subscription. It provides the interface, while the active Firestick IPTV account supplies the available channels and on-demand categories.
             </p>
 
             <Link href="#installation" className="shrink-0 w-full md:w-auto">
@@ -140,7 +140,7 @@ export function WhatIsB1GPlayer() {
                 size="lg"
                 className="w-full md:w-auto rounded-[12px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white px-5 sm:px-6 py-3.5 text-xs sm:text-sm font-semibold"
               >
-                <span>Install B1G Player on Firestick or Android</span>
+                <span>Install IPTV on Firestick or Android</span>
                 <ArrowRight className="ml-2 h-4 w-4 stroke-[2.5]" />
               </Button>
             </Link>

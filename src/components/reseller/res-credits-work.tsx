@@ -1,31 +1,17 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { FadeIn } from "@/components/animation/fade-in";
-import { Coins, AlertCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Coins, BookOpen } from "lucide-react";
 
-const purchaseChecks = [
-  "Credit quantity",
-  "Package price",
-  "Credit expiry rules",
-  "Trial-credit rules",
-  "Renewal-credit cost",
-  "Connection charges",
-  "Minimum top-up limit",
-  "Refund policy terms",
+const creditSteps = [
+  "You buy credits from us (discounted bulk pricing)",
+  "1 credit = 1 month subscription for your customer",
+  "You decide your own retail price (e.g. sell £9.99 plans at £14.99 and keep profit)",
+  "Use the reseller panel to activate accounts instantly",
 ];
-
-const Tick = () => (
-  <svg
-    className="h-4 w-4 text-[#E01E26] shrink-0 mt-0.5"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    strokeWidth={2.5}
-  >
-    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-  </svg>
-);
 
 export function ResCreditsWork() {
   return (
@@ -34,67 +20,53 @@ export function ResCreditsWork() {
       className="w-full py-12 sm:py-20 bg-white border-t border-slate-200"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
-        
-        {/* Card Box Container with Border and no shadow */}
         <FadeIn className="w-full rounded-[12px] border border-slate-200 bg-white p-6 sm:p-8 flex flex-col justify-between">
-          
           <div>
-            {/* Header Icon + Title */}
             <div className="flex items-center gap-2.5 mb-6">
               <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-red-50 text-[#E01E26] shrink-0">
                 <Coins className="h-4 w-4 stroke-[2]" />
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-[#12141F] leading-none font-heading">
-                How Reseller Credits Work
-              </h3>
+              <h2 className="text-base sm:text-lg font-bold text-[#12141F] leading-none font-heading">
+                How Firestick IPTV Reseller Credits Work
+              </h2>
             </div>
 
-            {/* Split Grid for Copy and Checklist */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-              
-              {/* Left Column (Copy explanations) */}
-              <div className="lg:col-span-6 space-y-4 text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed">
-                <p>
-                  Each customer account uses a set number of credits.
-                </p>
-                <p>
-                  The amount may depend on: subscription duration, number of connections, account type, and current reseller rules.
-                </p>
-                <p>
-                  For example, a one-month account may use fewer credits than a twelve-month account.
-                </p>
-              </div>
-
-              {/* Right Column (Checklist of items) */}
-              <div className="lg:col-span-6 border-t lg:border-t-0 lg:border-l border-slate-100 pt-6 lg:pt-0 lg:pl-8">
-                <h4 className="text-xs sm:text-sm font-bold text-[#12141F] mb-3">
-                  Before purchasing a package, check:
-                </h4>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {purchaseChecks.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <Tick />
+              <div className="lg:col-span-7">
+                <ol className="space-y-4">
+                  {creditSteps.map((step, idx) => (
+                    <li key={idx} className="flex items-start gap-2.5">
+                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-50 border border-red-100 text-[#E01E26] font-bold text-xs mt-0.5">
+                        {idx + 1}
+                      </span>
                       <span className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
-                        {item}
+                        {step}
                       </span>
                     </li>
                   ))}
-                </ul>
+                </ol>
+
+                <div className="mt-6">
+                  <Link href="/b1g-player-installation-guide/">
+                    <Button
+                      variant="outline"
+                      className="w-full sm:w-auto rounded-[12px] border-2 border-[#E01E26] bg-white text-[#12141F] px-5 py-3 text-xs sm:text-sm font-semibold hover:bg-red-50"
+                    >
+                      <BookOpen className="mr-2 h-4 w-4 text-[#E01E26] stroke-[2.5]" />
+                      <span>Installation Guide</span>
+                    </Button>
+                  </Link>
+                </div>
               </div>
 
+              <div className="lg:col-span-5 border-t lg:border-t-0 lg:border-l border-slate-100 pt-6 lg:pt-0 lg:pl-8">
+                <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed">
+                  Firestick IPTV Reseller UK dashboard with IPTV reseller panel UK showing instant activation, reseller credits, account management, profit tracking and scalable business features for 2026.
+                </p>
+              </div>
             </div>
           </div>
-
-          {/* Bottom disclaimer */}
-          <div className="border-t border-slate-100 pt-5 mt-8 flex items-start gap-2.5">
-            <AlertCircle className="h-4 w-4 text-[#E01E26] shrink-0 mt-0.5 stroke-[2.5]" />
-            <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed">
-              Monitor the credit balance regularly so new activations are not delayed.
-            </p>
-          </div>
-
         </FadeIn>
-
       </div>
     </section>
   );

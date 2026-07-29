@@ -52,16 +52,16 @@ export function B1GHeader() {
         className={`hidden lg:flex h-[84px] w-full items-center justify-between rounded-[12px] px-8 overflow-hidden ${glassSurface}`}
       >
         
-        {/* 1) LEFT: Logo image only (square ~64x64, object-contain) */}
+        {/* 1) LEFT: Logo image */}
         <Link href="/" className="flex items-center shrink-0 group">
-          <div className="relative w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-[1.02]">
+          <div className="relative w-[140px] h-[72px] flex items-center justify-center transition-transform duration-300 group-hover:scale-[1.02]">
             <Image
               src="/logo.PNG"
-              alt="B1G Player Logo"
-              width={64}
-              height={64}
+              alt="Fire IPTV Hub Logo"
+              width={140}
+              height={72}
               priority
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain object-left"
             />
           </div>
         </Link>
@@ -104,14 +104,14 @@ export function B1GHeader() {
           {/* Collapsed Top Bar (~64px tall) */}
           <div className="flex h-[64px] items-center justify-between px-5 shrink-0">
             <Link href="/" className="flex items-center group">
-              <div className="relative w-[54px] h-[54px] flex items-center justify-center transition-transform duration-300 group-active:scale-[1.02]">
+              <div className="relative w-[110px] h-[52px] flex items-center justify-center transition-transform duration-300 group-active:scale-[1.02]">
                 <Image
                   src="/logo.PNG"
-                  alt="B1G Player Logo"
-                  width={54}
-                  height={54}
+                  alt="Fire IPTV Hub Logo"
+                  width={110}
+                  height={52}
                   priority
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain object-left"
                 />
               </div>
             </Link>

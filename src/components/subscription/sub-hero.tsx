@@ -27,8 +27,8 @@ export function SubHero() {
                   as="h1"
                   className="text-h1-b1g leading-[1.15] font-bold tracking-tight"
                   parts={[
-                    { text: "B1G Player Subscription Plans –" },
-                    { text: "B1G IPTV Packages", className: "text-brand-gradient font-bold" },
+                    { text: "Firestick IPTV Subscription Plans –" },
+                    { text: "Firestick IPTV Packages", className: "text-brand-gradient font-bold" },
                     { text: "for UK Viewers" },
                   ]}
                 />
@@ -38,10 +38,10 @@ export function SubHero() {
               <FadeIn delay={0.22} duration={0.45} yOffset={14}>
                 <div className="mt-4 sm:mt-6 space-y-3 sm:space-y-4 text-xs sm:text-sm lg:text-base text-black leading-relaxed">
                   <p>
-                    Choose a B1G Player subscription plan that matches your preferred duration, budget and viewing requirements.
+                    Choose a Firestick IPTV subscription plan that matches your preferred duration, budget and viewing requirements.
                   </p>
                   <p>
-                    Every active B1G IPTV subscription includes access to the official app on compatible Android and Fire TV devices, together with a secure username, password and server URL.
+                    Every active Firestick IPTV subscription includes access to the official app on compatible Android and Fire TV devices, together with a secure username, password and server URL.
                   </p>
                   <p>
                     Browse available live television, sports, movies, television series, news, documentaries and international entertainment through one subscription.
@@ -76,7 +76,7 @@ export function SubHero() {
                     className="w-full sm:w-auto rounded-[12px] border-2 border-[#E01E26] bg-white text-[#12141F] px-5 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm lg:text-base font-semibold whitespace-nowrap hover:bg-red-50"
                   >
                     <Tv className="mr-1.5 sm:mr-2 h-3.5 w-3.5 sm:h-5 sm:w-5 text-[#E01E26] shrink-0 stroke-[2.5]" />
-                    <span>Install B1G Player</span>
+                    <span>Install IPTV App</span>
                   </Button>
                 </Link>
               </div>
@@ -140,8 +140,8 @@ export function SubHero() {
                 as="h1"
                 className="text-h1-b1g leading-[1.15] font-bold tracking-tight"
                 parts={[
-                  { text: "B1G Player Subscription Plans –" },
-                  { text: "B1G IPTV Packages", className: "text-brand-gradient font-bold" },
+                  { text: "Firestick IPTV Subscription Plans –" },
+                  { text: "Firestick IPTV Packages", className: "text-brand-gradient font-bold" },
                   { text: "for UK Viewers" },
                 ]}
               />
@@ -150,10 +150,10 @@ export function SubHero() {
             <FadeIn delay={0.22} duration={0.45} yOffset={14} className="w-full">
               <div className="mt-4 space-y-3 text-xs sm:text-sm text-black leading-relaxed">
                 <p>
-                  Choose a B1G Player subscription plan that matches your preferred duration, budget and viewing requirements.
+                  Choose a Firestick IPTV subscription plan that matches your preferred duration, budget and viewing requirements.
                 </p>
                 <p>
-                  Every active B1G IPTV subscription includes access to the official app on compatible Android and Fire TV devices, together with a secure username, password and server URL.
+                  Every active Firestick IPTV subscription includes access to the official app on compatible Android and Fire TV devices, together with a secure username, password and server URL.
                 </p>
                 <p>
                   Browse available live television, sports, movies, television series, news, documentaries and international entertainment through one subscription.
@@ -191,7 +191,7 @@ export function SubHero() {
                   className="w-full rounded-[12px] border-2 border-[#E01E26] bg-white text-[#12141F] py-3.5 text-xs sm:text-sm font-semibold hover:bg-red-50"
                 >
                   <Tv className="mr-2 h-4 w-4 text-[#E01E26] shrink-0 stroke-[2.5]" />
-                  <span>Install B1G Player</span>
+                  <span>Install IPTV App</span>
                 </Button>
               </Link>
             </div>

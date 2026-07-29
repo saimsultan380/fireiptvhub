@@ -144,7 +144,7 @@ export function B1GPricing() {
         {/* ── Section Heading & Intro ── */}
         <FadeIn className="w-full max-w-4xl mb-12">
           <h2 className="text-h2 font-bold tracking-tight text-[#12141F]">
-            Official B1G IPTV{" "}
+            Official Firestick IPTV{" "}
             <span className="text-brand-gradient font-bold">Subscription Plans</span>
           </h2>
           <div className="mt-4 space-y-3 text-sm sm:text-base text-[#4A4A4A] leading-relaxed">
@@ -152,7 +152,7 @@ export function B1GPricing() {
               Choose a plan based on how long you want access and the option that best suits your budget.
             </p>
             <p>
-              Every current plan includes access to the B1G Player app on supported devices, secure login information and customer assistance.
+              Every current plan includes access to compatible IPTV apps on supported devices, secure login information and customer assistance.
             </p>
           </div>
         </FadeIn>
@@ -254,7 +254,7 @@ export function B1GPricing() {
                 size="lg"
                 className="w-full md:w-auto rounded-[12px] border-2 border-[#E01E26] bg-white text-[#12141F] px-5 sm:px-6 py-3.5 text-xs sm:text-sm font-semibold hover:bg-red-50"
               >
-                <span>Compare all B1G IPTV subscription plans</span>
+                <span>Compare all Firestick IPTV subscription plans</span>
                 <ArrowRight className="ml-2 h-4 w-4 stroke-[2.5]" />
               </Button>
             </Link>

@@ -1,18 +1,13 @@
 import React from "react";
 import { B1GHeader } from "@/components/sections/b1g-header";
-import { B1GHeroSection } from "@/components/sections/b1g-hero-section";
-import { WhatIsB1GPlayer } from "@/components/sections/what-is-b1g-player";
-import { WhyUKViewers } from "@/components/sections/why-uk-viewers";
-import { LiveCategories } from "@/components/sections/live-categories";
-import { B1GPricing } from "@/components/sections/pricing";
-import { WhatIsIncluded } from "@/components/sections/what-is-included";
-import { CompatibleDevices } from "@/components/sections/compatible-devices";
-import { DownloadApp } from "@/components/sections/download-app";
-import { MoreDevices } from "@/components/sections/more-devices";
-import { StartWatchingSteps } from "@/components/sections/steps";
-import { PlaybackTips } from "@/components/sections/playback-tips";
-import { B1GFAQ } from "@/components/sections/faq";
-import { B1GCTABanner } from "@/components/sections/cta-banner";
+import { HomeHeroSection } from "@/components/sections/home-hero";
+import { HomeWhyChooseSection } from "@/components/sections/home-why-choose";
+import { HomePricingSection } from "@/components/sections/home-pricing";
+import { DeviceMarquee } from "@/components/sections/device-marquee";
+import { HomeDevicesSection } from "@/components/sections/home-devices";
+import { HomeFeaturesSection } from "@/components/sections/home-features";
+import { HomePaymentsSupportSection } from "@/components/sections/home-payments-support";
+import { HomeFAQSection } from "@/components/sections/home-faq";
 import { B1GFooter } from "@/components/sections/footer";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
 import { buildPageMetadata, SITE_PAGES } from "@/lib/seo";
@@ -31,19 +26,14 @@ export default function HomePage() {
       <B1GHeader />
       <BreadcrumbJsonLd items={[...page.breadcrumbs]} />
 
-      <B1GHeroSection />
-      <WhatIsB1GPlayer />
-      <WhyUKViewers />
-      <LiveCategories />
-      <B1GPricing />
-      <WhatIsIncluded />
-      <CompatibleDevices />
-      <DownloadApp />
-      <MoreDevices />
-      <StartWatchingSteps />
-      <PlaybackTips />
-      <B1GFAQ />
-      <B1GCTABanner />
+      <HomeHeroSection />
+      <HomeWhyChooseSection />
+      <HomePricingSection />
+      <DeviceMarquee />
+      <HomeDevicesSection />
+      <HomeFeaturesSection />
+      <HomePaymentsSupportSection />
+      <HomeFAQSection />
       <B1GFooter />
     </main>
   );

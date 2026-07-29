@@ -1,29 +1,22 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { FadeIn } from "@/components/animation/fade-in";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, AlertTriangle, CheckSquare } from "lucide-react";
+import { Package, ListChecks } from "lucide-react";
 
-const prepareList = [
-  "Active B1G IPTV subscription or trial",
-  "Compatible device",
-  "Stable internet connection",
-  "Username",
-  "Password",
-  "Server URL",
-  "Available device storage",
-  "Access to installation permissions",
+const boxContents = [
+  "Your Fire TV Stick — the streaming device itself",
+  "The Fire TV Stick remote, with batteries already included",
+  "A USB power cable and wall adapter — always power from the wall, not the TV",
+  "An HDMI extender — a small but useful cable for when your TV’s HDMI port sits in a tight or awkward spot",
 ];
 
-const doNotList = [
-  "Add spaces before or after the login",
-  "Change capital letters",
-  "Shorten the server URL",
-  "Post the information publicly",
-  "Enter the login into unknown websites",
-  "Download unofficial copies of the app",
+const whatYouNeed = [
+  "Any Amazon Fire TV Stick model — Lite, HD, 4K, or 4K Max",
+  "A TV with a free HDMI port — any modern television qualifies",
+  "A working WiFi connection — 25 Mbps or faster keeps HD streaming smooth",
+  "An Amazon account — the free version is all you need; you can create one during setup",
+  "The USB power adapter from the box — TV USB ports often can’t supply enough power, causing random restarts",
 ];
 
 const Tick = () => (
@@ -38,10 +31,6 @@ const Tick = () => (
   </svg>
 );
 
-const WarningDot = () => (
-  <span className="flex h-1.5 w-1.5 shrink-0 rounded-full bg-[#E01E26] mt-2" />
-);
-
 export function InstBeforeBegin() {
   return (
     <section
@@ -49,21 +38,26 @@ export function InstBeforeBegin() {
       className="w-full py-12 sm:py-20 bg-white border-t border-slate-200"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
-        
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start w-full">
-          
-          {/* Left Column: Preparation checklist */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left">
-            <FadeIn>
-              <h2 className="text-h2 font-bold tracking-tight text-[#12141F] mb-4">
-                Before You <span className="text-brand-gradient font-bold">Begin</span>
-              </h2>
-              <p className="text-sm sm:text-base text-slate-500 font-semibold leading-relaxed mb-6">
-                Prepare the following parameters before starting the installation:
+        <FadeIn className="w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch w-full">
+            {/* Card 1 — What's Inside the Box */}
+            <div className="rounded-[12px] border border-slate-200 bg-white p-6 sm:p-8 flex flex-col h-full transition-colors hover:border-slate-300">
+              <div className="flex items-start gap-2.5 mb-4">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-red-50 text-[#E01E26] shrink-0 mt-0.5">
+                  <Package className="h-4 w-4 stroke-[2]" />
+                </div>
+                <h2 className="text-lg sm:text-xl font-bold tracking-tight text-[#12141F] font-heading leading-snug">
+                  What&apos;s Inside the Box –{" "}
+                  <span className="text-brand-gradient font-bold">Fire TV Stick Unboxing</span>
+                </h2>
+              </div>
+
+              <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed mb-5">
+                Open your Fire TV Stick box and you’ll find everything needed for installation — no extra purchases required:
               </p>
 
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 mb-6 w-full">
-                {prepareList.map((item, idx) => (
+              <ul className="space-y-3.5 mb-5 w-full flex-1">
+                {boxContents.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2.5">
                     <Tick />
                     <span className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
@@ -73,58 +67,40 @@ export function InstBeforeBegin() {
                 ))}
               </ul>
 
-              <p className="text-xs sm:text-sm text-slate-500 font-semibold mb-6 leading-relaxed">
-                Your account details should be entered exactly as supplied.
+              <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed pt-4 border-t border-slate-100">
+                One tip most guides miss: keep the HDMI extender even if your port has plenty of room. Moving the stick a few inches away from the TV’s body can noticeably improve its WiFi reception.
+              </p>
+            </div>
+
+            {/* Card 2 — What You'll Need */}
+            <div className="rounded-[12px] border border-slate-200 bg-white p-6 sm:p-8 flex flex-col h-full transition-colors hover:border-slate-300">
+              <div className="flex items-start gap-2.5 mb-4">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-red-50 text-[#E01E26] shrink-0 mt-0.5">
+                  <ListChecks className="h-4 w-4 stroke-[2]" />
+                </div>
+                <h2 className="text-lg sm:text-xl font-bold tracking-tight text-[#12141F] font-heading leading-snug">
+                  What You&apos;ll Need Before Setting Up Your{" "}
+                  <span className="text-brand-gradient font-bold">Firestick</span>
+                </h2>
+              </div>
+
+              <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed mb-5">
+                Have these five things ready and the whole Fire TV Stick installation will run without a single pause:
               </p>
 
-              <div className="border-t border-slate-100 pt-6 w-full">
-                <p className="text-xs sm:text-sm text-slate-500 font-semibold mb-4 leading-relaxed">
-                  Have you not selected a subscription package yet?
-                </p>
-                <Link href="/b1g-iptv-subscription/">
-                  <Button
-                    variant="primary"
-                    className="w-full sm:w-auto rounded-[12px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white px-5 py-3 text-xs sm:text-sm font-semibold"
-                  >
-                    <span>Visit Subscription Plans page</span>
-                    <ArrowRight className="ml-2 h-4 w-4 stroke-[2.5]" />
-                  </Button>
-                </Link>
-              </div>
-            </FadeIn>
+              <ul className="space-y-3.5 w-full flex-1">
+                {whatYouNeed.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2.5">
+                    <Tick />
+                    <span className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-
-          {/* Right Column: Precaution Warning Card */}
-          <div className="lg:col-span-5 w-full">
-            <FadeIn delay={0.1}>
-              <div className="w-full rounded-[12px] border border-[#E01E26]/20 bg-red-50/10 p-6 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center gap-2.5 mb-5">
-                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-red-50 text-[#E01E26] shrink-0">
-                      <AlertTriangle className="h-4 w-4 stroke-[2]" />
-                    </div>
-                    <h3 className="text-base sm:text-lg font-bold text-[#E01E26] leading-none">
-                      Do Not:
-                    </h3>
-                  </div>
-
-                  <ul className="space-y-3.5">
-                    {doNotList.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-2.5">
-                        <WarningDot />
-                        <span className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
-                          {item}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </FadeIn>
-          </div>
-
-        </div>
-
+        </FadeIn>
       </div>
     </section>
   );

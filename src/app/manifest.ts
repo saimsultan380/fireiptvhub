@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "B1G Player",
-    short_name: "B1G Player",
+    name: "Fire IPTV Hub",
+    short_name: "Fire IPTV Hub",
     description:
-      "Official B1G Player IPTV app for B1G IPTV subscriptions on Firestick and Android devices.",
+      "Firestick IPTV UK – premium IPTV subscription for Fire TV Stick with 20,000+ live channels, sports, movies and 24/7 support.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

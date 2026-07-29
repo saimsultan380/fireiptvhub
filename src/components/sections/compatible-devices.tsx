@@ -77,7 +77,7 @@ export function CompatibleDevices() {
             Compatible <span className="text-brand-gradient font-bold">Devices</span>
           </h2>
           <p className="mt-4 text-sm sm:text-base text-[#4A4A4A] leading-relaxed">
-            The official B1G Player app is designed for Android and Fire TV platforms.
+            The Official Firestick IPTV App is designed for Android and Fire TV platforms.
           </p>
         </FadeIn>
 
@@ -121,7 +121,7 @@ export function CompatibleDevices() {
 
               <div className="border-t border-slate-100 pt-4 mt-6">
                 <p className="text-xs text-slate-500 font-semibold leading-relaxed">
-                  These devices support direct installation of the official B1G Player client app.
+                  These devices support direct installation of the compatible IPTV client app.
                 </p>
               </div>
             </div>
@@ -139,7 +139,7 @@ export function CompatibleDevices() {
                 </div>
                 
                 <p className="text-xs sm:text-sm text-slate-500 mb-4 font-semibold leading-relaxed">
-                  A B1G IPTV subscription may also be used through compatible players on:
+                  A Firestick IPTV subscription may also be used through compatible players on:
                 </p>
 
                 {/* Alt Devices Grid */}
@@ -206,7 +206,7 @@ export function CompatibleDevices() {
               {/* Disclaimer footer */}
               <div className="border-t border-slate-100 pt-4 mt-6">
                 <p className="text-xs text-slate-500 font-semibold leading-relaxed">
-                  Third-party application fees are separate from the B1G IPTV subscription.
+                  Third-party application fees are separate from the Firestick IPTV subscription.
                 </p>
               </div>
             </div>

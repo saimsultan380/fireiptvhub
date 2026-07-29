@@ -5,7 +5,7 @@ import Link from "next/link";
 import { B1GHeroMockup } from "@/components/sections/b1g-hero-mockup";
 import { FadeIn } from "@/components/animation/fade-in";
 import { Button } from "@/components/ui/button";
-import { Download, HelpCircle, ShieldCheck, KeyRound, Headphones } from "lucide-react";
+import { Tv } from "lucide-react";
 import { MaskReveal } from "@/components/animation/mask-reveal";
 
 export function InstHero() {
@@ -17,7 +17,7 @@ export function InstHero() {
         {/* DESKTOP LAYOUT (lg:grid lg:grid-cols-12) */}
         <div className="hidden lg:grid lg:grid-cols-12 lg:gap-12 lg:items-center">
           
-          {/* Left Column (Headline + Paragraphs + CTAs + Trust Row) */}
+          {/* Left Column (Headline + Paragraphs + CTAs) */}
           <div className="lg:col-span-6 flex flex-col items-start">
             <div className="flex flex-col items-start text-left">
               {/* Main H1 Headline with Skew Reveal — outside FadeIn */}
@@ -27,9 +27,9 @@ export function InstHero() {
                   as="h1"
                   className="text-h1-b1g leading-[1.15] font-bold tracking-tight"
                   parts={[
-                    { text: "B1G Player Installation Guide –" },
-                    { text: "Firestick, Android TV", className: "text-brand-gradient font-bold" },
-                    { text: "& More" },
+                    { text: "Fire TV Stick Installation Guide –" },
+                    { text: "Easy Setup for All Firestick Models", className: "text-brand-gradient font-bold" },
+                    { text: "(2026)" },
                   ]}
                 />
               </div>
@@ -38,16 +38,13 @@ export function InstHero() {
               <FadeIn delay={0.22} duration={0.45} yOffset={14}>
                 <div className="mt-4 sm:mt-6 space-y-3 sm:space-y-4 text-xs sm:text-sm lg:text-base text-black leading-relaxed">
                   <p>
-                    Install B1G Player on a compatible Firestick, Fire TV, Android TV, Android box, smartphone or tablet.
+                    Just unboxed a new Fire TV Stick and not sure where to start? You’re in exactly the right place. This Fire TV Stick installation guide takes you from the sealed box to your first live stream in around fifteen minutes — written in plain English, with no jargon and no steps skipped.
                   </p>
                   <p>
-                    The official installation uses Downloader code <span className="font-extrabold text-[#E01E26]">4172090</span> or the approved direct download address.
+                    Everything below applies to every Firestick model: the Fire TV Stick Lite, Fire TV Stick HD, Fire TV Stick 4K, and Fire TV Stick 4K Max. Whether this is your first streaming device or you’re replacing an old one, the process is identical — connect the hardware, get online, and load your apps.
                   </p>
                   <p>
-                    Once installed, enter the username, password and server URL supplied with your active B1G IPTV subscription.
-                  </p>
-                  <p>
-                    Customers using Samsung, LG, Apple, Windows or Mac devices can access the same subscription through a compatible alternative IPTV player.
+                    By the end of this guide, your Fire TV Stick setup will be complete, your Firestick IPTV apps installed through Downloader codes, and thousands of live channels ready to watch. And if you hit a snag at any point, our support team is one WhatsApp message away.
                   </p>
                 </div>
               </FadeIn>
@@ -56,68 +53,16 @@ export function InstHero() {
             {/* CTAs */}
             <FadeIn delay={0.15} duration={0.4} className="mt-8 w-full">
               <div className="flex flex-row items-center gap-2 sm:gap-4 w-full">
-                {/* Primary CTA */}
-                <Link href="#device-guides" className="flex-1 sm:flex-initial">
+                <Link href="/contact/" className="flex-1 sm:flex-initial">
                   <Button
                     variant="primary"
                     size="lg"
                     className="w-full sm:w-auto rounded-[12px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white px-5 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm lg:text-base font-semibold whitespace-nowrap shine-effect"
                   >
-                    <Download className="mr-1.5 sm:mr-2 h-3.5 w-3.5 sm:h-5 sm:w-5 shrink-0 stroke-[2.5]" />
-                    <span>Install B1G Player</span>
+                    <Tv className="mr-1.5 sm:mr-2 h-3.5 w-3.5 sm:h-5 sm:w-5 shrink-0 stroke-[2.5]" />
+                    <span>Free Firestick IPTV Trial UK</span>
                   </Button>
                 </Link>
-
-                {/* Secondary CTA */}
-                <Link href="#faq" className="flex-1 sm:flex-initial">
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="w-full sm:w-auto rounded-[12px] border-2 border-[#E01E26] bg-white text-[#12141F] px-5 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm lg:text-base font-semibold whitespace-nowrap hover:bg-red-50"
-                  >
-                    <HelpCircle className="mr-1.5 sm:mr-2 h-3.5 w-3.5 sm:h-5 sm:w-5 text-[#E01E26] shrink-0 stroke-[2.5]" />
-                    <span>Get Setup Help</span>
-                  </Button>
-                </Link>
-              </div>
-            </FadeIn>
-
-            {/* Trust Row */}
-            <FadeIn delay={0.25} duration={0.4} className="mt-10 w-full max-w-xl">
-              <div className="w-full rounded-2xl sm:rounded-full border border-slate-200 bg-white p-3 sm:p-4">
-                <div className="grid grid-cols-3 divide-x divide-slate-200/90 text-center items-center">
-                  
-                  {/* Item 1 */}
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-2 px-1 sm:px-4">
-                    <div className="flex h-7 w-7 sm:h-8 sm:w-8 shrink-0 items-center justify-center rounded-full bg-red-50 text-[#E01E26]">
-                      <Download className="h-3.5 w-3.5 sm:h-4 sm:w-4 stroke-[2.5]" />
-                    </div>
-                    <span className="text-xs lg:text-sm font-semibold text-slate-800 tracking-tight leading-tight">
-                      Official Downloader Code
-                    </span>
-                  </div>
-
-                  {/* Item 2 */}
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-2 px-1 sm:px-4">
-                    <div className="flex h-7 w-7 sm:h-8 sm:w-8 shrink-0 items-center justify-center rounded-full bg-red-50 text-[#E01E26]">
-                      <KeyRound className="h-3.5 w-3.5 sm:h-4 sm:w-4 stroke-[2.5]" />
-                    </div>
-                    <span className="text-xs lg:text-sm font-semibold text-slate-800 tracking-tight leading-tight">
-                      Secure Login
-                    </span>
-                  </div>
-
-                  {/* Item 3 */}
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-2 px-1 sm:px-4">
-                    <div className="flex h-7 w-7 sm:h-8 sm:w-8 shrink-0 items-center justify-center rounded-full bg-red-50 text-[#E01E26]">
-                      <Headphones className="h-3.5 w-3.5 sm:h-4 sm:w-4 stroke-[2.5]" />
-                    </div>
-                    <span className="text-xs lg:text-sm font-semibold text-slate-800 tracking-tight leading-tight">
-                      Device Setup Assistance
-                    </span>
-                  </div>
-
-                </div>
               </div>
             </FadeIn>
           </div>
@@ -140,9 +85,9 @@ export function InstHero() {
                 as="h1"
                 className="text-h1-b1g leading-[1.15] font-bold tracking-tight"
                 parts={[
-                  { text: "B1G Player Installation Guide –" },
-                  { text: "Firestick, Android TV", className: "text-brand-gradient font-bold" },
-                  { text: "& More" },
+                  { text: "Fire TV Stick Installation Guide –" },
+                  { text: "Easy Setup for All Firestick Models", className: "text-brand-gradient font-bold" },
+                  { text: "(2026)" },
                 ]}
               />
             </div>
@@ -150,16 +95,13 @@ export function InstHero() {
             <FadeIn delay={0.22} duration={0.45} yOffset={14} className="w-full">
               <div className="mt-4 space-y-3 text-xs sm:text-sm text-black leading-relaxed">
                 <p>
-                  Install B1G Player on a compatible Firestick, Fire TV, Android TV, Android box, smartphone or tablet.
+                  Just unboxed a new Fire TV Stick and not sure where to start? You’re in exactly the right place. This Fire TV Stick installation guide takes you from the sealed box to your first live stream in around fifteen minutes — written in plain English, with no jargon and no steps skipped.
                 </p>
                 <p>
-                  The official installation uses Downloader code <span className="font-extrabold text-[#E01E26]">4172090</span> or the approved direct download address.
+                  Everything below applies to every Firestick model: the Fire TV Stick Lite, Fire TV Stick HD, Fire TV Stick 4K, and Fire TV Stick 4K Max. Whether this is your first streaming device or you’re replacing an old one, the process is identical — connect the hardware, get online, and load your apps.
                 </p>
                 <p>
-                  Once installed, enter the username, password and server URL supplied with your active B1G IPTV subscription.
-                </p>
-                <p>
-                  Customers using Samsung, LG, Apple, Windows or Mac devices can access the same subscription through a compatible alternative IPTV player.
+                  By the end of this guide, your Fire TV Stick setup will be complete, your Firestick IPTV apps installed through Downloader codes, and thousands of live channels ready to watch. And if you hit a snag at any point, our support team is one WhatsApp message away.
                 </p>
               </div>
             </FadeIn>
@@ -173,66 +115,16 @@ export function InstHero() {
           {/* 3. Stacked Full-Width CTA Buttons */}
           <FadeIn delay={0.15} duration={0.35} className="w-full">
             <div className="flex flex-col gap-3 w-full">
-              <Link href="#device-guides" className="w-full">
+              <Link href="/contact/" className="w-full">
                 <Button
                   variant="primary"
                   size="lg"
                   className="w-full rounded-[12px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white py-3.5 text-xs sm:text-sm font-semibold"
                 >
-                  <Download className="mr-2 h-4 w-4 shrink-0 stroke-[2.5]" />
-                  <span>Install B1G Player</span>
+                  <Tv className="mr-2 h-4 w-4 shrink-0 stroke-[2.5]" />
+                  <span>Free Firestick IPTV Trial UK</span>
                 </Button>
               </Link>
-
-              <Link href="#faq" className="w-full">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="w-full rounded-[12px] border-2 border-[#E01E26] bg-white text-[#12141F] py-3.5 text-xs sm:text-sm font-semibold hover:bg-red-50"
-                >
-                  <HelpCircle className="mr-2 h-4 w-4 text-[#E01E26] shrink-0 stroke-[2.5]" />
-                  <span>Get Setup Help</span>
-                </Button>
-              </Link>
-            </div>
-          </FadeIn>
-
-          {/* 4. Compact Trust Row */}
-          <FadeIn delay={0.2} duration={0.35} className="w-full mt-2">
-            <div className="w-full rounded-2xl border border-slate-200 bg-white p-3">
-              <div className="grid grid-cols-3 divide-x divide-slate-200/90 text-center items-center">
-                
-                {/* Item 1 */}
-                <div className="flex flex-col items-center justify-center gap-1">
-                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-red-50 text-[#E01E26]">
-                    <Download className="h-3.5 w-3.5 stroke-[2.5]" />
-                  </div>
-                  <span className="text-xs font-semibold text-slate-800 tracking-tight leading-tight">
-                    Downloader Code
-                  </span>
-                </div>
-
-                {/* Item 2 */}
-                <div className="flex flex-col items-center justify-center gap-1">
-                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-red-50 text-[#E01E26]">
-                    <KeyRound className="h-3.5 w-3.5 stroke-[2.5]" />
-                  </div>
-                  <span className="text-xs font-semibold text-slate-800 tracking-tight leading-tight">
-                    Secure Login
-                  </span>
-                </div>
-
-                {/* Item 3 */}
-                <div className="flex flex-col items-center justify-center gap-1">
-                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-red-50 text-[#E01E26]">
-                    <Headphones className="h-3.5 w-3.5 stroke-[2.5]" />
-                  </div>
-                  <span className="text-xs font-semibold text-slate-800 tracking-tight leading-tight">
-                    Setup Help
-                  </span>
-                </div>
-
-              </div>
             </div>
           </FadeIn>
 
