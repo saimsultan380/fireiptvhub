@@ -4,12 +4,13 @@ import React from "react";
 import Link from "next/link";
 import { Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ROUTES } from "@/lib/routes";
 
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2.5 group">
+        <Link href={ROUTES.home} className="flex items-center gap-2.5 group">
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-white shadow-sm transition-transform duration-300 group-hover:scale-105">
             <Sparkles className="h-4 w-4" />
           </div>

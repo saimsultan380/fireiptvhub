@@ -6,14 +6,17 @@ import { Button } from "@/components/ui/button";
 import { Send, CheckCircle2, MessageSquare } from "lucide-react";
 
 const enquiryTypes = [
-  "Free Trial",
-  "Subscription Question",
-  "New Activation",
-  "IPTV Installation",
-  "Login Support",
-  "Renewal or Upgrade",
-  "Reseller Enquiry",
-  "General Question",
+  "Trial",
+  "Compatibility check",
+  "Installation",
+  "Login problem",
+  "Playback issue",
+  "Renewal",
+  "Billing or refund",
+  "Reseller application",
+  "Privacy request",
+  "Copyright notice",
+  "Other",
 ];
 
 const deviceTypes = [
@@ -37,7 +40,7 @@ export function ConForm() {
     fullName: "",
     email: "",
     whatsapp: "",
-    enquiryType: "Free Trial",
+    enquiryType: "Trial",
     deviceType: "Firestick",
     message: "",
   });
@@ -112,7 +115,7 @@ export function ConForm() {
                     fullName: "",
                     email: "",
                     whatsapp: "",
-                    enquiryType: "Free Trial",
+                    enquiryType: "Trial",
                     deviceType: "Firestick",
                     message: "",
                   });
@@ -250,7 +253,7 @@ export function ConForm() {
                   className="w-full rounded-[12px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white py-3.5 text-xs sm:text-sm font-semibold shine-effect flex items-center justify-center gap-2"
                 >
                   <Send className="h-4 w-4 shrink-0 stroke-[2.5]" />
-                  <span>{isSubmitting ? "Sending..." : "Send Your Enquiry"}</span>
+                  <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
                 </Button>
               </div>
 

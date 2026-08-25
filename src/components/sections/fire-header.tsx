@@ -6,13 +6,14 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { ROUTES } from "@/lib/routes";
 
 const navLinks = [
-  { name: "Home", href: "/" },
-  { name: "Installation Guide", href: "/b1g-player-installation-guide/" },
-  { name: "Subscription Plans", href: "/b1g-iptv-subscription/" },
-  { name: "Reseller Panel", href: "/b1g-player-reseller/" },
-  { name: "Contact Us", href: "/contact/" },
+  { name: "Home", href: ROUTES.home },
+  { name: "Installation Guide", href: ROUTES.installation },
+  { name: "Subscription Plans", href: ROUTES.subscription },
+  { name: "Reseller Panel", href: ROUTES.reseller },
+  { name: "Contact Us", href: ROUTES.contact },
 ];
 
 /** Shared frosted-glass surface — desktop header + mobile navbar use the exact same look */
@@ -49,7 +50,7 @@ export function FireHeader() {
         className={`hidden lg:flex h-[84px] w-full items-center justify-between rounded-[12px] px-8 overflow-hidden ${glassSurface}`}
       >
         {/* LEFT: Logo */}
-        <Link href="/" className="flex items-center shrink-0 group">
+        <Link href={ROUTES.home} className="flex items-center shrink-0 group">
           <div className="relative w-[140px] h-[72px] flex items-center justify-center transition-transform duration-300 group-hover:scale-[1.02]">
             <Image
               src="/logo.PNG"
@@ -77,7 +78,7 @@ export function FireHeader() {
 
         {/* RIGHT: Primary CTA */}
         <div className="flex items-center shrink-0">
-          <Link href="/b1g-iptv-subscription/">
+          <Link href={ROUTES.subscription}>
             <Button
               variant="primary"
               className="h-[44px] px-6 rounded-[12px] text-sm font-semibold bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white whitespace-nowrap"
@@ -95,7 +96,7 @@ export function FireHeader() {
         >
           {/* Collapsed Top Bar */}
           <div className="flex h-[64px] items-center justify-between px-5 shrink-0">
-            <Link href="/" className="flex items-center group">
+            <Link href={ROUTES.home} className="flex items-center group">
               <div className="relative w-[110px] h-[52px] flex items-center justify-center transition-transform duration-300 group-active:scale-[1.02]">
                 <Image
                   src="/logo.PNG"
@@ -149,7 +150,7 @@ export function FireHeader() {
                   </nav>
 
                   <div className="pt-2">
-                    <Link href="/b1g-iptv-subscription/" onClick={() => setMobileMenuOpen(false)}>
+                    <Link href={ROUTES.subscription} onClick={() => setMobileMenuOpen(false)}>
                       <Button
                         variant="primary"
                         className="w-full h-[48px] rounded-[12px] text-base font-semibold bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white"

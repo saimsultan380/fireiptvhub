@@ -5,6 +5,7 @@ import Link from "next/link";
 import { FadeIn } from "@/components/animation/fade-in";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowUpRight, Check } from "lucide-react";
+import { ROUTES } from "@/lib/routes";
 
 interface PricingPlan {
   id: string;
@@ -19,72 +20,72 @@ interface PricingPlan {
 const hdPlans: PricingPlan[] = [
   {
     id: "hd-1-month",
-    audience: "First-time users",
-    name: "Monthly Subscription",
+    audience: "£12.00 per month",
+    name: "1 month",
     price: "£12",
-    period: "/mo",
-    features: ["20,000+ channels + VOD library"],
+    period: "total",
+    features: ["Total price £12", "Standard HD and Full HD"],
   },
   {
     id: "hd-3-months",
-    audience: "Frequent streamers",
-    name: "3 Months Subscription",
+    audience: "£6.67 per month",
+    name: "3 months",
     price: "£20",
-    period: "/3mo",
-    features: ["Same content, better quality & extra European channels"],
+    period: "total",
+    features: ["Total price £20", "Same core features"],
   },
   {
     id: "hd-6-months",
-    audience: "Sports lovers",
-    name: "6 Months Subscription",
+    audience: "£5.83 per month",
+    name: "6 months",
     price: "£35",
-    period: "/6mo",
-    features: ["Full HD / UHD, fastest servers, all sports & premium channels"],
+    period: "total",
+    features: ["Total price £35", "Same core features"],
   },
   {
     id: "hd-12-months",
-    audience: "Long-term users",
-    name: "12 Months Subscription",
+    audience: "£3.75 per month",
+    name: "12 months",
     price: "£45",
-    period: "/12mo",
+    period: "total",
     recommended: true,
-    features: ["All features included"],
+    features: ["Total price £45", "Same core features"],
   },
 ];
 
 const premium4KPlans: PricingPlan[] = [
   {
     id: "4k-1-month",
-    audience: "First-time users",
-    name: "Monthly Subscription",
+    audience: "£15.00 per month",
+    name: "1 month",
     price: "£15",
-    period: "/mo",
-    features: ["20,000+ channels + VOD library"],
+    period: "total",
+    features: ["Total price £15", "Premium 4K-ready"],
   },
   {
     id: "4k-3-months",
-    audience: "Frequent streamers",
-    name: "3 Months Subscription",
+    audience: "£10.00 per month",
+    name: "3 months",
     price: "£30",
-    period: "/3mo",
-    features: ["Same content, better quality & extra European channels"],
+    period: "total",
+    features: ["Total price £30", "Available 4K sources"],
   },
   {
     id: "4k-6-months",
-    audience: "Sports lovers",
-    name: "6 Months Subscription",
+    audience: "£7.50 per month",
+    name: "6 months",
     price: "£45",
-    period: "/6mo",
-    features: ["Full HD / UHD, fastest servers, all sports & premium channels"],
+    period: "total",
+    features: ["Total price £45", "Available 4K sources"],
   },
   {
     id: "4k-12-months",
-    audience: "Long-term users",
-    name: "12 Months Subscription",
+    audience: "£5.00 per month",
+    name: "12 months",
     price: "£60",
-    period: "/12mo",
+    period: "total",
     recommended: true,
-    features: ["All features included"],
+    features: ["Total price £60", "Available 4K sources"],
   },
 ];
 
@@ -150,7 +151,7 @@ function PricingCard({ plan }: { plan: PricingPlan }) {
       </div>
 
       <div className="mt-auto">
-        <Link href="/contact/">
+        <Link href={ROUTES.contact}>
           <Button
             variant="primary"
             className="w-full justify-between rounded-[12px] font-bold text-xs py-3 px-4 flex items-center bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white hover:opacity-95 border-0"
@@ -177,20 +178,20 @@ export function FirePricing() {
           <h2 className="text-h2 font-bold tracking-tight text-[#12141F] font-heading">
             {planType === "standard" ? (
               <>
-                Standard HD Plans – Affordable Firestick IPTV Subscription for{" "}
+                Standard HD and Full HD Plans –{" "}
                 <span className="text-brand-gradient font-bold">Everyday Viewing</span>
               </>
             ) : (
               <>
-                Premium 4K Plans – Ultra HD Firestick IPTV Subscription for{" "}
-                <span className="text-brand-gradient font-bold">Big Screens</span>
+                Premium 4K-Ready Plans –{" "}
+                <span className="text-brand-gradient font-bold">Highest Available Quality</span>
               </>
             )}
           </h2>
           <p className="mt-3 text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed max-w-3xl mx-auto">
             {planType === "standard"
-              ? "Our HD range is where most viewers land, and for good reason: crisp Full HD streams, the complete channel list, and pricing that stays friendly whether you commit for a month or a year. These dependable Firestick IPTV subscription UK plans suit everyone from first-time streamers testing the waters to football fans who never miss a Saturday fixture — and they run smoothly on every Firestick device, including older models."
-              : "Own a Fire TV Stick 4K or 4K Max and a television worth showing off? This is our IPTV Firestick subscription UK service at full power: ultra-fast dedicated servers, the complete sports lineup in razor-sharp detail, and thousands of channels in Ultra HD. Built for long-term users, movie lovers, and anyone who wants match day to look the way it does in the stadium."}
+              ? "Standard plans are suitable for everyday viewing on HD and Full HD televisions. The listed amount is the total prepaid price for the chosen duration."
+              : "Premium plans include access to the highest available stream quality, including supported 4K sources. Not every programme or channel is produced in 4K."}
           </p>
         </FadeIn>
 

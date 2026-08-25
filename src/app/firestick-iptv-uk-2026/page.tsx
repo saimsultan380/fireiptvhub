@@ -3,9 +3,8 @@ import { B1GHeader } from "@/components/sections/b1g-header";
 import { HomeHeroSection } from "@/components/sections/home-hero";
 import { HomeWhyChooseSection } from "@/components/sections/home-why-choose";
 import { HomePricingSection } from "@/components/sections/home-pricing";
-import { DeviceMarquee } from "@/components/sections/device-marquee";
-import { HomeDevicesSection } from "@/components/sections/home-devices";
 import { HomeFeaturesSection } from "@/components/sections/home-features";
+import { HomeDevicesSection } from "@/components/sections/home-devices";
 import { HomePaymentsSupportSection } from "@/components/sections/home-payments-support";
 import { HomeFAQSection } from "@/components/sections/home-faq";
 import { B1GFooter } from "@/components/sections/footer";
@@ -20,6 +19,12 @@ export const metadata = buildPageMetadata({
   path: page.path,
 });
 
+/**
+ * Homepage section order matches new-content.md Page 1:
+ * Hero → What Is → Plans → What Is Included → Installation Help /
+ * Choosing Best / Why People Use → How to Start / Before Ordering /
+ * Free vs Paid / Performance / Compatible Devices → FAQs → Ready CTA
+ */
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-transparent">
@@ -29,9 +34,8 @@ export default function HomePage() {
       <HomeHeroSection />
       <HomeWhyChooseSection />
       <HomePricingSection />
-      <DeviceMarquee />
-      <HomeDevicesSection />
       <HomeFeaturesSection />
+      <HomeDevicesSection />
       <HomePaymentsSupportSection />
       <HomeFAQSection />
       <B1GFooter />

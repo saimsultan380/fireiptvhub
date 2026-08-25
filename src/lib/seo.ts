@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { ROUTES } from "@/lib/routes";
+
+export { ROUTES };
 
 /** Canonical production origin — always non-www, no trailing slash on origin. */
 export const SITE_ORIGIN = "https://fireiptvhub.com";
@@ -6,19 +9,10 @@ export const SITE_ORIGIN = "https://fireiptvhub.com";
 export const SITE_NAME = "Fire IPTV Hub";
 
 export const SITE_TITLE =
-  "#1 Firestick IPTV UK – Premium IPTV Subscription for Fire TV Stick in 2026";
+  "Firestick IPTV – 20,000+ Channels & Plans from £12";
 
 export const SITE_DESCRIPTION =
-  "What if one subscription covered every match, every movie night, and every channel your family actually watches? Fire IPTV Hub UK delivers 20,000+ live channels, a huge on-demand library, and complete sports coverage to every Fire TV device.";
-
-/** Canonical route paths (always trailing slash except homepage `/`). */
-export const ROUTES = {
-  home: "/",
-  subscription: "/b1g-iptv-subscription/",
-  installation: "/b1g-player-installation-guide/",
-  reseller: "/b1g-player-reseller/",
-  contact: "/contact/",
-} as const;
+  "Choose Firestick IPTV with 20,000+ live channels, films, series, EPG, guided installation and UK subscription plans from £12. Trial available.";
 
 /**
  * Prefer explicit env in preview/staging; production always resolves to non-www.
@@ -151,9 +145,9 @@ export const SITE_PAGES = [
   },
   {
     path: ROUTES.subscription,
-    title: "Firestick IPTV Subscription Plans UK 2026 – Flexible, Affordable & Built for Every Viewer",
+    title: "Firestick IPTV Subscription UK – Paid Plans from £12",
     description:
-      "Your entertainment shouldn’t be locked into someone else’s schedule — or someone else’s contract. At Fire IPTV Hub UK, every Firestick IPTV subscription UK plan puts you in charge.",
+      "Compare Firestick IPTV subscription plans for 1, 3, 6 or 12 months. Includes 20,000+ live channels, on-demand viewing and setup help.",
     changeFrequency: "weekly" as const,
     priority: 0.9,
     breadcrumbs: [
@@ -163,10 +157,9 @@ export const SITE_PAGES = [
   },
   {
     path: ROUTES.installation,
-    title: "Fire TV Stick Installation Guide – Easy Setup for All Firestick Models (2026)",
+    title: "How to Download IPTV on Firestick – Apps & Codes",
     description:
-      "Just unboxed a new Fire TV Stick and not sure where to start? This Fire TV Stick installation guide takes you from the sealed box to your first live stream in around fifteen minutes.",
-
+      "Learn how to download IPTV on Firestick, install a player, use Downloader safely, enter your login and fix common setup problems.",
     changeFrequency: "monthly" as const,
     priority: 0.8,
     breadcrumbs: [
@@ -176,9 +169,9 @@ export const SITE_PAGES = [
   },
   {
     path: ROUTES.reseller,
-    title: "Start Your IPTV Business Today with the Best IPTV Reseller Panels in UK 2026",
+    title: "Firestick IPTV Reseller UK – Panel & Credits",
     description:
-      "Want to earn money by selling Firestick IPTV subscriptions UK? With Firestick IPTV reseller panels in the UK, start your own IPTV business with instant activation credits and full account control.",
+      "Apply for a Firestick IPTV reseller panel with prepaid credits, account tools, setup guidance and clearly explained reseller responsibilities.",
     changeFrequency: "monthly" as const,
     priority: 0.8,
     breadcrumbs: [
@@ -188,14 +181,98 @@ export const SITE_PAGES = [
   },
   {
     path: ROUTES.contact,
-    title: "Contact Firestick IPTV Support – 24/7 Help",
+    title: "Firestick IPTV Free Trial & UK Support",
     description:
-      "Have questions about your Firestick IPTV subscription, installation, or reseller panel? Our support team is here to help you 24/7.",
+      "Request a 24-hour Firestick IPTV trial, check your device or contact Fire IPTV Hub for installation, account, payment and renewal support.",
     changeFrequency: "monthly" as const,
     priority: 0.7,
     breadcrumbs: [
       { name: "Home", path: ROUTES.home },
       { name: "Contact Us", path: ROUTES.contact },
+    ],
+  },
+  {
+    path: ROUTES.apps,
+    title: "Firestick IPTV Apps – Players & Supported Devices",
+    description:
+      "Compare Firestick IPTV apps and players, check supported Fire TV models and find the best device or Firestick alternative for your setup.",
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+    breadcrumbs: [
+      { name: "Home", path: ROUTES.home },
+      { name: "Apps and Devices", path: ROUTES.apps },
+    ],
+  },
+  {
+    path: ROUTES.best,
+    title: "Best IPTV for Firestick UK 2026 – What to Check",
+    description:
+      "Learn how to choose the best IPTV for Firestick in the UK by comparing apps, trials, paid and free options, device support and genuine reviews.",
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+    breadcrumbs: [
+      { name: "Home", path: ROUTES.home },
+      { name: "Best IPTV for Firestick", path: ROUTES.best },
+    ],
+  },
+  {
+    path: ROUTES.about,
+    title: "About Fire IPTV Hub – Firestick IPTV UK",
+    description:
+      "Learn how Fire IPTV Hub helps UK customers choose, test and install Firestick IPTV with clearer prices, device checks and setup support.",
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+    breadcrumbs: [
+      { name: "Home", path: ROUTES.home },
+      { name: "About Us", path: ROUTES.about },
+    ],
+  },
+  {
+    path: ROUTES.terms,
+    title: "Terms of Service | Fire IPTV Hub",
+    description:
+      "Read the terms covering Fire IPTV Hub subscriptions, trials, payments, compatibility, acceptable use, cancellations and customer accounts.",
+    changeFrequency: "yearly" as const,
+    priority: 0.3,
+    breadcrumbs: [
+      { name: "Home", path: ROUTES.home },
+      { name: "Terms of Service", path: ROUTES.terms },
+    ],
+  },
+  {
+    path: ROUTES.privacy,
+    title: "Privacy Policy | Fire IPTV Hub",
+    description:
+      "Learn what information Fire IPTV Hub collects, why it is used, how long it is retained and your UK data-protection rights.",
+    changeFrequency: "yearly" as const,
+    priority: 0.3,
+    breadcrumbs: [
+      { name: "Home", path: ROUTES.home },
+      { name: "Privacy Policy", path: ROUTES.privacy },
+    ],
+  },
+  {
+    path: ROUTES.refund,
+    title: "Refund & Cancellation Policy | Fire IPTV Hub",
+    description:
+      "Read the Fire IPTV Hub cancellation and refund rules for trials, activation, duplicate payments, compatibility and subscription problems.",
+    changeFrequency: "yearly" as const,
+    priority: 0.3,
+    breadcrumbs: [
+      { name: "Home", path: ROUTES.home },
+      { name: "Refund Policy", path: ROUTES.refund },
+    ],
+  },
+  {
+    path: ROUTES.copyright,
+    title: "Copyright & DMCA Policy | Fire IPTV Hub",
+    description:
+      "Submit a copyright or trademark notice concerning material hosted or controlled by FireIPTVHub.com and review our takedown process.",
+    changeFrequency: "yearly" as const,
+    priority: 0.3,
+    breadcrumbs: [
+      { name: "Home", path: ROUTES.home },
+      { name: "Copyright Policy", path: ROUTES.copyright },
     ],
   },
 ] as const;

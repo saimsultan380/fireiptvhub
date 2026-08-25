@@ -5,61 +5,36 @@ import Link from "next/link";
 import { FadeIn } from "@/components/animation/fade-in";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Mail } from "lucide-react";
+import { ROUTES, SUPPORT_EMAIL, WHATSAPP_HREF } from "@/lib/routes";
 
 export function ConCTA() {
   return (
-    <section
-      id="cta"
-      className="w-full py-12 sm:py-20 section-glass border-t border-white/50"
-    >
+    <section id="cta" className="w-full py-12 sm:py-20 section-glass border-t border-white/50">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 w-full">
-        <FadeIn className="w-full rounded-[12px] border border-slate-200 bg-white p-6 sm:p-12 text-center flex flex-col items-center">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#12141F] max-w-2xl font-heading mb-4">
-            Contact Firestick IPTV{" "}
-            <span className="text-brand-gradient font-bold">Support</span>
+        <FadeIn className="rounded-[12px] border border-slate-200 bg-white p-6 sm:p-12 text-center flex flex-col items-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#12141F] mb-4">
+            Request Your Trial or{" "}
+            <span className="text-brand-gradient font-bold">Message Support</span>
           </h2>
-
-          <p className="text-xs sm:text-sm lg:text-base text-slate-500 font-semibold leading-relaxed max-w-3xl mb-8">
-            Have questions about your Firestick IPTV subscription, installation, or reseller panel? Our support team is here to help you 24/7.
+          <p className="text-xs sm:text-sm text-slate-500 font-semibold max-w-3xl mb-8">
+            By submitting the form, you confirm that you have read the Privacy Policy and permit Fire IPTV Hub to use the supplied information to respond.
           </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-            <a
-              href="https://wa.me/447848177296"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto"
-            >
-              <Button
-                variant="primary"
-                size="lg"
-                className="w-full sm:w-auto rounded-[12px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white px-8 py-3.5 text-xs sm:text-sm font-semibold shine-effect"
-              >
-                <MessageCircle className="mr-2 h-4 w-4 stroke-[2.5]" />
-                <span>WhatsApp</span>
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Button variant="primary" size="lg" className="w-full sm:w-auto rounded-[12px] px-8 py-3.5 text-sm font-semibold shine-effect">
+                <MessageCircle className="mr-2 h-4 w-4" />
+                Request Your Trial
               </Button>
             </a>
-
-            <a href="mailto:support@fireiptvhub.com" className="w-full sm:w-auto">
-              <Button
-                variant="outline"
-                size="lg"
-                className="w-full sm:w-auto rounded-[12px] border-2 border-[#E01E26] bg-white text-[#12141F] px-8 py-3.5 text-xs sm:text-sm font-semibold hover:bg-red-50"
-              >
-                <Mail className="mr-2 h-4 w-4 text-[#E01E26] stroke-[2.5]" />
-                <span>Email Support</span>
+            <a href={`mailto:${SUPPORT_EMAIL}`} className="w-full sm:w-auto">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto rounded-[12px] border-2 border-[#E01E26] px-8 py-3.5 text-sm font-semibold hover:bg-red-50">
+                <Mail className="mr-2 h-4 w-4 text-[#E01E26]" />
+                Message Support
               </Button>
             </a>
           </div>
-
-          <p className="mt-6 text-xs sm:text-sm font-semibold text-slate-500">
-            Let&apos;s Talk{" "}
-            <Link
-              href="tel:+447848177296"
-              className="text-[#E01E26] hover:underline"
-            >
-              +44 (784) 817 7296
-            </Link>
+          <p className="mt-6 text-xs font-semibold text-slate-500">
+            <Link href={ROUTES.privacy} className="text-[#E01E26] hover:underline">Privacy Policy</Link>
           </p>
         </FadeIn>
       </div>

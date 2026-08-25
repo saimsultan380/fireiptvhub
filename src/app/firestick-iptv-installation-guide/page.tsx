@@ -4,15 +4,13 @@ import { InstHero } from "@/components/installation/inst-hero";
 import { InstBeforeBegin } from "@/components/installation/inst-before-begin";
 import { InstSetupSteps } from "@/components/installation/inst-setup-steps";
 import { InstQuickFixes } from "@/components/installation/inst-quick-fixes";
-import { InstCTA } from "@/components/installation/inst-cta";
 import { InstFAQ } from "@/components/installation/inst-faq";
+import { InstCTA } from "@/components/installation/inst-cta";
 import { B1GFooter } from "@/components/sections/footer";
 import { BreadcrumbJsonLd } from "@/components/seo/breadcrumb-json-ld";
-import { buildPageMetadata, SITE_PAGES } from "@/lib/seo";
+import { buildPageMetadata, ROUTES, SITE_PAGES } from "@/lib/seo";
 
-const page = SITE_PAGES.find(
-  (p) => p.path === "/b1g-player-installation-guide/"
-)!;
+const page = SITE_PAGES.find((p) => p.path === ROUTES.installation)!;
 
 export const metadata = buildPageMetadata({
   title: page.title,
@@ -20,6 +18,11 @@ export const metadata = buildPageMetadata({
   path: page.path,
 });
 
+/**
+ * Installation section order matches new-content.md Page 3:
+ * Hero → What You Need / Identify Model / Appstore → Setup steps
+ * (Smarters, Downloader, Login, Fixes tabs) → Common Problems → FAQs → CTAs
+ */
 export default function InstallationGuidePage() {
   return (
     <main className="min-h-screen bg-transparent">

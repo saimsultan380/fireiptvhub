@@ -5,6 +5,7 @@ import Link from "next/link";
 import { FadeIn } from "@/components/animation/fade-in";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowUpRight, Check } from "lucide-react";
+import { ROUTES } from "@/lib/routes";
 
 interface PlanItem {
   name: string;
@@ -17,61 +18,61 @@ interface PlanItem {
 
 const hdPlans: PlanItem[] = [
   {
-    name: "Monthly Subscription",
+    name: "1 month",
     price: "£12",
-    period: "/mo",
-    tagline: "Perfect for first-time users.",
-    features: ["20,000+ Live Channels", "Complete VOD Library"],
+    period: "total",
+    tagline: "Standard HD and Full HD.",
+    features: ["20,000+ live channels", "Films and television series", "EPG on supported channels"],
   },
   {
-    name: "3 Months Subscription",
+    name: "3 months",
     price: "£20",
-    period: "/3mo",
-    tagline: "Perfect for regular streamers.",
-    features: ["Same Complete Content", "Better Streaming Quality", "Extra European Channels"],
+    period: "total",
+    tagline: "Same core features.",
+    features: ["20,000+ live channels", "Films and television series", "EPG on supported channels"],
   },
   {
-    name: "6 Months Subscription",
+    name: "6 months",
     price: "£35",
-    period: "/6mo",
-    tagline: "Perfect for sports lovers.",
-    features: ["Full HD & UHD", "Fastest Streaming Servers", "Premium Sports Channels"],
+    period: "total",
+    tagline: "Same core features.",
+    features: ["20,000+ live channels", "Films and television series", "EPG on supported channels"],
   },
   {
-    name: "12 Months Subscription",
+    name: "12 months",
     price: "£45",
-    period: "/12mo",
-    tagline: "Perfect for long-term users.",
+    period: "total",
+    tagline: "Same core features.",
     recommended: true,
-    features: ["Includes every feature"],
+    features: ["20,000+ live channels", "Films and television series", "EPG on supported channels"],
   },
 ];
 
 const premium4kPlans: PlanItem[] = [
   {
-    name: "Monthly Subscription",
+    name: "1 month",
     price: "£15",
-    period: "/mo",
-    features: ["20,000+ Channels", "Complete VOD Library"],
+    period: "total",
+    features: ["HD, Full HD and available 4K", "20,000+ live channels", "Films and television series"],
   },
   {
-    name: "3 Months Subscription",
+    name: "3 months",
     price: "£30",
-    period: "/3mo",
-    features: ["Better Streaming Quality", "Extra European Channels"],
+    period: "total",
+    features: ["HD, Full HD and available 4K", "20,000+ live channels", "Films and television series"],
   },
   {
-    name: "6 Months Subscription",
+    name: "6 months",
     price: "£45",
-    period: "/6mo",
-    features: ["Full HD & UHD", "Fastest Servers", "Premium Sports Channels"],
+    period: "total",
+    features: ["HD, Full HD and available 4K", "20,000+ live channels", "Films and television series"],
   },
   {
-    name: "12 Months Subscription",
+    name: "12 months",
     price: "£60",
-    period: "/12mo",
+    period: "total",
     recommended: true,
-    features: ["Everything Included.", "Maximum Value."],
+    features: ["HD, Full HD and available 4K", "20,000+ live channels", "Films and television series"],
   },
 ];
 
@@ -137,12 +138,12 @@ function PricingCard({ plan }: { plan: PlanItem }) {
       </div>
 
       <div className="mt-auto">
-        <Link href="/contact/">
+        <Link href={ROUTES.subscription}>
           <Button
             variant="primary"
             className="w-full justify-between rounded-[12px] font-bold text-xs py-3 px-4 flex items-center bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white hover:opacity-95 border-0"
           >
-            <span>Choose Plan</span>
+            <span>Compare All Subscription Plans</span>
             <ArrowUpRight className="h-4 w-4 shrink-0 stroke-[2.5]" />
           </Button>
         </Link>
@@ -163,13 +164,13 @@ export function HomePricingSection() {
         {/* Header & Subtitle */}
         <FadeIn className="w-full max-w-4xl mx-auto text-center mb-8">
           <h2 className="text-h2 font-bold tracking-tight text-[#12141F]">
-            Affordable Firestick IPTV{" "}
+            Firestick IPTV{" "}
             <span className="text-brand-gradient font-bold">Subscription Plans</span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600 font-semibold leading-relaxed max-w-2xl mx-auto">
             {planType === "standard"
-              ? "Our Standard HD Plans are designed for everyday streaming, giving you reliable access to live TV, sports, movies, and entertainment across every Fire TV device."
-              : "Experience our highest-quality IPTV service with dedicated servers and stunning Ultra HD picture quality."}
+              ? "Every duration within the same package includes the same core features. Choosing a longer subscription changes the expiry date and overall price—not the basic channel selection. Standard plans are suitable for everyday HD and Full HD viewing."
+              : "Premium plans include access to the highest available stream quality, including supported 4K sources. Not every programme or channel is produced in 4K."}
           </p>
         </FadeIn>
 

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { FadeIn } from "@/components/animation/fade-in";
 import { Plus, Minus, HelpCircle } from "lucide-react";
+import { ROUTES } from "@/lib/routes";
 
 interface FAQItem {
   question: string;
@@ -12,39 +13,59 @@ interface FAQItem {
 
 const faqList: FAQItem[] = [
   {
-    question: "How much does a Firestick subscription cost in the UK?",
+    question: "Does a longer plan include more channels?",
     answer:
-      "HD plans run from £12 for one month up to £45 for a full year, and 4K plans from £15 up to £60. The longer the plan, the lower your cost per month — the 12-month options are the best value we offer.",
+      "No. Durations within the same package include the same core service. Only the expiry date and price change.",
   },
   {
-    question: "What is the best IPTV subscription for Firestick?",
+    question: "Are the prices monthly payments?",
     answer:
-      "The one that matches how you watch. HD plans suit everyday viewing on any Firestick model; 4K plans reward Fire TV Stick 4K and Max owners with sharper sport and movies. If you're unsure, start monthly and upgrade — or ask us on WhatsApp for a recommendation.",
+      "No. The listed amount is the total prepaid price for the chosen duration.",
   },
   {
-    question: "Can I watch EPL and EFL games with my subscription?",
+    question: "Is there a contract?",
     answer:
-      "Yes — every plan includes complete football coverage. Premier League, EFL Championship and European fixtures all stream through dedicated sports channels, in Full HD or 4K depending on your plan.",
+      "The subscription lasts for the selected prepaid period. There is no continuing commitment unless recurring billing is clearly agreed.",
+  },
+  {
+    question: "Is the player included?",
+    answer:
+      "Setup guidance and compatible login details are included. A third-party player may charge a separate application licence.",
+  },
+  {
+    question: "How quickly will I receive the account?",
+    answer:
+      "Activation begins after successful payment confirmation and compatibility checks. The details are then sent to the contact method used for the order.",
+  },
+  {
+    question: "Can I upgrade from Standard to Premium?",
+    answer:
+      "Contact support. Any available upgrade and additional price will be explained before payment.",
+  },
+  {
+    question: "Can I share my subscription?",
+    answer:
+      "No. Credentials must not be publicly shared or used beyond the purchased connection allowance.",
+  },
+  {
+    question: "What happens at expiry?",
+    answer:
+      "The player app may remain installed, but subscription content stops loading until the account is renewed.",
   },
   {
     question: "How do I activate my subscription on Firestick?",
     answer: (
       <>
-        Pay for your chosen plan and your login details arrive within minutes. Install IPTV Smarters Pro using our{" "}
+        Pay for your chosen plan and your login details arrive after activation. Install a compatible player using our{" "}
         <Link
-          href="/b1g-player-installation-guide/"
+          href={ROUTES.installation}
           className="text-[#E01E26] underline underline-offset-2 hover:opacity-80"
         >
           installation guide
         </Link>
-        , enter your username, password and server URL, and your channels load straight away.
+        , enter your username, password and server address, and your channels load after the first update.
       </>
     ),
-  },
-  {
-    question: "Can I cancel my subscription anytime?",
-    answer:
-      "Yes. None of our plans carry contracts or automatic renewals — your plan simply runs to its end date, and renewing is always your choice.",
   },
 ];
 
@@ -90,7 +111,7 @@ export function FireFAQ() {
 
         <div
           className={`transition-all duration-300 ease-in-out overflow-hidden ${
-            isOpen ? "max-h-[320px] opacity-100" : "max-h-0 opacity-0"
+            isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <div className="px-5 pb-5 pt-0 border-t border-slate-100/50 mt-1">
@@ -119,9 +140,26 @@ export function FireFAQ() {
             </h3>
           </div>
           <h2 className="text-h2 font-bold tracking-tight text-[#12141F] font-heading">
-            Firestick IPTV Subscription Plans UK –{" "}
+            Subscription{" "}
             <span className="text-brand-gradient font-bold">FAQs</span>
           </h2>
+        </FadeIn>
+
+        <FadeIn className="w-full mb-10">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center rounded-[12px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white px-6 py-3 text-xs sm:text-sm font-semibold"
+            >
+              Choose Your Plan
+            </Link>
+            <Link
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center rounded-[12px] border-2 border-[#E01E26] bg-white text-[#12141F] px-6 py-3 text-xs sm:text-sm font-semibold hover:bg-red-50"
+            >
+              Check Compatibility First
+            </Link>
+          </div>
         </FadeIn>
 
         <FadeIn className="w-full">

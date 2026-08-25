@@ -5,32 +5,58 @@ import Link from "next/link";
 import { FadeIn } from "@/components/animation/fade-in";
 import { Button } from "@/components/ui/button";
 import { Tv } from "lucide-react";
+import { ROUTES } from "@/lib/routes";
 
 const planRecommendations = [
   {
-    plan: "1-Month Plan",
-    label: "Testing the waters?",
+    plan: "24-Hour Trial",
+    label: "Start here",
     description:
-      "The 1-Month Plan lets you judge the service properly — full channels, full library — with zero commitment.",
+      "Start here if you have not tested the service. Check compatibility, picture quality, navigation, programme information and performance during your usual viewing hours.",
   },
   {
-    plan: "3-Month Plan",
-    label: "Watch a few evenings a week?",
+    plan: "One Month",
+    label: "Shortest paid commitment",
     description:
-      "The 3-Month Plan trims your monthly cost nicely without tying you down.",
+      "The one-month Firestick subscription provides the shortest paid commitment. It suits first-time customers who want more time after completing a trial.",
   },
   {
-    plan: "6-Month Premium Plan",
-    label: "Live for the football?",
+    plan: "Three Months",
+    label: "Better monthly value",
     description:
-      "Sports fans wanting EPL IPTV, EFL IPTV and premium channels should pick the 6-Month Premium Plan — it covers a full half-season on our fastest servers.",
+      "This option offers better monthly value while keeping the commitment relatively short.",
   },
   {
-    plan: "12-Month Plan",
-    label: "Want the best deal, full stop?",
+    plan: "Six Months",
+    label: "Regular viewers",
     description:
-      "The 12-Month Plan is the cheapest per month by a distance and covers you for the whole year — set it and forget it.",
+      "Suitable for regular viewers who have already confirmed that the service works well on their device and connection.",
   },
+  {
+    plan: "Twelve Months",
+    label: "Lowest average monthly price",
+    description:
+      "The annual plan provides the lowest average monthly price. Choose it only after completing a trial or shorter subscription.",
+  },
+];
+
+const freeMeans = [
+  "A free player app",
+  "A legitimate advertising-supported service",
+  "A limited provider trial",
+  "A public playlist",
+  "An unauthorised login shared online",
+];
+
+const paidShouldProvide = [
+  "A defined subscription period",
+  "Individual login details",
+  "A compatible installation method",
+  "Clear connection limits",
+  "A current channel check",
+  "Customer support",
+  "Cancellation and refund information",
+  "A trial or short plan before a long commitment",
 ];
 
 const Tick = () => (
@@ -54,19 +80,16 @@ export function FirePlanGuide() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
         <FadeIn className="w-full max-w-4xl mb-8 sm:mb-10">
           <h2 className="text-h2 font-bold tracking-tight text-[#12141F] font-heading mb-4">
-            Which IPTV Firestick Subscription UK Plan Is{" "}
-            <span className="text-brand-gradient font-bold">Right for You?</span>
+            Which Duration Should{" "}
+            <span className="text-brand-gradient font-bold">You Choose?</span>
           </h2>
-          <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed">
-            Not sure which IPTV Firestick subscription plan fits you best in 2026? Here’s the honest advice we give every customer who asks:
-          </p>
         </FadeIn>
 
-        <FadeIn className="w-full mb-8 sm:mb-10">
+        <FadeIn className="w-full mb-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 w-full">
-            {planRecommendations.map((item, idx) => (
+            {planRecommendations.map((item) => (
               <div
-                key={idx}
+                key={item.plan}
                 className="rounded-[12px] border border-slate-200 bg-white p-5 sm:p-6 flex flex-col gap-3 h-full"
               >
                 <div className="flex items-start gap-2.5">
@@ -88,16 +111,48 @@ export function FirePlanGuide() {
           </div>
         </FadeIn>
 
+        <FadeIn className="w-full mb-8">
+          <div className="rounded-[12px] border border-slate-200 bg-white p-6 sm:p-8">
+            <h3 className="text-base sm:text-lg font-bold text-[#12141F] mb-3">
+              Free IPTV or a Paid Firestick TV Subscription?
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed mb-3">
+              Free IPTV can refer to:
+            </p>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
+              {freeMeans.map((item) => (
+                <li key={item} className="text-xs sm:text-sm font-semibold text-slate-700">
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed mb-4">
+              These are very different products. A free player app does not normally include channels. Public playlists may stop working, contain unsafe links or offer no support when something fails.
+            </p>
+            <p className="text-xs sm:text-sm font-bold text-[#12141F] mb-3">
+              The best paid IPTV for Firestick should provide:
+            </p>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              {paidShouldProvide.map((item) => (
+                <li key={item} className="flex items-start gap-2 text-xs sm:text-sm font-semibold text-slate-700">
+                  <Tick />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </FadeIn>
+
         <FadeIn className="w-full">
           <div className="w-full flex justify-start" data-no-reveal>
-            <Link href="/contact/" className="w-full sm:w-auto">
+            <Link href={ROUTES.contact} className="w-full sm:w-auto">
               <Button
                 variant="primary"
                 size="lg"
                 className="w-full sm:w-auto rounded-[12px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white px-5 sm:px-6 py-3.5 text-xs sm:text-sm font-semibold shine-effect"
               >
                 <Tv className="mr-2 h-4 w-4 stroke-[2.5]" />
-                <span>Get Free Firestick IPTV</span>
+                <span>Check Compatibility First</span>
               </Button>
             </Link>
           </div>

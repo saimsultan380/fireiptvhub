@@ -5,6 +5,7 @@ import { SiteAtmosphere } from "@/components/layout/site-atmosphere";
 import { CtaClickSound } from "@/components/layout/cta-click-sound";
 import { JsonLd } from "@/components/seo/json-ld";
 import {
+  ROUTES,
   SITE_DESCRIPTION,
   SITE_NAME,
   SITE_TITLE,
@@ -37,6 +38,7 @@ export const metadata: Metadata = {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
       { url: "/icons/icon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/icons/icon-96.png", sizes: "96x96", type: "image/png" },
       { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
       { url: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
@@ -90,7 +92,7 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: SITE_NAME,
-  url: absoluteUrl("/"),
+  url: absoluteUrl(ROUTES.home),
   logo: absoluteUrl("/icons/icon-512.png"),
   image: absoluteUrl("/og-image.png"),
   description: SITE_DESCRIPTION,
@@ -100,12 +102,12 @@ const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: SITE_NAME,
-  url: absoluteUrl("/"),
+  url: absoluteUrl(ROUTES.home),
   description: SITE_DESCRIPTION,
   publisher: {
     "@type": "Organization",
     name: SITE_NAME,
-    url: absoluteUrl("/"),
+    url: absoluteUrl(ROUTES.home),
   },
 };
 

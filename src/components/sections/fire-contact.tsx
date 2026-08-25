@@ -4,15 +4,16 @@ import React from "react";
 import Link from "next/link";
 import { FadeIn } from "@/components/animation/fade-in";
 import { Phone, Mail, Headphones } from "lucide-react";
+import { ROUTES } from "@/lib/routes";
 
 const quickLinks = [
-  { name: "Home", href: "/" },
+  { name: "Home", href: ROUTES.home },
   { name: "Pricing", href: "#pricing" },
-  { name: "IPTV Reseller Panel", href: "/b1g-player-reseller/" },
-  { name: "Downloader Codes", href: "/b1g-player-installation-guide/" },
+  { name: "IPTV Reseller Panel", href: "/iptv-reseller-panel-uk-2026/" },
+  { name: "Downloader Codes", href: "/firestick-iptv-installation-guide/" },
   { name: "Support", href: "/contact/" },
-  { name: "Installation Guide", href: "/b1g-player-installation-guide/" },
-  { name: "IPTV Smarters Pro Installation Guide", href: "/b1g-player-installation-guide/" },
+  { name: "Installation Guide", href: "/firestick-iptv-installation-guide/" },
+  { name: "IPTV Smarters Pro Installation Guide", href: "/firestick-iptv-installation-guide/" },
   { name: "Contact Us", href: "/contact/" },
   { name: "Privacy Policy", href: "/contact/" },
 ];

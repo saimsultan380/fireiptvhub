@@ -3,12 +3,10 @@
 import React from "react";
 import {
   Monitor,
-  Smartphone,
   Tablet,
   Tv,
   Flame,
   Cpu,
-  Laptop,
   Box,
 } from "lucide-react";
 
@@ -18,14 +16,14 @@ interface DeviceItem {
 }
 
 const devices: DeviceItem[] = [
-  { name: "Desktop", icon: Monitor },
-  { name: "Smartphone", icon: Smartphone },
-  { name: "Tablet", icon: Tablet },
-  { name: "Fire TV Stick", icon: Flame },
-  { name: "Smart TV", icon: Tv },
-  { name: "Android TV", icon: Cpu },
-  { name: "Mac / Laptop", icon: Laptop },
-  { name: "MAG Box", icon: Box },
+  { name: "Fire TV Stick Lite", icon: Flame },
+  { name: "Fire TV Stick HD", icon: Tv },
+  { name: "Fire TV Stick 4K", icon: Flame },
+  { name: "Fire TV Stick 4K Max", icon: Cpu },
+  { name: "Fire TV Stick 4K Plus", icon: Flame },
+  { name: "Fire TV Cube", icon: Box },
+  { name: "Fire TV Edition TV", icon: Monitor },
+  { name: "Fire TV Stick 4K Select", icon: Tablet },
 ];
 
 export function DeviceMarquee() {
@@ -35,7 +33,7 @@ export function DeviceMarquee() {
     <div className="w-full py-6 sm:py-10 section-glass border-t border-b border-white/50 overflow-hidden select-none">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-5 text-center">
         <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#E01E26]">
-          Supported Across All Platforms &amp; Devices
+          Supported Fire TV Models
         </p>
       </div>
 
