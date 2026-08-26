@@ -53,20 +53,37 @@ export function ResHero() {
           </div>
         </div>
 
-        <div className="flex lg:hidden flex-col gap-6 w-full">
-          <MaskReveal
-            trigger="mount"
-            as="h1"
-            className="text-h1-b1g leading-[1.15] font-bold tracking-tight"
-            parts={[
-              { text: "Firestick IPTV Reseller Panel" },
-              { text: "for UK Businesses", className: "text-brand-gradient font-bold" },
-            ]}
-          />
-          <B1GHeroMockup />
+        <div className="flex lg:hidden flex-col items-center gap-6 text-left w-full">
+          <div className="w-full" data-no-reveal>
+            <MaskReveal
+              trigger="mount"
+              as="h1"
+              className="text-h1-b1g leading-[1.15] font-bold tracking-tight"
+              parts={[
+                { text: "Firestick IPTV Reseller Panel" },
+                { text: "for UK Businesses", className: "text-brand-gradient font-bold" },
+              ]}
+            />
+            <FadeIn delay={0.22} duration={0.45} yOffset={14} className="mt-4">
+              <div className="hero-desc space-y-3 text-xs sm:text-sm text-black leading-relaxed">
+                <p>
+                  The Fire IPTV Hub reseller panel allows approved resellers to create and manage customer subscriptions through one dashboard.
+                </p>
+                <p>
+                  It is intended for people who understand device setup, customer support and responsible marketing. A reseller panel does not provide guaranteed customers or income.
+                </p>
+              </div>
+            </FadeIn>
+          </div>
+
+          <div className="w-full my-2">
+            <B1GHeroMockup />
+          </div>
+
           <Link href={ROUTES.contact} className="w-full">
             <Button variant="primary" size="lg" className="w-full rounded-[12px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white py-3.5 text-xs sm:text-sm font-semibold">
-              Apply for Reseller Access
+              <TrendingUp className="mr-2 h-4 w-4 stroke-[2.5]" />
+              <span>Apply for Reseller Access</span>
             </Button>
           </Link>
         </div>
