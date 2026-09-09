@@ -5,7 +5,7 @@ import Link from "next/link";
 import { FadeIn } from "@/components/animation/fade-in";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Mail, ArrowUpRight, CheckCircle2 } from "lucide-react";
-import { SUPPORT_EMAIL, WHATSAPP_HREF } from "@/lib/routes";
+import { SUPPORT_EMAIL, WHATSAPP_DEFAULT_HREF } from "@/lib/routes";
 
 const trialUses = [
   "Fire TV device",
@@ -67,7 +67,7 @@ export function ConHelpOptions() {
         <FadeIn className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <a
-              href={WHATSAPP_HREF}
+              href={WHATSAPP_DEFAULT_HREF}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-[12px] border border-slate-200 bg-white p-6"

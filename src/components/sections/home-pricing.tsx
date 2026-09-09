@@ -75,7 +75,13 @@ const premium4kPlans: PlanItem[] = [
   },
 ];
 
-function PricingCard({ plan }: { plan: PlanItem }) {
+function PricingCard({
+  plan,
+  packageType,
+}: {
+  plan: PlanItem;
+  packageType: "Standard" | "Premium";
+}) {
   return (
     <div
       className={`rounded-[12px] border bg-white p-6 flex flex-col justify-between h-full relative transition-all duration-200 hover:shadow-lg ${
@@ -138,7 +144,7 @@ function PricingCard({ plan }: { plan: PlanItem }) {
 
       <div className="mt-auto">
         <a
-          href={whatsappPlanHref(plan.name, plan.price)}
+          href={whatsappPlanHref(plan.name, plan.price, packageType)}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -218,7 +224,7 @@ export function HomePricingSection() {
             }
           >
             {hdPlans.map((plan, idx) => (
-              <PricingCard key={`standard-${idx}`} plan={plan} />
+              <PricingCard key={`standard-${idx}`} plan={plan} packageType="Standard" />
             ))}
           </div>
           <div
@@ -229,7 +235,7 @@ export function HomePricingSection() {
             }
           >
             {premium4kPlans.map((plan, idx) => (
-              <PricingCard key={`premium-${idx}`} plan={plan} />
+              <PricingCard key={`premium-${idx}`} plan={plan} packageType="Premium" />
             ))}
           </div>
         </div>

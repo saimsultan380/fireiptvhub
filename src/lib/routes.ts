@@ -24,21 +24,28 @@ export const COPYRIGHT_EMAIL = "copyright@fireiptvhub.com";
 /** Homepage pricing section (View Plans CTAs). */
 export const HOME_PRICING_HREF = `${ROUTES.home}#pricing`;
 
+export const WHATSAPP_DEFAULT_MESSAGE = "Firestick subscription";
+
 export function whatsappHref(message?: string): string {
   if (!message?.trim()) return WHATSAPP_HREF;
   return `${WHATSAPP_HREF}?text=${encodeURIComponent(message.trim())}`;
 }
 
-export const WHATSAPP_TRIAL_HREF = whatsappHref(
-  "Hi, I'd like to request a 24-hour Firestick IPTV trial."
-);
+/** General WhatsApp CTA (trial, floating button, support). */
+export const WHATSAPP_DEFAULT_HREF = whatsappHref(WHATSAPP_DEFAULT_MESSAGE);
 
-export const WHATSAPP_ORDER_HREF = whatsappHref(
-  "Hi, I'd like to order a Firestick IPTV subscription plan."
-);
+export const WHATSAPP_TRIAL_HREF = WHATSAPP_DEFAULT_HREF;
+export const WHATSAPP_ORDER_HREF = WHATSAPP_DEFAULT_HREF;
 
-export function whatsappPlanHref(planName: string, price: string): string {
-  return whatsappHref(
-    `Hi, I'd like the ${planName} Firestick IPTV plan (${price}).`
-  );
+/** Package CTA — includes Firestick subscription + selected plan. */
+export function whatsappPlanHref(
+  planName: string,
+  price: string,
+  packageType?: string
+): string {
+  const packageLabel = packageType
+    ? `${packageType} ${planName} (${price})`
+    : `${planName} (${price})`;
+
+  return whatsappHref(`${WHATSAPP_DEFAULT_MESSAGE}\n${packageLabel}`);
 }

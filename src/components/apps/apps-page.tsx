@@ -9,7 +9,7 @@ import {
   ContentSection,
   InfoCards,
 } from "@/components/content/content-blocks";
-import { HOME_PRICING_HREF, ROUTES, WHATSAPP_HREF } from "@/lib/routes";
+import { HOME_PRICING_HREF, ROUTES, WHATSAPP_DEFAULT_HREF } from "@/lib/routes";
 
 export function AppsHero() {
   return (
@@ -161,7 +161,7 @@ export function AppsSections() {
         body="Send your exact Fire TV model and we will recommend a compatible player and setup method."
         primary={{ href: ROUTES.installation, label: "Installation Guide", icon: Download }}
         secondary={{
-          href: WHATSAPP_HREF,
+          href: WHATSAPP_DEFAULT_HREF,
           label: "Contact Support",
           icon: Tv,
           external: true,

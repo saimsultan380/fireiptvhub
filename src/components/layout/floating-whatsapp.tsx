@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { WHATSAPP_HREF, WHATSAPP_DISPLAY } from "@/lib/routes";
+import { WHATSAPP_DEFAULT_HREF, WHATSAPP_DISPLAY } from "@/lib/routes";
 
 function WhatsAppGlyph({ className }: { className?: string }) {
   return (
@@ -22,7 +22,7 @@ function WhatsAppGlyph({ className }: { className?: string }) {
 export function FloatingWhatsApp() {
   return (
     <a
-      href={WHATSAPP_HREF}
+      href={WHATSAPP_DEFAULT_HREF}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={`Chat on WhatsApp ${WHATSAPP_DISPLAY}`}

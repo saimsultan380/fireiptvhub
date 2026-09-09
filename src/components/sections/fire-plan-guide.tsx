@@ -4,7 +4,7 @@ import React from "react";
 import { FadeIn } from "@/components/animation/fade-in";
 import { Button } from "@/components/ui/button";
 import { Tv } from "lucide-react";
-import { WHATSAPP_HREF } from "@/lib/routes";
+import { WHATSAPP_DEFAULT_HREF } from "@/lib/routes";
 
 const planRecommendations = [
   {
@@ -145,7 +145,7 @@ export function FirePlanGuide() {
         <FadeIn className="w-full">
           <div className="w-full flex justify-start" data-no-reveal>
             <a
-              href={WHATSAPP_HREF}
+              href={WHATSAPP_DEFAULT_HREF}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto"

@@ -88,7 +88,13 @@ const premium4KPlans: PricingPlan[] = [
   },
 ];
 
-function PricingCard({ plan }: { plan: PricingPlan }) {
+function PricingCard({
+  plan,
+  packageType,
+}: {
+  plan: PricingPlan;
+  packageType: "Standard" | "Premium";
+}) {
   return (
     <div
       className={`rounded-[12px] border bg-white p-6 flex flex-col justify-between h-full relative transition-all duration-200 hover:shadow-lg ${
@@ -151,7 +157,7 @@ function PricingCard({ plan }: { plan: PricingPlan }) {
 
       <div className="mt-auto">
         <a
-          href={whatsappPlanHref(plan.name, plan.price)}
+          href={whatsappPlanHref(plan.name, plan.price, packageType)}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -237,7 +243,7 @@ export function FirePricing() {
             }
           >
             {hdPlans.map((plan) => (
-              <PricingCard key={plan.id} plan={plan} />
+              <PricingCard key={plan.id} plan={plan} packageType="Standard" />
             ))}
           </div>
           <div
@@ -248,7 +254,7 @@ export function FirePricing() {
             }
           >
             {premium4KPlans.map((plan) => (
-              <PricingCard key={plan.id} plan={plan} />
+              <PricingCard key={plan.id} plan={plan} packageType="Premium" />
             ))}
           </div>
         </div>

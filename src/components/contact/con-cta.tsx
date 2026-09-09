@@ -5,7 +5,7 @@ import Link from "next/link";
 import { FadeIn } from "@/components/animation/fade-in";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Mail } from "lucide-react";
-import { ROUTES, SUPPORT_EMAIL, WHATSAPP_HREF } from "@/lib/routes";
+import { ROUTES, SUPPORT_EMAIL, WHATSAPP_DEFAULT_HREF } from "@/lib/routes";
 
 export function ConCTA() {
   return (
@@ -20,7 +20,7 @@ export function ConCTA() {
             By submitting the form, you confirm that you have read the Privacy Policy and permit Fire IPTV Hub to use the supplied information to respond.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <a href={WHATSAPP_DEFAULT_HREF} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <Button variant="primary" size="lg" className="w-full sm:w-auto rounded-[12px] px-8 py-3.5 text-sm font-semibold shine-effect">
                 <MessageCircle className="mr-2 h-4 w-4" />
                 Request Your Trial
