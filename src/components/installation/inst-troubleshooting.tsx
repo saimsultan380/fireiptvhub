@@ -19,7 +19,7 @@ const troubleshootList: TroubleshootingItem[] = [
   {
     title: "Downloader Code Does Not Work",
     checks: [
-      "The code is entered as 4172090",
+      "The code is entered as 8899059 or 7020235",
       "Downloader has internet access",
       "The code has not changed",
       "The device date and time are correct",

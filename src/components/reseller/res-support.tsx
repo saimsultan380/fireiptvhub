@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, HelpCircle, Briefcase, CheckCircle } from "lucide-react";
 
 const customerDetailsList = [
-  "Correct app Downloader code (4172090)",
+  "Correct app Downloader code (8899059 or 7020235)",
   "Step-by-step installation instructions",
   "Private account username",
   "Private account password",
@@ -73,7 +73,7 @@ export function ResSupport() {
               </div>
 
               <p className="text-xs sm:text-sm text-slate-500 font-semibold mb-5 leading-relaxed">
-                Customers using supported Android and Fire TV devices can install the official app using Downloader code 4172090. Always supply them with:
+                Customers using supported Android and Fire TV devices can install the official app using Downloader code 8899059 (TREXPRON.apk) or 7020235 (TREXVIPN.apk). Always supply them with:
               </p>
 
               {/* Supplying checklist */}

@@ -48,7 +48,7 @@ const deviceGuidesList: DeviceGuide[] = [
       },
       {
         title: "Enter the Code",
-        description: "Open Downloader and enter the official Downloader Code: 4172090. Select Go. Confirm that the page displays the Official Firestick IPTV App before downloading.",
+        description: "Open Downloader and enter official Downloader Code 8899059 (TREXPRON.apk) or 7020235 (TREXVIPN.apk). Select Go. Confirm that the page displays the Official Firestick IPTV App before downloading.",
       },
       {
         title: "Install the App",
@@ -78,7 +78,7 @@ const deviceGuidesList: DeviceGuide[] = [
       },
       {
         title: "Enter Downloader Code",
-        description: "Enter: 4172090.",
+        description: "Enter: 8899059 (TREXPRON.apk) or 7020235 (TREXVIPN.apk).",
       },
       {
         title: "Install IPTV App",
@@ -102,7 +102,7 @@ const deviceGuidesList: DeviceGuide[] = [
     steps: [
       {
         title: "Download the APK",
-        description: "Open the official download link (http://aftv.news/4172090) through your mobile browser. Download the IPTV app APK.",
+        description: "Install TREXPRON.apk with Downloader code 8899059, or TREXVIPN.apk with Downloader code 7020235, through your mobile browser or file manager. Download the IPTV app APK.",
       },
       {
         title: "Allow Permissions & Install",
@@ -343,17 +343,35 @@ export function InstDeviceGuides() {
 
               {/* Tag box for Downloader Code if applicable */}
               {activeGuide.showDownloaderCode && (
-                <div className="inline-flex items-center gap-3 p-3 rounded-[12px] border border-red-100 bg-red-50/50 mb-6 select-none">
-                  <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#E01E26] text-white">
-                    <Download className="h-3.5 w-3.5" />
+                <div className="inline-flex flex-col gap-2 p-3 rounded-[12px] border border-red-100 bg-red-50/50 mb-6 select-none">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#E01E26] text-white">
+                      <Download className="h-3.5 w-3.5" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block leading-none mb-0.5">
+                        TREXPRON.apk
+                      </span>
+                      <span className="text-sm font-extrabold text-[#E01E26] leading-none">
+                        8899059
+                      </span>
+                    </div>
                   </div>
-                  <div>
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block leading-none mb-0.5">
-                      Downloader Code
-                    </span>
-                    <span className="text-sm font-extrabold text-[#E01E26] leading-none">
-                      4172090
-                    </span>
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 text-center">
+                    or
+                  </span>
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#E01E26] text-white">
+                      <Download className="h-3.5 w-3.5" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block leading-none mb-0.5">
+                        TREXVIPN.apk
+                      </span>
+                      <span className="text-sm font-extrabold text-[#E01E26] leading-none">
+                        7020235
+                      </span>
+                    </div>
                   </div>
                 </div>
               )}

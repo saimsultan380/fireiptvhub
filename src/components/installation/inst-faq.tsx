@@ -18,7 +18,7 @@ const faqList = [
   {
     question: "What is the best IPTV Downloader code?",
     answer:
-      "The safest code is one controlled by the app developer or subscription provider and checked regularly. Random permanent lists can become outdated.",
+      "The safest codes are TREXPRON.apk (8899059) or TREXVIPN.apk (7020235), controlled by the subscription provider and checked regularly. Random permanent lists can become outdated.",
   },
   {
     question: "Can support install it remotely?",
