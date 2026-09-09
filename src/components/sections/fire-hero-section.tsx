@@ -7,7 +7,7 @@ import { FadeIn } from "@/components/animation/fade-in";
 import { Button } from "@/components/ui/button";
 import { B1GHeroMockup } from "./b1g-hero-mockup";
 import { Tv, Calendar } from "lucide-react";
-import { ROUTES } from "@/lib/routes";
+import { WHATSAPP_TRIAL_HREF } from "@/lib/routes";
 
 export function FireHeroSection() {
   return (
@@ -40,7 +40,12 @@ export function FireHeroSection() {
 
             <FadeIn delay={0.15} duration={0.4} className="mt-8 w-full">
               <div className="flex flex-row items-center gap-2 sm:gap-4 w-full">
-                <Link href={ROUTES.contact} className="flex-1 sm:flex-initial">
+                <a
+                  href={WHATSAPP_TRIAL_HREF}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 sm:flex-initial"
+                >
                   <Button
                     variant="primary"
                     size="lg"
@@ -49,7 +54,7 @@ export function FireHeroSection() {
                     <Tv className="mr-1.5 sm:mr-2 h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0 stroke-[2.5]" />
                     <span>Request a 24-Hour Trial</span>
                   </Button>
-                </Link>
+                </a>
 
                 <Link href="#pricing" className="flex-1 sm:flex-initial">
                   <Button
@@ -102,7 +107,12 @@ export function FireHeroSection() {
 
           <FadeIn delay={0.15} duration={0.35} className="w-full">
             <div className="flex flex-col gap-2.5 w-full">
-              <Link href={ROUTES.contact} className="w-full">
+              <a
+                href={WHATSAPP_TRIAL_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
+              >
                 <Button
                   variant="primary"
                   size="lg"
@@ -111,7 +121,7 @@ export function FireHeroSection() {
                   <Tv className="mr-2 h-4 w-4 shrink-0 stroke-[2.5]" />
                   <span>Request a 24-Hour Trial</span>
                 </Button>
-              </Link>
+              </a>
 
               <Link href="#pricing" className="w-full">
                 <Button

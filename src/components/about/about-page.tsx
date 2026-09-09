@@ -9,7 +9,7 @@ import {
   ContentSection,
   InfoCards,
 } from "@/components/content/content-blocks";
-import { ROUTES } from "@/lib/routes";
+import { HOME_PRICING_HREF, WHATSAPP_TRIAL_HREF } from "@/lib/routes";
 
 export function AboutHero() {
   return (
@@ -23,8 +23,13 @@ export function AboutHero() {
         "Fire IPTV Hub is a UK-focused Firestick IPTV subscription and setup service.",
         "We help customers identify their Fire TV model, select a suitable package, install a compatible player and test the service before choosing a longer subscription.",
       ]}
-      primary={{ href: ROUTES.subscription, label: "View Subscription Plans", icon: Calendar }}
-      secondary={{ href: ROUTES.contact, label: "Request a 24-Hour Trial", icon: Tv }}
+      primary={{ href: HOME_PRICING_HREF, label: "View Subscription Plans", icon: Calendar }}
+      secondary={{
+        href: WHATSAPP_TRIAL_HREF,
+        label: "Request a 24-Hour Trial",
+        icon: Tv,
+        external: true,
+      }}
     />
   );
 }
@@ -124,8 +129,13 @@ export function AboutSections() {
         titleLead="Ready to Get"
         titleAccent="Started?"
         body="Check your Fire TV model, request an eligible trial or choose a subscription plan with guided installation."
-        primary={{ href: ROUTES.subscription, label: "View Plans", icon: Calendar }}
-        secondary={{ href: ROUTES.contact, label: "Contact Support", icon: Tv }}
+        primary={{ href: HOME_PRICING_HREF, label: "View Plans", icon: Calendar }}
+        secondary={{
+          href: WHATSAPP_TRIAL_HREF,
+          label: "Contact Support",
+          icon: Tv,
+          external: true,
+        }}
       />
     </>
   );

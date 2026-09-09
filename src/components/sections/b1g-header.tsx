@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ROUTES } from "@/lib/routes";
+import { HOME_PRICING_HREF, ROUTES } from "@/lib/routes";
 
 const navLinks = [
   { name: "Home", href: ROUTES.home },
@@ -82,7 +82,7 @@ export function B1GHeader() {
 
         {/* 3) RIGHT: Primary CTA “Get Started” (~44px tall, rounded-[12px]) */}
         <div className="flex items-center shrink-0">
-          <Link href={ROUTES.subscription}>
+          <Link href={HOME_PRICING_HREF}>
             <Button
               variant="primary"
               className="h-[44px] px-6 rounded-[12px] text-sm font-semibold bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white whitespace-nowrap"
@@ -158,7 +158,7 @@ export function B1GHeader() {
                   </nav>
 
                   <div className="pt-2">
-                    <Link href={ROUTES.subscription} onClick={() => setMobileMenuOpen(false)}>
+                    <Link href={HOME_PRICING_HREF} onClick={() => setMobileMenuOpen(false)}>
                       <Button
                         variant="primary"
                         className="w-full h-[48px] rounded-[12px] text-base font-semibold bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white"

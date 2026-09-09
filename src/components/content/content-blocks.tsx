@@ -111,11 +111,31 @@ export function ContentCta({
   titleLead: string;
   titleAccent: string;
   body: string;
-  primary: { href: string; label: string; icon: LucideIcon };
-  secondary: { href: string; label: string; icon: LucideIcon };
+  primary: { href: string; label: string; icon: LucideIcon; external?: boolean };
+  secondary: { href: string; label: string; icon: LucideIcon; external?: boolean };
 }) {
   const PrimaryIcon = primary.icon;
   const SecondaryIcon = secondary.icon;
+
+  const wrap = (
+    cta: { href: string; external?: boolean },
+    className: string,
+    children: React.ReactNode
+  ) =>
+    cta.external ? (
+      <a
+        href={cta.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+      >
+        {children}
+      </a>
+    ) : (
+      <Link href={cta.href} className={className}>
+        {children}
+      </Link>
+    );
 
   return (
     <section className="w-full py-12 sm:py-20 section-glass border-t border-white/50">
@@ -129,7 +149,9 @@ export function ContentCta({
             {body}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Link href={primary.href} className="w-full sm:w-auto">
+            {wrap(
+              primary,
+              "w-full sm:w-auto",
               <Button
                 variant="primary"
                 size="lg"
@@ -138,8 +160,10 @@ export function ContentCta({
                 <PrimaryIcon className="mr-2 h-4 w-4" />
                 {primary.label}
               </Button>
-            </Link>
-            <Link href={secondary.href} className="w-full sm:w-auto">
+            )}
+            {wrap(
+              secondary,
+              "w-full sm:w-auto",
               <Button
                 variant="outline"
                 size="lg"
@@ -148,7 +172,7 @@ export function ContentCta({
                 <SecondaryIcon className="mr-2 h-4 w-4 text-[#E01E26]" />
                 {secondary.label}
               </Button>
-            </Link>
+            )}
           </div>
         </FadeIn>
       </div>

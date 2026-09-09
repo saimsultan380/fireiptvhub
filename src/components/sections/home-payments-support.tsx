@@ -1,11 +1,10 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { FadeIn } from "@/components/animation/fade-in";
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Headphones, CheckCircle2 } from "lucide-react";
-import { ROUTES } from "@/lib/routes";
+import { WHATSAPP_TRIAL_HREF } from "@/lib/routes";
 
 const startSteps = [
   {
@@ -181,7 +180,7 @@ export function HomePaymentsSupportSection() {
         </FadeIn>
 
         <FadeIn className="w-full flex justify-center">
-          <Link href={ROUTES.contact}>
+          <a href={WHATSAPP_TRIAL_HREF} target="_blank" rel="noopener noreferrer">
             <Button
               variant="primary"
               size="lg"
@@ -190,7 +189,7 @@ export function HomePaymentsSupportSection() {
               <Headphones className="mr-2 h-5 w-5 stroke-[2.5]" />
               <span>Request Your Trial</span>
             </Button>
-          </Link>
+          </a>
         </FadeIn>
       </div>
     </section>

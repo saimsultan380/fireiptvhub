@@ -7,7 +7,7 @@ import { FadeIn } from "@/components/animation/fade-in";
 import { Button } from "@/components/ui/button";
 import { B1GHeroMockup } from "./b1g-hero-mockup";
 import { Calendar, Tv } from "lucide-react";
-import { ROUTES } from "@/lib/routes";
+import { HOME_PRICING_HREF, WHATSAPP_TRIAL_HREF } from "@/lib/routes";
 
 export function HomeHeroSection() {
   return (
@@ -40,7 +40,7 @@ export function HomeHeroSection() {
 
             <div className="mt-8 w-full">
               <div className="flex flex-row items-center gap-2 sm:gap-4 w-full">
-                <Link href={ROUTES.subscription} className="flex-1 sm:flex-initial">
+                <Link href={HOME_PRICING_HREF} className="flex-1 sm:flex-initial">
                   <Button
                     variant="primary"
                     size="lg"
@@ -50,7 +50,12 @@ export function HomeHeroSection() {
                     <span>View Firestick IPTV Plans</span>
                   </Button>
                 </Link>
-                <Link href={ROUTES.contact} className="flex-1 sm:flex-initial">
+                <a
+                  href={WHATSAPP_TRIAL_HREF}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 sm:flex-initial"
+                >
                   <Button
                     variant="outline"
                     size="lg"
@@ -59,7 +64,7 @@ export function HomeHeroSection() {
                     <Tv className="mr-2 h-4 w-4 text-[#E01E26] stroke-[2.5]" />
                     <span>Request a 24-Hour Trial</span>
                   </Button>
-                </Link>
+                </a>
               </div>
               <p className="mt-4 text-[11px] sm:text-xs font-semibold text-slate-600 leading-relaxed">
                 Plans from £12 • 20,000+ Live Channels • Guided Installation • Trial Available
@@ -104,7 +109,7 @@ export function HomeHeroSection() {
 
           <div className="w-full">
             <div className="flex flex-col gap-2.5 w-full">
-              <Link href={ROUTES.subscription} className="w-full">
+              <Link href={HOME_PRICING_HREF} className="w-full">
                 <Button
                   variant="primary"
                   size="lg"
@@ -114,7 +119,12 @@ export function HomeHeroSection() {
                   <span>View Firestick IPTV Plans</span>
                 </Button>
               </Link>
-              <Link href={ROUTES.contact} className="w-full">
+              <a
+                href={WHATSAPP_TRIAL_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
+              >
                 <Button
                   variant="outline"
                   size="lg"
@@ -123,7 +133,7 @@ export function HomeHeroSection() {
                   <Tv className="mr-2 h-4 w-4 text-[#E01E26] stroke-[2.5]" />
                   <span>Request a 24-Hour Trial</span>
                 </Button>
-              </Link>
+              </a>
             </div>
             <p className="mt-3 text-[11px] font-semibold text-slate-600 leading-relaxed">
               Plans from £12 • 20,000+ Live Channels • Guided Installation • Trial Available

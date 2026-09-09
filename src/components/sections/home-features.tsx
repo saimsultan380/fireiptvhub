@@ -5,7 +5,7 @@ import Link from "next/link";
 import { FadeIn } from "@/components/animation/fade-in";
 import { Button } from "@/components/ui/button";
 import { Globe, Flame, Briefcase, Download, Calendar, CheckCircle2 } from "lucide-react";
-import { ROUTES } from "@/lib/routes";
+import { HOME_PRICING_HREF } from "@/lib/routes";
 
 const channelCats = [
   "Entertainment",
@@ -120,7 +120,7 @@ export function HomeFeaturesSection() {
         </FadeIn>
 
         <FadeIn className="w-full flex justify-center">
-          <Link href={ROUTES.subscription}>
+          <Link href={HOME_PRICING_HREF}>
             <Button
               variant="primary"
               size="lg"

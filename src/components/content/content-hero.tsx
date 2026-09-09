@@ -14,7 +14,37 @@ type HeroCta = {
   href: string;
   label: string;
   icon: LucideIcon;
+  external?: boolean;
 };
+
+function CtaLink({
+  cta,
+  className,
+  children,
+}: {
+  cta: HeroCta;
+  className?: string;
+  children: React.ReactNode;
+}) {
+  if (cta.external) {
+    return (
+      <a
+        href={cta.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+      >
+        {children}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={cta.href} className={className}>
+      {children}
+    </Link>
+  );
+}
 
 export function ContentHero({
   titleParts,
@@ -57,7 +87,7 @@ export function ContentHero({
 
             <div className="mt-8 w-full">
               <div className="flex flex-row items-center gap-2 sm:gap-4 w-full">
-                <Link href={primary.href} className="flex-1 sm:flex-initial">
+                <CtaLink cta={primary} className="flex-1 sm:flex-initial">
                   <Button
                     variant="primary"
                     size="lg"
@@ -66,8 +96,8 @@ export function ContentHero({
                     <PrimaryIcon className="mr-2 h-4 w-4 stroke-[2.5]" />
                     <span>{primary.label}</span>
                   </Button>
-                </Link>
-                <Link href={secondary.href} className="flex-1 sm:flex-initial">
+                </CtaLink>
+                <CtaLink cta={secondary} className="flex-1 sm:flex-initial">
                   <Button
                     variant="outline"
                     size="lg"
@@ -76,7 +106,7 @@ export function ContentHero({
                     <SecondaryIcon className="mr-2 h-4 w-4 text-[#E01E26] stroke-[2.5]" />
                     <span>{secondary.label}</span>
                   </Button>
-                </Link>
+                </CtaLink>
               </div>
             </div>
           </div>
@@ -110,7 +140,7 @@ export function ContentHero({
           </div>
 
           <div className="w-full flex flex-col gap-2.5">
-            <Link href={primary.href} className="w-full">
+            <CtaLink cta={primary} className="w-full">
               <Button
                 variant="primary"
                 size="lg"
@@ -119,8 +149,8 @@ export function ContentHero({
                 <PrimaryIcon className="mr-2 h-4 w-4 stroke-[2.5]" />
                 <span>{primary.label}</span>
               </Button>
-            </Link>
-            <Link href={secondary.href} className="w-full">
+            </CtaLink>
+            <CtaLink cta={secondary} className="w-full">
               <Button
                 variant="outline"
                 size="lg"
@@ -129,7 +159,7 @@ export function ContentHero({
                 <SecondaryIcon className="mr-2 h-4 w-4 text-[#E01E26] stroke-[2.5]" />
                 <span>{secondary.label}</span>
               </Button>
-            </Link>
+            </CtaLink>
           </div>
         </div>
       </div>

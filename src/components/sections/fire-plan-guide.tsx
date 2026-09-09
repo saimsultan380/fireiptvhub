@@ -1,11 +1,10 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { FadeIn } from "@/components/animation/fade-in";
 import { Button } from "@/components/ui/button";
 import { Tv } from "lucide-react";
-import { ROUTES } from "@/lib/routes";
+import { WHATSAPP_HREF } from "@/lib/routes";
 
 const planRecommendations = [
   {
@@ -145,7 +144,12 @@ export function FirePlanGuide() {
 
         <FadeIn className="w-full">
           <div className="w-full flex justify-start" data-no-reveal>
-            <Link href={ROUTES.contact} className="w-full sm:w-auto">
+            <a
+              href={WHATSAPP_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
               <Button
                 variant="primary"
                 size="lg"
@@ -154,7 +158,7 @@ export function FirePlanGuide() {
                 <Tv className="mr-2 h-4 w-4 stroke-[2.5]" />
                 <span>Check Compatibility First</span>
               </Button>
-            </Link>
+            </a>
           </div>
         </FadeIn>
       </div>

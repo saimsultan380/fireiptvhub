@@ -3,6 +3,7 @@ import "./globals.css";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
 import { SiteAtmosphere } from "@/components/layout/site-atmosphere";
 import { CtaClickSound } from "@/components/layout/cta-click-sound";
+import { FloatingWhatsApp } from "@/components/layout/floating-whatsapp";
 import { JsonLd } from "@/components/seo/json-ld";
 import {
   ROUTES,
@@ -129,6 +130,7 @@ export default function RootLayout({
           <ScrollReveal />
           <CtaClickSound />
           {children}
+          <FloatingWhatsApp />
         </div>
       </body>
     </html>

@@ -9,7 +9,7 @@ import {
   ContentSection,
   InfoCards,
 } from "@/components/content/content-blocks";
-import { ROUTES } from "@/lib/routes";
+import { HOME_PRICING_HREF, ROUTES, WHATSAPP_HREF } from "@/lib/routes";
 
 export function AppsHero() {
   return (
@@ -24,7 +24,7 @@ export function AppsHero() {
         "The best IPTV player for Firestick is the one that supports your login format, works with your device’s operating system and remains easy to control with the Fire TV remote.",
       ]}
       primary={{ href: ROUTES.installation, label: "Installation Guide", icon: Download }}
-      secondary={{ href: ROUTES.subscription, label: "View Subscription Plans", icon: Calendar }}
+      secondary={{ href: HOME_PRICING_HREF, label: "View Subscription Plans", icon: Calendar }}
     />
   );
 }
@@ -160,7 +160,12 @@ export function AppsSections() {
         titleAccent="Player?"
         body="Send your exact Fire TV model and we will recommend a compatible player and setup method."
         primary={{ href: ROUTES.installation, label: "Installation Guide", icon: Download }}
-        secondary={{ href: ROUTES.contact, label: "Contact Support", icon: Tv }}
+        secondary={{
+          href: WHATSAPP_HREF,
+          label: "Contact Support",
+          icon: Tv,
+          external: true,
+        }}
       />
     </>
   );

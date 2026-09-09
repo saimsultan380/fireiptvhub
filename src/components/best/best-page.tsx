@@ -9,7 +9,7 @@ import {
   ContentSection,
   InfoCards,
 } from "@/components/content/content-blocks";
-import { ROUTES } from "@/lib/routes";
+import { HOME_PRICING_HREF, WHATSAPP_TRIAL_HREF } from "@/lib/routes";
 
 export function BestHero() {
   return (
@@ -23,8 +23,13 @@ export function BestHero() {
         "The best IPTV for Firestick is not determined by one impressive number or anonymous review. It should work on your device, cover your preferred categories, provide clear prices and perform properly on your own broadband.",
         "This guide explains how to compare Firestick IPTV services, free and paid options, player apps, Reddit recommendations and Trustpilot reviews in 2026.",
       ]}
-      primary={{ href: ROUTES.subscription, label: "View Subscription Plans", icon: Calendar }}
-      secondary={{ href: ROUTES.contact, label: "Request a 24-Hour Trial", icon: Tv }}
+      primary={{ href: HOME_PRICING_HREF, label: "View Subscription Plans", icon: Calendar }}
+      secondary={{
+        href: WHATSAPP_TRIAL_HREF,
+        label: "Request a 24-Hour Trial",
+        icon: Tv,
+        external: true,
+      }}
     />
   );
 }
@@ -119,8 +124,13 @@ export function BestSections() {
         titleLead="Compare on Your Own"
         titleAccent="Device"
         body="Request an eligible 24-hour trial and test live TV, films, the programme guide and your normal viewing time before choosing a longer plan."
-        primary={{ href: ROUTES.contact, label: "Request a Trial", icon: Tv }}
-        secondary={{ href: ROUTES.subscription, label: "View Plans", icon: Calendar }}
+        primary={{
+          href: WHATSAPP_TRIAL_HREF,
+          label: "Request a Trial",
+          icon: Tv,
+          external: true,
+        }}
+        secondary={{ href: HOME_PRICING_HREF, label: "View Plans", icon: Calendar }}
       />
     </>
   );

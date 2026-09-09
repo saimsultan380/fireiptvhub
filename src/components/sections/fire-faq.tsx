@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { FadeIn } from "@/components/animation/fade-in";
 import { Plus, Minus, HelpCircle } from "lucide-react";
-import { ROUTES } from "@/lib/routes";
+import { ROUTES, WHATSAPP_ORDER_HREF, WHATSAPP_TRIAL_HREF } from "@/lib/routes";
 
 interface FAQItem {
   question: string;
@@ -147,18 +147,22 @@ export function FireFAQ() {
 
         <FadeIn className="w-full mb-10">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href={ROUTES.contact}
+            <a
+              href={WHATSAPP_ORDER_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-[12px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white px-6 py-3 text-xs sm:text-sm font-semibold"
             >
               Choose Your Plan
-            </Link>
-            <Link
-              href={ROUTES.contact}
+            </a>
+            <a
+              href={WHATSAPP_TRIAL_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-[12px] border-2 border-[#E01E26] bg-white text-[#12141F] px-6 py-3 text-xs sm:text-sm font-semibold hover:bg-red-50"
             >
               Check Compatibility First
-            </Link>
+            </a>
           </div>
         </FadeIn>
 

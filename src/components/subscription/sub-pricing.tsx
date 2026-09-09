@@ -4,6 +4,7 @@ import React from "react";
 import { FadeIn } from "@/components/animation/fade-in";
 import { Button } from "@/components/ui/button";
 import { Calendar, Check } from "lucide-react";
+import { whatsappPlanHref } from "@/lib/routes";
 
 interface PricingPlan {
   id: string;
@@ -148,13 +149,20 @@ export function SubPricing() {
                 </div>
 
                 {/* CTA Button — red on all plans */}
-                <Button
-                  variant="primary"
-                  size="lg"
-                  className="w-full rounded-[12px] py-3.5 text-xs sm:text-sm font-semibold bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white hover:opacity-95 shadow-none border-0"
+                <a
+                  href={whatsappPlanHref(plan.name, plan.price)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto"
                 >
-                  {plan.ctaText}
-                </Button>
+                  <Button
+                    variant="primary"
+                    size="lg"
+                    className="w-full rounded-[12px] py-3.5 text-xs sm:text-sm font-semibold bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white hover:opacity-95 shadow-none border-0"
+                  >
+                    {plan.ctaText}
+                  </Button>
+                </a>
 
               </div>
             ))}

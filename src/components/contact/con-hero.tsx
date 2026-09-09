@@ -1,13 +1,12 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { B1GHeroMockup } from "@/components/sections/b1g-hero-mockup";
 import { FadeIn } from "@/components/animation/fade-in";
 import { Button } from "@/components/ui/button";
 import { MessageSquare } from "lucide-react";
 import { MaskReveal } from "@/components/animation/mask-reveal";
-import { ROUTES, SUPPORT_EMAIL, WHATSAPP_DISPLAY } from "@/lib/routes";
+import { SUPPORT_EMAIL, WHATSAPP_DISPLAY, WHATSAPP_TRIAL_HREF } from "@/lib/routes";
 
 export function ConHero() {
   return (
@@ -42,12 +41,12 @@ export function ConHero() {
             </FadeIn>
 
             <FadeIn delay={0.15} duration={0.4} className="mt-8 w-full">
-              <Link href="#contact-form">
+              <a href={WHATSAPP_TRIAL_HREF} target="_blank" rel="noopener noreferrer">
                 <Button variant="primary" size="lg" className="rounded-[12px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white px-5 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm font-semibold shine-effect">
                   <MessageSquare className="mr-2 h-4 w-4 stroke-[2.5]" />
                   <span>Request Your Trial</span>
                 </Button>
-              </Link>
+              </a>
             </FadeIn>
           </div>
 
@@ -81,12 +80,12 @@ export function ConHero() {
             <B1GHeroMockup />
           </div>
 
-          <Link href="#contact-form" className="w-full">
+          <a href={WHATSAPP_TRIAL_HREF} target="_blank" rel="noopener noreferrer" className="w-full">
             <Button variant="primary" size="lg" className="w-full rounded-[12px] bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white py-3.5 text-xs sm:text-sm font-semibold">
               <MessageSquare className="mr-2 h-4 w-4 stroke-[2.5]" />
               <span>Request Your Trial</span>
             </Button>
-          </Link>
+          </a>
         </div>
       </main>
     </div>

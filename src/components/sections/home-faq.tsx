@@ -5,7 +5,7 @@ import Link from "next/link";
 import { FadeIn } from "@/components/animation/fade-in";
 import { Button } from "@/components/ui/button";
 import { Plus, Minus, HelpCircle, Calendar, Tv } from "lucide-react";
-import { ROUTES } from "@/lib/routes";
+import { HOME_PRICING_HREF, WHATSAPP_TRIAL_HREF } from "@/lib/routes";
 
 interface FAQItem {
   question: string;
@@ -159,7 +159,7 @@ export function HomeFAQSection() {
               Tell us which Fire TV model you use, whether your television is HD or 4K and how many screens you want to watch at the same time.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-              <Link href={ROUTES.subscription} className="w-full sm:w-auto">
+              <Link href={HOME_PRICING_HREF} className="w-full sm:w-auto">
                 <Button
                   variant="primary"
                   size="lg"
@@ -169,7 +169,12 @@ export function HomeFAQSection() {
                   <span>View Plans from £12</span>
                 </Button>
               </Link>
-              <Link href={ROUTES.contact} className="w-full sm:w-auto">
+              <a
+                href={WHATSAPP_TRIAL_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
                 <Button
                   variant="outline"
                   size="lg"
@@ -178,7 +183,7 @@ export function HomeFAQSection() {
                   <Tv className="mr-2 h-4 w-4 text-[#E01E26] stroke-[2.5]" />
                   <span>Request Your Trial</span>
                 </Button>
-              </Link>
+              </a>
             </div>
           </FadeIn>
         </div>

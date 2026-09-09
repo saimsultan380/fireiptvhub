@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 import { FadeIn } from "@/components/animation/fade-in";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowUpRight, Check } from "lucide-react";
-import { ROUTES } from "@/lib/routes";
+import { whatsappPlanHref } from "@/lib/routes";
 
 interface PricingPlan {
   id: string;
@@ -151,15 +150,19 @@ function PricingCard({ plan }: { plan: PricingPlan }) {
       </div>
 
       <div className="mt-auto">
-        <Link href={ROUTES.contact}>
+        <a
+          href={whatsappPlanHref(plan.name, plan.price)}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button
             variant="primary"
             className="w-full justify-between rounded-[12px] font-bold text-xs py-3 px-4 flex items-center bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white hover:opacity-95 border-0"
           >
-            <span>Choose Plan</span>
+            <span>Order on WhatsApp</span>
             <ArrowUpRight className="h-4 w-4 shrink-0 stroke-[2.5]" />
           </Button>
-        </Link>
+        </a>
       </div>
     </div>
   );

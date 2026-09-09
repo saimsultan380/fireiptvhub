@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { B1GLogo } from "@/components/brand/b1g-logo";
-import { ROUTES } from "@/lib/routes";
+import { ROUTES, WHATSAPP_TRIAL_HREF } from "@/lib/routes";
 
 const linkClass =
   "text-xs sm:text-sm text-slate-500 hover:text-[#E01E26] font-semibold transition-colors";
@@ -18,13 +18,13 @@ const pageLinks = [
 ];
 
 const supportLinks = [
-  { name: "Contact Us", href: ROUTES.contact },
-  { name: "Request a 24-Hour Trial", href: ROUTES.contact },
-  { name: "About Us", href: ROUTES.about },
-  { name: "Privacy Policy", href: ROUTES.privacy },
-  { name: "Terms of Service", href: ROUTES.terms },
-  { name: "Refund Policy", href: ROUTES.refund },
-  { name: "Copyright Policy", href: ROUTES.copyright },
+  { name: "Contact Us", href: ROUTES.contact, external: false },
+  { name: "Request a 24-Hour Trial", href: WHATSAPP_TRIAL_HREF, external: true },
+  { name: "About Us", href: ROUTES.about, external: false },
+  { name: "Privacy Policy", href: ROUTES.privacy, external: false },
+  { name: "Terms of Service", href: ROUTES.terms, external: false },
+  { name: "Refund Policy", href: ROUTES.refund, external: false },
+  { name: "Copyright Policy", href: ROUTES.copyright, external: false },
 ];
 
 export function B1GFooter() {
@@ -63,9 +63,20 @@ export function B1GFooter() {
             <ul className="space-y-3">
               {supportLinks.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className={linkClass}>
-                    {link.name}
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={linkClass}
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link href={link.href} className={linkClass}>
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

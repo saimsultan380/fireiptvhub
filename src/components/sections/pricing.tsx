@@ -5,6 +5,7 @@ import Link from "next/link";
 import { FadeIn } from "@/components/animation/fade-in";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowUpRight, ArrowRight } from "lucide-react";
+import { HOME_PRICING_HREF, whatsappPlanHref } from "@/lib/routes";
 
 interface PricingPlan {
   id: string;
@@ -228,13 +229,19 @@ export function B1GPricing() {
 
                 {/* Card Button / Action — red on all plans */}
                 <div className="mt-auto">
-                  <Button
-                    variant="primary"
-                    className="w-full justify-between rounded-[12px] font-bold text-xs py-3 px-4 flex items-center bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white hover:opacity-95 border-0"
+                  <a
+                    href={whatsappPlanHref(plan.name, plan.price)}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <span>{plan.ctaText}</span>
-                    <ArrowUpRight className="h-4 w-4 shrink-0 stroke-[2.5]" />
-                  </Button>
+                    <Button
+                      variant="primary"
+                      className="w-full justify-between rounded-[12px] font-bold text-xs py-3 px-4 flex items-center bg-gradient-to-r from-[#E01E26] via-[#EE2830] to-[#B5121A] text-white hover:opacity-95 border-0"
+                    >
+                      <span>{plan.ctaText}</span>
+                      <ArrowUpRight className="h-4 w-4 shrink-0 stroke-[2.5]" />
+                    </Button>
+                  </a>
                 </div>
               </div>
             ))}
@@ -248,7 +255,7 @@ export function B1GPricing() {
               Full plan details, connection rules and current availability should be reviewed before placing an order.
             </p>
 
-            <Link href="/iptv-firestick-subscription-plans-2026/#compare-plans" className="shrink-0 w-full md:w-auto">
+            <Link href={HOME_PRICING_HREF} className="shrink-0 w-full md:w-auto">
               <Button
                 variant="outline"
                 size="lg"
