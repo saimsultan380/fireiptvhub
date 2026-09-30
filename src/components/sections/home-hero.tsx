@@ -9,6 +9,46 @@ import { B1GHeroMockup } from "./b1g-hero-mockup";
 import { Calendar, Tv } from "lucide-react";
 import { HOME_PRICING_HREF, WHATSAPP_TRIAL_HREF } from "@/lib/routes";
 
+const heroTitle = [
+  { text: "Firestick IPTV UK | IPTV on Firestick" },
+  { text: "Get IPTV for Fire TV", className: "text-brand-gradient font-bold" },
+];
+
+const heroPoints = [
+  "20,000+ Live Channels",
+  "Movies & Series",
+  "EPG Support",
+  "HD & Full HD",
+  "Available in 4K",
+  "Guided Installation",
+];
+
+function HeroCopy({ compact = false }: { compact?: boolean }) {
+  return (
+    <div className={`hero-desc space-y-3 text-xs text-black leading-relaxed ${compact ? "" : "sm:space-y-4 sm:text-sm lg:text-base"}`}>
+      <p>
+        Choose a Firestick IPTV subscription for live television and on-demand entertainment on a compatible Amazon Fire TV device. Get the best Fire stick IPTV UK service for Amazon Fire TV devices, with live TV, movies, series, EPG support, and guided setup.
+      </p>
+      <p>
+        Get access to 20,000+ live channels, films, complete series, programme-guide support, and HD, Full HD, and available 4K streams.
+      </p>
+      <p>
+        Plans start from £12, with a 24-hour trial available to eligible new customers and guided installation for supported Fire TV models.
+      </p>
+      <div className="flex flex-wrap gap-1.5 pt-1">
+        {heroPoints.map((point) => (
+          <span
+            key={point}
+            className="text-[11px] font-semibold text-slate-700 bg-white/80 border border-slate-200 px-2.5 py-1 rounded-md"
+          >
+            {point}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function HomeHeroSection() {
   return (
     <div className="relative section-glass-hero text-[#12141F] flex flex-col pb-8 sm:pb-12" data-hero>
@@ -20,22 +60,12 @@ export function HomeHeroSection() {
                 trigger="mount"
                 as="h1"
                 className="text-h1-b1g leading-[1.15] font-bold tracking-tight"
-                parts={[
-                  { text: "Firestick IPTV for Live TV, Sport, Films & Series" },
-                  { text: "in the UK", className: "text-brand-gradient font-bold" },
-                ]}
+                parts={heroTitle}
               />
             </div>
 
             <FadeIn delay={0.22} duration={0.45} yOffset={14} className="w-full mt-4">
-              <div className="hero-desc space-y-4 text-xs sm:text-sm lg:text-base text-black leading-relaxed">
-                <p>
-                  Choose a Firestick IPTV subscription for live television and on-demand entertainment on a compatible Amazon Fire TV device. Get access to 20,000+ live channels, films, complete series, programme-guide support and HD, Full HD and available 4K streams.
-                </p>
-                <p>
-                  Plans start from £12, with a 24-hour trial available to eligible new customers and guided installation for supported Fire TV models.
-                </p>
-              </div>
+              <HeroCopy />
             </FadeIn>
 
             <div className="mt-8 w-full">
@@ -62,13 +92,10 @@ export function HomeHeroSection() {
                     className="w-full rounded-[12px] border-2 border-[#E01E26] bg-white text-[#12141F] px-5 sm:px-7 py-3.5 text-xs sm:text-sm font-semibold whitespace-nowrap hover:bg-red-50"
                   >
                     <Tv className="mr-2 h-4 w-4 text-[#E01E26] stroke-[2.5]" />
-                    <span>Request a 24-Hour Trial</span>
+                    <span>Request a 24-hour Free Trial</span>
                   </Button>
                 </a>
               </div>
-              <p className="mt-4 text-[11px] sm:text-xs font-semibold text-slate-600 leading-relaxed">
-                Plans from £12 • 20,000+ Live Channels • Guided Installation • Trial Available
-              </p>
             </div>
           </div>
 
@@ -84,22 +111,12 @@ export function HomeHeroSection() {
                 trigger="mount"
                 as="h1"
                 className="text-h1-b1g leading-[1.15] font-bold tracking-tight"
-                parts={[
-                  { text: "Firestick IPTV for Live TV, Sport, Films & Series" },
-                  { text: "in the UK", className: "text-brand-gradient font-bold" },
-                ]}
+                parts={heroTitle}
               />
             </div>
 
             <FadeIn delay={0.22} duration={0.45} yOffset={14} className="w-full mt-3">
-              <div className="hero-desc space-y-3 text-xs text-black leading-relaxed">
-                <p>
-                  Choose a Firestick IPTV subscription for live television and on-demand entertainment on a compatible Amazon Fire TV device. Get access to 20,000+ live channels, films, complete series, programme-guide support and HD, Full HD and available 4K streams.
-                </p>
-                <p>
-                  Plans start from £12, with a 24-hour trial available to eligible new customers and guided installation for supported Fire TV models.
-                </p>
-              </div>
+              <HeroCopy compact />
             </FadeIn>
           </div>
 
@@ -131,13 +148,10 @@ export function HomeHeroSection() {
                   className="w-full rounded-[12px] border-2 border-[#E01E26] bg-white text-[#12141F] py-3.5 text-xs font-semibold hover:bg-red-50"
                 >
                   <Tv className="mr-2 h-4 w-4 text-[#E01E26] stroke-[2.5]" />
-                  <span>Request a 24-Hour Trial</span>
+                  <span>Request a 24-hour Free Trial</span>
                 </Button>
               </a>
             </div>
-            <p className="mt-3 text-[11px] font-semibold text-slate-600 leading-relaxed">
-              Plans from £12 • 20,000+ Live Channels • Guided Installation • Trial Available
-            </p>
           </div>
         </div>
       </div>

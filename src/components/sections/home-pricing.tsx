@@ -173,10 +173,16 @@ export function HomePricingSection() {
         {/* Header & Subtitle */}
         <FadeIn className="w-full max-w-4xl mx-auto text-center mb-8">
           <h2 className="text-h2 font-bold tracking-tight text-[#12141F]">
-            Firestick IPTV{" "}
-            <span className="text-brand-gradient font-bold">Subscription Plans</span>
+            IPTV Subscription Firestick{" "}
+            <span className="text-brand-gradient font-bold">UK Plans</span>
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-slate-600 font-semibold leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-3 text-sm sm:text-base text-slate-600 font-semibold leading-relaxed max-w-3xl mx-auto">
+            Looking for an IPTV Subscription Firestick option should not mean choosing a plan before checking whether your device and connection are suitable.
+          </p>
+          <p className="mt-3 text-sm sm:text-base text-slate-800 font-bold leading-relaxed">
+            Fire IPTV Hub currently offers Standard and Premium plans.
+          </p>
+          <p className="mt-3 text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed max-w-2xl mx-auto">
             {planType === "standard"
               ? "Every duration within the same package includes the same core features. Choosing a longer subscription changes the expiry date and overall price—not the basic channel selection. Standard plans are suitable for everyday HD and Full HD viewing."
               : "Premium plans include access to the highest available stream quality, including supported 4K sources. Not every programme or channel is produced in 4K."}

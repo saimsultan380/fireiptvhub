@@ -20,10 +20,9 @@ export const metadata = buildPageMetadata({
 });
 
 /**
- * Homepage section order matches new-content.md Page 1:
- * Hero → What Is → Plans → What Is Included → Installation Help /
- * Choosing Best / Why People Use → How to Start / Before Ordering /
- * Free vs Paid / Performance / Compatible Devices → FAQs → Ready CTA
+ * Homepage order matches new-content.md.
+ * Hero is unchanged. Pricing cards, What Is Included, installation help,
+ * and Check These Details Before Ordering stay in place.
  */
 export default function HomePage() {
   return (
