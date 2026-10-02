@@ -1,7 +1,7 @@
 import React from "react";
 import { B1GHeader } from "@/components/sections/b1g-header";
 import { HomeHeroSection } from "@/components/sections/home-hero";
-import { HomeWhyChooseSection } from "@/components/sections/home-why-choose";
+import { HomeMadeSimpleSection, HomeWhatIsSection } from "@/components/sections/home-why-choose";
 import { HomePricingSection } from "@/components/sections/home-pricing";
 import { HomeFeaturesSection } from "@/components/sections/home-features";
 import { HomeDevicesSection } from "@/components/sections/home-devices";
@@ -20,9 +20,7 @@ export const metadata = buildPageMetadata({
 });
 
 /**
- * Homepage order matches new-content.md.
- * Hero is unchanged. Pricing cards, What Is Included, installation help,
- * and Check These Details Before Ordering stay in place.
+ * Homepage order: hero, What Is Firestick IPTV, then plans.
  */
 export default function HomePage() {
   return (
@@ -31,8 +29,9 @@ export default function HomePage() {
       <BreadcrumbJsonLd items={[...page.breadcrumbs]} />
 
       <HomeHeroSection />
-      <HomeWhyChooseSection />
+      <HomeWhatIsSection />
       <HomePricingSection />
+      <HomeMadeSimpleSection />
       <HomeFeaturesSection />
       <HomeDevicesSection />
       <HomePaymentsSupportSection />

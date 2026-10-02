@@ -43,9 +43,8 @@ const simpleParts = [
   },
 ];
 
-export function HomeWhyChooseSection() {
+export function HomeWhatIsSection() {
   return (
-    <>
       <section
         id="what-is-firestick-iptv"
         className="w-full py-12 sm:py-20 section-glass border-t border-white/50"
@@ -91,7 +90,11 @@ export function HomeWhyChooseSection() {
           </FadeIn>
         </div>
       </section>
+  );
+}
 
+export function HomeMadeSimpleSection() {
+  return (
       <section
         id="iptv-for-firestick-made-simple"
         className="w-full py-12 sm:py-20 section-glass border-t border-white/50"
@@ -164,6 +167,5 @@ export function HomeWhyChooseSection() {
           </FadeIn>
         </div>
       </section>
-    </>
   );
 }
