@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { BLOG_POSTS } from "./src/lib/blog";
 import { ROUTES } from "./src/lib/routes";
 
 const CANONICAL_ORIGIN = "https://fireiptvhub.com";
@@ -70,6 +71,9 @@ const legacyToCanonical: [string, string][] = [
   // Old Firestick UK landing URLs → homepage
   ["/firestick-iptv", ROUTES.home],
   ["/firestick-iptv-uk", ROUTES.home],
+  ...BLOG_POSTS.map(
+    (post) => [`/blog/${post.slug}`, `/${post.slug}/`] as [string, string]
+  ),
 ];
 
 const nextConfig: NextConfig = {

@@ -13,6 +13,7 @@ const quickLinks = [
   { name: "Apps and Devices", href: ROUTES.apps },
   { name: "Best IPTV for Firestick", href: ROUTES.best },
   { name: "Reseller Panel", href: ROUTES.reseller },
+  { name: "Blog", href: ROUTES.blog },
   { name: "Contact Us", href: ROUTES.contact },
   { name: "About Us", href: ROUTES.about },
   { name: "Privacy Policy", href: ROUTES.privacy },

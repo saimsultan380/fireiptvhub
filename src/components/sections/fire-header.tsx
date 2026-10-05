@@ -13,6 +13,7 @@ const navLinks = [
   { name: "Installation Guide", href: ROUTES.installation },
   { name: "Subscription Plans", href: ROUTES.subscription },
   { name: "Reseller Panel", href: ROUTES.reseller },
+  { name: "Blog", href: ROUTES.blog },
   { name: "Contact Us", href: ROUTES.contact },
 ];
 
@@ -64,7 +65,7 @@ export function FireHeader() {
         </Link>
 
         {/* CENTER: Horizontal Nav */}
-        <nav className="flex items-center gap-8 text-[15px] font-semibold text-slate-700">
+        <nav className="flex items-center gap-5 xl:gap-7 text-[14px] xl:text-[15px] font-semibold text-slate-700">
           {navLinks.map((link) => (
             <Link
               key={link.name}

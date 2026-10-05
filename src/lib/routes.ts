@@ -8,6 +8,7 @@ export const ROUTES = {
   apps: "/firestick-iptv-apps/",
   best: "/best-iptv-for-firestick/",
   about: "/about/",
+  blog: "/blog/",
   terms: "/terms-of-service/",
   privacy: "/privacy-policy/",
   refund: "/refund-policy/",

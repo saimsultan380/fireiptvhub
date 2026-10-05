@@ -216,6 +216,18 @@ export const SITE_PAGES = [
     ],
   },
   {
+    path: ROUTES.blog,
+    title: "Firestick IPTV Blog – Setup Guides & UK Advice",
+    description:
+      "Read Firestick IPTV guides on setup, players, device compatibility, M3U and Xtream Codes, and what to check before choosing a UK subscription.",
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+    breadcrumbs: [
+      { name: "Home", path: ROUTES.home },
+      { name: "Blog", path: ROUTES.blog },
+    ],
+  },
+  {
     path: ROUTES.about,
     title: "About Fire IPTV Hub – Firestick IPTV UK",
     description:

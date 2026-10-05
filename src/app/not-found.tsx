@@ -17,6 +17,7 @@ const helpfulLinks = [
   { name: "Subscription Plans", href: ROUTES.subscription },
   { name: "Installation Guide", href: ROUTES.installation },
   { name: "Reseller Panel", href: ROUTES.reseller },
+  { name: "Blog", href: ROUTES.blog },
   { name: "Contact Us", href: ROUTES.contact },
 ];
 
